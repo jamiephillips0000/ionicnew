@@ -1,0 +1,9 @@
+page-listofassignments-teacher {
+	.back-button.show-back-button {display: none;}
+.back_arrow{position: absolute; left: 15px; z-index:1; top:0px;}
+	.row{margin-left:-21px; margin-right:-21px;}
+	.plus_arrow_set {top: 11px; right: 15px;}
+	.trash_icon{position: absolute; right: 22px; top: 7px; font-size: 30px; color: #cfd8dc;}
+	.trash_icon1{position: absolute; right: 22px;top: -6px;font-size: 30px; color: #cfd8dc;}
+	.curriculum_text{width: fit-content;background-color: #cfd8dc; padding: 0 15px; border-radius: 11px; font-size: 10.5px; margin-bottom: 5px !important;}
+}

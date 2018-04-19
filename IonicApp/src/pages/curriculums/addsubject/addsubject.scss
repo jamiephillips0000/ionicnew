@@ -1,0 +1,33 @@
+page-addsubject{
+		.back-button.show-back-button {display: none;}
+.back_arrow{position: absolute; left: 15px; z-index:1; top:0px;}
+.item-md.item-block .item-inner {padding-right:0 !important;}
+.item-block {min-height: 4rem !important;}
+.chk_popup .list-md{margin-bottom:0px;}
+
+.plus_arrow_set {top: 22px; right: 5px;}
+.up_arrow {padding: 5.9px 11px;}
+
+.toggle-md {width: 60px !important; height: 30px !important;}
+.toggle-md .toggle-inner {top: 0px !important; width: 29px !important; height: 29px !important;background-color: #b0bec5 !important;}
+.toggle-md .toggle-icon {background-color: #fff !important;}
+.toggle-md.toggle-checked .toggle-inner {-webkit-transform: translate3d(31px, 0, 0) !important;transform: translate3d(31px, 0, 0) !important; background-color: #673ab7 !important;}
+.item-md .toggle-md {padding: 5px 8px 5px 16px;}
+
+.plus_div{height: 22px; width: 22px; background-color: #673ab7; border-radius: 50%; text-align: center; color: #fff;}
+.section_div{background-color: #cfd8dc; border-radius: 11px;font-size: 10.5px;line-height: 22px;}
+.minus_div{background-color: #b0bec5; height: 22px; width: 22px; border-radius: 50%; text-align: center; color: #fff;}
+.remove_icon{height: 30px;width: 30px;background-color: #b0bec5; border-radius: 50%; color: #fff; text-align: center; font-size: 30px; line-height: 24px;}
+
+/*For IOS*/
+.item-ios.item-block .item-inner {padding-right:0 !important;}
+.chk_popup .list-ios{margin-bottom:0px;}
+
+.toggle-ios {width: 60px !important; height: 30px !important;}
+.toggle-ios .toggle-inner {top: 0px !important; width: 29px !important; height: 29px !important;background-color: #b0bec5 !important;}
+.toggle-ios .toggle-icon {background-color: #fff !important;}
+.toggle-ios.toggle-checked .toggle-inner {-webkit-transform: translate3d(31px, 0, 0) !important;transform: translate3d(31px, 0, 0) !important; background-color: #673ab7 !important;}
+.item-ios .toggle-ios {padding: 5px 8px 5px 16px;}
+
+
+}

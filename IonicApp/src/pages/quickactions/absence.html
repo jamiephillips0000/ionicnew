@@ -1,0 +1,85 @@
+<ion-header class="fontopensansbold">
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title class="text_center p_l_5">Absence</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list class="">
+    <ion-row>
+      <ion-col col-12>
+        <div class="width65 w_pain  m_0a mt_40p pos_rel">
+         <ion-list class="width100 pos_rel mt_7p">
+             <ion-item class="selectitem">
+      		  <ion-label floating class="mt_5p mb_7p">
+                <p class="fontopensansbold color_b0">PERSON:</p>
+              </ion-label>
+                  <ion-select [(ngModel)]="person" interface="popover">
+                    <ion-option value="Person-1">Person-1</ion-option>
+                    <ion-option value="Person-2">Person-2</ion-option>
+                    <ion-option value="Person-3">Person-3</ion-option>
+                  </ion-select>
+                </ion-item>
+  		</ion-list>
+            <!--<div class="to_date"><ion-icon name="ios-arrow-down-outline" class="arrow_down"></ion-icon></div>-->
+          </div>
+      </ion-col>
+    </ion-row>
+      <ion-row>
+      <ion-col col-6>
+        <div class="width65 w_pain m_a0aa mt_40p p_r_20p pos_rel">
+          <ion-list>
+            <ion-item>
+              <ion-label floating>
+                <p class="fontopensansbold color_b0">FROM:</p>
+              </ion-label>
+              <ion-datetime class="font18 color_42 fontopensansreg" displayFormat="DD.MMM.YYYY" [(ngModel)]="fromdate.month"></ion-datetime>
+            </ion-item>
+           </ion-list>
+            <div class="from_date"><ion-icon name="ios-calendar-outline" class="icon_calender"></ion-icon></div>
+        </div>
+      </ion-col>
+      <ion-col col-6>
+        <div class="width65 w_pain m_a0a0 mt_40p p_l_20p pos_rel">
+          <ion-list>
+            <ion-item>
+              <ion-label floating>
+                <p class="fontopensansbold color_b0">TO:</p>
+              </ion-label>
+              <ion-datetime class="font18 color_42 fontopensansreg" displayFormat="DD.MMM.YYYY" [(ngModel)]="todate.month"></ion-datetime>
+            </ion-item>
+           </ion-list>
+           <div class="to_date"><ion-icon name="ios-calendar-outline" class="icon_calender"></ion-icon></div>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <div class="width65 w_pain m_0a ">
+          <ion-list>
+            <ion-item>
+              <ion-label floating>
+                <p class="fontopensansbold color_b0">REASON:</p>
+              </ion-label>
+              <ion-input type="text" class="font18 color_42 fontopensansreg" ></ion-input>
+            </ion-item>
+           </ion-list>
+        </div>
+      </ion-col>
+    </ion-row>
+     <ion-row>
+      <ion-col col-12 class="p_t_0 p_b_0">
+        <div class="width45 width100_576 m_0a m_00a45">
+          <div class="width202p m_25a0">
+            <button ion-button class="quick_btn">
+            <p class="fontopensansbold font18">Save</p>
+            </button>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-list>
+ </ion-content>

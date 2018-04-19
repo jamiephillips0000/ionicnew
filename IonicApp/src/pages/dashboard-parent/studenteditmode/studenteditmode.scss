@@ -1,0 +1,116 @@
+page-studenteditmode {
+.down_arrow_set {background-color: #673ab7; position: absolute; top: 27px; right: 30px; color: #fff; font-size: 18px; border-radius: 50%; padding: 4px 10px 1px 9px;}
+.down_arrow_set_pos{right: 5px;}
+.minus_arrow_set{background-color: #b0bec5; position: absolute;top: 10px; right: 5px; color: #fff; font-size: 17px; border-radius: 50%; padding: 3px 10px;}
+.item-md .radio-md {position: absolute; display: block; left: 0; margin: 6px 10px 9px 0;}
+.radio{min-height: 20px; margin-top: 10px;margin-bottom: 10px;padding-left: 0px;}
+.radio-md .radio-icon {width: 22px; height: 22px; border-width: 0px; border-style: solid;  border-color: #673ab7; background-color: #eceff1;}
+.item-radio.item-md ion-label {margin-left: 35px;}
+.radio-md .radio-inner {
+    left: 5px;
+    top: 5px;
+    border-radius: 50%;
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #488aff;
+    -webkit-transform: scale3d(0, 0, 0);
+    transform: scale3d(0, 0, 0);
+    -webkit-transition: -webkit-transform 280ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: -webkit-transform 280ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 280ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 280ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 280ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.radios .label-md {margin: 10px 8px 0 0;}
+.radios .list-md .item-block .item-inner{border-bottom:none !important;}
+.upload_btn{height: 30px; border-radius: 15px; background-color: #673ab7; width: 120px; -webkit-box-shadow: none; box-shadow: none; position: absolute; right: 44px; top: 18px;}
+
+.item-md .toggle-md {padding: 0 0 0 0 !important;}
+.toggle-md {width: 60px !important; height: 30px !important;}
+.toggle-md .toggle-inner {top: 0px !important; width: 29px !important; height: 29px !important;background-color: #b0bec5 !important;}
+.toggle-md .toggle-icon {background-color: #fff !important;}
+.toggle-md.toggle-checked .toggle-inner {-webkit-transform: translate3d(31px, 0, 0) !important;transform: translate3d(31px, 0, 0) !important; background-color: #673ab7 !important;}
+.up_arrow{padding: 6px 11px !important;}
+.item-md.item-block .item-inner {padding-right:0 !important;}
+.item-block {min-height: 4rem !important;}
+
+.primary_div .item-md{background-color:#eceff1 !important;}
+
+.from_date{left:0;}
+.to_date{left:0;}
+
+.sickness_div .from_date{left:30px;}
+.sickness_div .to_date{left:30px;}
+
+.fromtodiv .item-input ion-input{padding-left:35px;}
+.fromtodiv .label-md[floating]{padding-left:45px !important;}
+
+.barred_person_div .upload_btn, .barred_person_div .plus_arrow_set {background-color: #f44336;}
+
+.barred_person_div .item-md.item-input.item-input-has-focus .item-inner,
+.barred_person_div .item-md.item-input.input-has-focus .item-inner{border-bottom:2px solid #f44336 !important;-webkit-box-shadow: inset 0 -1px 0 0 #f44336 !important;box-shadow: inset 0 -1px 0 0 #f44336 !important;}
+
+.plus_arrow_pos{right:5px !important; top:10px !important;}
+
+.datetime-md {padding: 6px 8px 3px 0px;}
+.fromtodiv .datetime-md {padding: 6px 8px 3px 40px;}
+
+.sickness_div .item-md.item-block .item-inner {border-bottom: 2px solid #673ab7 !important; }
+.sickness_div .label-md[floating]{padding-left:40px !important;}
+.sickness_div .item-input ion-input{padding-left:40px !important;}
+
+.information_txtbox .item-md.item-block .item-inner {border-bottom: 2px solid #673ab7 !important; }
+.information_txtbox .label-md[floating]{padding-left:0 !important;}
+.information_txtbox .item-input ion-input{padding-left:0 !important;}
+
+.sickness_div .datetime-md {padding: 6px 8px 3px 40px !important;}
+.minus_btn{width: 30px; height: 30px; background-color: #b0bec5; border-radius: 50%; color: #fff; text-align: center; font-size: 30px; line-height: 28px; position: absolute; top: 10px; right: 10px;}
+.avtar_img{height: 40px; width: 40px; border-radius: 50%;}
+.address_btn{height: 30px; border-radius: 15px; background-color: #673ab7; width: 100PX;-webkit-box-shadow: none;  box-shadow: none;}
+
+/*For IOS*/
+.item-ios .radio-ios {position: absolute; display: block; left: 0; margin: 6px 10px 9px 0;}
+.radio-ios .radio-icon {width: 22px; height: 22px; border-width: 0px; border-style: solid;  border-color: #673ab7; background-color: #eceff1;}
+.item-radio.item-ios ion-label {margin-left: 35px;}
+.radio-ios .radio-inner {
+    left: 5px;
+    top: 5px;
+    border-radius: 50%;
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #488aff;
+    -webkit-transform: scale3d(0, 0, 0);
+    transform: scale3d(0, 0, 0);
+    -webkit-transition: -webkit-transform 280ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: -webkit-transform 280ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 280ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 280ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 280ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.radios .label-ios {margin: 10px 8px 0 0;}
+.radios .list-ios .item-block .item-inner{border-bottom:none !important;}
+.item-ios .toggle-ios {padding: 0 0 0 0 !important;}
+.toggle-ios {width: 60px !important; height: 30px !important;}
+.toggle-ios .toggle-inner {top: 0px !important; width: 29px !important; height: 29px !important;background-color: #b0bec5 !important;}
+.toggle-ios .toggle-icon {background-color: #fff !important;}
+.toggle-ios.toggle-checked .toggle-inner {-webkit-transform: translate3d(31px, 0, 0) !important;transform: translate3d(31px, 0, 0) !important; background-color: #673ab7 !important;}
+.item-ios.item-block .item-inner {padding-right:0 !important;}
+
+.primary_div .item-ios{background-color:#eceff1 !important;}
+
+.fromtodiv .label-ios[floating]{padding-left:45px !important;}
+
+.barred_person_div .item-ios.item-input.item-input-has-focus .item-inner,
+.barred_person_div .item-ios.item-input.input-has-focus .item-inner{border-bottom:2px solid #f44336 !important;-webkit-box-shadow: inset 0 -1px 0 0 #f44336 !important;box-shadow: inset 0 -1px 0 0 #f44336 !important;}
+
+.datetime-ios {padding: 6px 8px 3px 0px;}
+.fromtodiv .datetime-ios {padding: 6px 8px 3px 40px;}
+
+.sickness_div .item-ios.item-block .item-inner {border-bottom: 2px solid #673ab7 !important; }
+.sickness_div .label-ios[floating]{padding-left:40px !important;}
+
+.information_txtbox .item-ios.item-block .item-inner {border-bottom: 2px solid #673ab7 !important; }
+.information_txtbox .label-ios[floating]{padding-left:0 !important;}
+
+.sickness_div .datetime-ios {padding: 6px 8px 3px 40px !important;}
+}

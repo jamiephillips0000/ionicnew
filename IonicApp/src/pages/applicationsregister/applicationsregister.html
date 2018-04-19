@@ -1,0 +1,275 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header >
+  <ion-navbar class="bg_header_active">
+    <button ion-button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title class="pl_8">Applications</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding  ng-app="familyparent">
+  <div class="width100" ng-controller="familyparentCtrl">
+    <ul class="nav nav-tabs m_0a width40 fontopensansbold mt_50p">
+      <li class="active border_none float_left"><a data-toggle="tab" href="#activeapplication" class="color_b0 font12 p_0">ACTIVE</a></li>
+      <li class="text_center border_none float_right"><a data-toggle="tab" href="#inactiveapplication" class="color_b0 font12 p_0">IN ACTIVE</a></li>
+    </ul>
+    <div class="tab-content mt_50p">
+      <div id="activeapplication" class="tab-pane fade in active">
+        <ion-grid class="">
+          <ion-row class="bg_grey m_0">
+            <ion-col col-3 class="plr_10p ptm_2p colwidth35_932 colwidth50_768">
+              <ion-item class="bg_grey">
+                <ion-avatar item-start> <img src="assets/images/user.jpg"> </ion-avatar>
+                <p class="font8 color_b0">NAME:</p>
+                <p class="font15 color_42">Frederick Addo</p>
+              </ion-item>
+            </ion-col>
+            <ion-col col-5 class="plr_10p ptm_2p colwidth25_932 colwidth50_768">
+              <ion-item class="bg_grey h_56p">
+                <p class="font8 color_b0">ROLE:</p>
+                <p class="font15 color_42">Teacher, Principal</p>
+              </ion-item>
+            </ion-col>
+            <ion-col col-4 class="plr_10p ptm_2p colwidth40_932 colwidth100_768 mb_10p_768">
+              <div class="float_right mt_20p" (click)="opensubdiv1()"> 
+              <span class="step size-32 color_67 up_arrow" *ngIf ="uparrow == '0' "> <i class="icon ion-ios-arrow-up"></i> </span>
+              <span class="step size-32 color_67 up_arrow" *ngIf ="downarrow == '1' "> <i class="icon ion-ios-arrow-down"></i> </span>	
+               </div>
+              <div class="float_right mt_10p mr_5p">
+                <button ion-button class="decline_btn">
+                <p class="fontopensansbold color_fff" >DECLINE</p>
+                </button>
+              </div>
+              <div class="float_right mt_10p">
+                <button ion-button class="accept_btn">
+                <p class="fontopensansbold color_fff" >ACCEPT</p>
+                </button>
+              </div>
+            </ion-col>
+          </ion-row>
+          <div *ngIf ="subdiv1 == '1' ">
+          <ion-row class="bg_ec m_0">
+            <ion-col col-3 class="plr_10p ptm_2p colwidth35_932 colwidth50_768">
+              <!--<ion-item class="bg_grey">
+                <ion-avatar item-start> <img src="assets/images/user.jpg"> </ion-avatar>
+                <p class="font8 color_b0">NAME:</p>
+                <p class="font15 color_42">Frederick Addo</p>
+              </ion-item>-->
+            </ion-col>
+            <ion-col col-5 class="plr_10p ptm_2p colwidth25_932 colwidth50_768">
+              <ion-item class="bg_ec h_56p">
+                <p class="font8 color_b0">ROLE:</p>
+                <p class="font15 color_42">Teacher</p>
+              </ion-item>
+            </ion-col>
+            <ion-col col-4 class="plr_10p ptm_2p colwidth40_932 colwidth100_768 mb_10p_768">
+              <div class="float_right mt_20p"> 
+              <span class="step size-32 color_67 up_arrow" style="opacity:0;"> <i class="icon ion-ios-arrow-up"></i> </span> 
+              </div>
+              <div class="float_right mt_10p mr_5p">
+                <button ion-button class="decline_btn">
+                <p class="fontopensansbold color_fff" >DECLINE</p>
+                </button>
+              </div>
+              <div class="float_right mt_10p">
+                <button ion-button class="accept_btn">
+                <p class="fontopensansbold color_fff" >ACCEPT</p>
+                </button>
+              </div>
+            </ion-col>
+          </ion-row>
+           <ion-row class="bg_ec m_0 mt_1p">
+            <ion-col col-3 class="plr_10p ptm_2p colwidth35_932 colwidth50_768">
+              <!--<ion-item class="bg_grey">
+                <ion-avatar item-start> <img src="assets/images/user.jpg"> </ion-avatar>
+                <p class="font8 color_b0">NAME:</p>
+                <p class="font15 color_42">Frederick Addo</p>
+              </ion-item>-->
+            </ion-col>
+            <ion-col col-5 class="plr_10p ptm_2p colwidth25_932 colwidth50_768">
+              <ion-item class="bg_ec h_56p">
+                <p class="font8 color_b0">ROLE:</p>
+                <p class="font15 color_42">Principal</p>
+              </ion-item>
+            </ion-col>
+            <ion-col col-4 class="plr_10p ptm_2p colwidth40_932 colwidth100_768 mb_10p_768">
+              <div class="float_right mt_20p"> <span class="step size-32 color_67 up_arrow" style="opacity:0;"> <i class="icon ion-ios-arrow-up"></i> </span> </div>
+              <div class="float_right mt_10p mr_5p">
+                <button ion-button class="decline_btn">
+                <p class="fontopensansbold color_fff" >DECLINE</p>
+                </button>
+              </div>
+              <div class="float_right mt_10p">
+                <button ion-button class="accept_btn">
+                <p class="fontopensansbold color_fff" >ACCEPT</p>
+                </button>
+              </div>
+            </ion-col>
+          </ion-row>
+          </div>
+        </ion-grid>
+        <ion-grid class="">
+          <ion-row class="bg_grey m_0">
+            <ion-col col-3 class="plr_10p ptm_2p colwidth35_932 colwidth50_768">
+              <ion-item class="bg_grey">
+                <ion-avatar item-start> <img src="assets/images/user.jpg"> </ion-avatar>
+                <p class="font8 color_b0">FAMILY:</p>
+                <p class="font15 color_42">Way's</p>
+              </ion-item>
+            </ion-col>
+            <ion-col col-5 class="plr_10p ptm_2p colwidth25_932 colwidth50_768">
+              <ion-item class="bg_grey h_56p">
+                <p class="font8 color_b0">ROLE:</p>
+                <p class="font15 color_42">Teacher, Principal</p>
+              </ion-item>
+            </ion-col>
+            <ion-col col-4 class="plr_10p ptm_2p colwidth40_932 colwidth100_768 mb_10p_768">
+              <div class="float_right mt_20p" (click)="opensubdiv2()"> 
+              <span class="step size-32 color_67 up_arrow" *ngIf ="uparrow1 == '0' "> <i class="icon ion-ios-arrow-up"></i> </span> 
+              <span class="step size-32 color_67 up_arrow" *ngIf ="downarrow1 == '1' "> <i class="icon ion-ios-arrow-down"></i> </span> 
+              </div>
+              <div class="float_right mt_10p mr_5p">
+                <button ion-button class="decline_btn">
+                <p class="fontopensansbold color_fff" >DECLINE</p>
+                </button>
+              </div>
+              <div class="float_right mt_10p">
+                <button ion-button class="accept_btn">
+                <p class="fontopensansbold color_fff" >ACCEPT</p>
+                </button>
+              </div>
+            </ion-col>
+          </ion-row>
+          <div *ngIf ="subdiv2 == '1' ">
+          <ion-row class="bg_ec m_0">
+            <ion-col col-3 class="plr_10p ptm_2p colwidth35_932 colwidth50_768">
+              <ion-item class="bg_ec">
+                <ion-avatar item-start> <img src="assets/images/user.jpg"> </ion-avatar>
+                <p class="font8 color_b0">NAME:</p>
+                <p class="font15 color_42">Johnny Way</p>
+              </ion-item>
+            </ion-col>
+            <ion-col col-5 class="plr_10p ptm_2p colwidth25_932 colwidth50_768">
+              <ion-item class="bg_ec h_56p">
+                <p class="font8 color_b0">ROLE:</p>
+                <p class="font15 color_42">Teacher</p>
+              </ion-item>
+            </ion-col>
+            <ion-col col-4 class="plr_10p ptm_2p colwidth40_932 colwidth100_768 mb_10p_768">
+              <div class="float_right mt_20p"> <span class="step size-32 color_67 up_arrow" style="opacity:0;"> <i class="icon ion-ios-arrow-up"></i> </span> </div>
+              <div class="float_right mt_10p mr_5p">
+                <button ion-button class="decline_btn">
+                <p class="fontopensansbold color_fff" >DECLINE</p>
+                </button>
+              </div>
+              <div class="float_right mt_10p">
+                <button ion-button class="accept_btn">
+                <p class="fontopensansbold color_fff" >ACCEPT</p>
+                </button>
+              </div>
+            </ion-col>
+          </ion-row>
+           <ion-row class="bg_ec m_0 mt_1p">
+            <ion-col col-3 class="plr_10p ptm_2p colwidth35_932 colwidth50_576">
+              <ion-item class="bg_ec">
+                <ion-avatar item-start> <img src="assets/images/user.jpg"> </ion-avatar>
+                <p class="font8 color_b0">NAME:</p>
+                <p class="font15 color_42">Elizabeth Way</p>
+              </ion-item>
+            </ion-col>
+            <ion-col col-1 class="pl_10 pr_0p ptm_2p colwidth15_932 colwidth50_576">
+              <ion-item class="bg_ec h_56p">
+                <p class="font8 color_b0">ROLE:</p>
+                <p class="font15 color_42">Student</p>
+              </ion-item>
+            </ion-col>
+             <ion-col col-2 class="plr_10p ptm_2p pos_rel colwidth25_932 colwidth50_576">
+              <ion-list class="width100 pos_rel mt_7p">
+             <ion-item class="bg_ec">
+      		  <ion-label floating>
+                <p class="fontopensansbold font8 color_b0">ROLE:</p>
+              </ion-label>
+                  <ion-select [(ngModel)]="role" interface="popover">
+                    <ion-option value="2016-2017">2016-2017</ion-option>
+                    <ion-option value="2017-2018">2017-2018</ion-option>
+                    <ion-option value="2018-2019">2018-2019</ion-option>
+                  </ion-select>
+                </ion-item>
+  		</ion-list>
+            
+          </ion-col>
+             <ion-col col-2 class="plr_10p ptm_2p pos_rel colwidth25_932 colwidth50_576">
+              <ion-list class="width100 pos_rel mt_7p">
+             <ion-item class="bg_ec">
+      		  <ion-label floating>
+                <p class="fontopensansbold font8 color_b0">ROLE:</p>
+              </ion-label>
+                  <ion-select [(ngModel)]="role1" interface="popover">
+                    <ion-option value="Year-1">Year-1</ion-option>
+                    <ion-option value="Year-2">Year-2</ion-option>
+                    <ion-option value="Year-3">Year-3</ion-option>
+                  </ion-select>
+                </ion-item>
+  		</ion-list>
+            
+            </ion-col>
+            <ion-col col-4 class="plr_10p ptm_2p colwidth100_932 mb_10p_768">
+              <div class="float_right mt_20p"> <span class="step size-32 color_67 up_arrow" style="opacity:0;"> <i class="icon ion-ios-arrow-up"></i> </span> </div>
+              <div class="float_right mt_10p mr_5p">
+                <button ion-button class="decline_btn">
+                <p class="fontopensansbold color_fff" >DECLINE</p>
+                </button>
+              </div>
+              <div class="float_right mt_10p">
+                <button ion-button class="accept_btn">
+                <p class="fontopensansbold color_fff" >ACCEPT</p>
+                </button>
+              </div>
+            </ion-col>
+          </ion-row>
+          </div>
+          </ion-grid>
+          <ion-grid>
+           <ion-row class="bg_grey m_0">
+            <ion-col col-3 class="plr_10p ptm_2p colwidth35_932 colwidth50_768">
+              <ion-item class="bg_grey">
+                <ion-avatar item-start> <img src="assets/images/user.jpg"> </ion-avatar>
+                <p class="font8 color_b0">NAME:</p>
+                <p class="font15 color_42">Peter Parker</p>
+              </ion-item>
+            </ion-col>
+            <ion-col col-5 class="plr_10p ptm_2p colwidth25_932 colwidth50_768">
+              <ion-item class="bg_grey h_56p">
+                <p class="font8 color_b0">ROLE:</p>
+                <p class="font15 color_42">Teacher</p>
+              </ion-item>
+            </ion-col>
+            <ion-col col-4 class="plr_10p ptm_2p colwidth40_932 colwidth100_768 mb_10p_768">
+              <div class="float_right mt_20p"> <span class="step size-32 color_67 up_arrow" style="opacity:0;"> <i class="icon ion-ios-arrow-up"></i> </span> </div>
+              <div class="float_right mt_10p mr_5p">
+                <button ion-button class="decline_btn">
+                <p class="fontopensansbold color_fff" >DECLINE</p>
+                </button>
+              </div>
+              <div class="float_right mt_10p">
+                <button ion-button class="accept_btn">
+                <p class="fontopensansbold color_fff" >ACCEPT</p>
+                </button>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+      <div id="inactiveapplication" class="tab-pane fade"> 
+        <!--<h3>Menu 1</h3>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>--> 
+      </div>
+    </div>
+  </div>
+</ion-content>

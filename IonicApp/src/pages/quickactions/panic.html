@@ -1,0 +1,52 @@
+<ion-header class="fontopensansbold">
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <div class="back_arrow float_left color_fff" (click)="goBack()">
+      <div class="float_left"><span class="step size-32 font40"> <i class="icon ion-ios-arrow-left"></i> </span></div>
+      <div class="float_left pl_10 lh_56 fontopensansreg font18"><span>Back</span></div>
+    </div>
+    <ion-title class="text_center p_l_5">Panic</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list class="">
+    <ion-row>
+      <ion-col col-12>
+        <div class="width65 w_pain  m_0a mt_40p ">
+          <ion-list>
+            <ion-item>
+              <ion-label floating>
+                <p class="fontopensansbold color_b0">NOTES:</p>
+              </ion-label>
+              <ion-input type="text" class="font18 color_42 fontopensansreg" ></ion-input>
+            </ion-item>
+           </ion-list>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12 class="p_t_0 p_b_0">
+        <div class="width70 m_0a dis_flex w_pain">
+          <div class=" m_25a0">
+            <button ion-button class="pain_btn" >
+            <p class="fontopensansbold font18 pain_font">Fire</p>
+            </button>
+          </div>
+          <div class=" m_25a0">
+            <button ion-button class="pain_btn" >
+            <p class="fontopensansbold font18 pain_font">Intruder</p>
+            </button>
+          </div>
+          <div class=" m_25a0">
+            <button ion-button class="pain_btn">
+            <p class="fontopensansbold font18 pain_font">Other Panic</p>
+            </button>
+          </div>
+       </div>
+      </ion-col>
+    </ion-row>
+  </ion-list>
+ </ion-content>

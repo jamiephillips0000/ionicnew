@@ -1,0 +1,18 @@
+page-tempteacherapply {
+	.back-button.show-back-button {display: none;}
+.back_arrow{position: absolute; left: 15px; z-index:1; top:0px;}
+.from_date {right: 5px;}
+.to_date {right: 5px;}
+.equipment_div .text-input-md {margin: 0px 0px;}
+.equipment_div .list-md .item-block .item-inner{background-color:#eceff1; border-bottom: 2px solid #673ab7 !important;}
+.minus_arrow_set{background-color: #b0bec5; position: absolute;top: 10px; right: 5px; color: #fff; font-size: 17px; border-radius: 50%; padding: 3px 10px;}
+.equipment_div .list-md {margin: -1px 0 5px;}
+.datetime-md {padding: 6px 8px 3px 0px;}
+
+/*For IOS*/
+.equipment_div .text-input-ios {margin: 0px 0px;}
+.equipment_div .list-ios .item-block .item-inner{background-color:#eceff1; border-bottom: 2px solid #673ab7 !important;}
+.equipment_div .list-ios {margin: -1px 0 5px;}
+.datetime-ios {padding: 6px 8px 3px 0px;}
+
+}

@@ -1,0 +1,9 @@
+page-listofteachers-principal {
+	.back-button.show-back-button {display: none;}
+	.back_arrow{position: absolute; left: 15px; z-index:1; top:0px;}
+	.row{margin-left:-21px; margin-right:-21px;}
+	.plus_arrow_set {top: 11px; right: 15px;}
+	.trash_icon{position: absolute; right: 22px;top: 6px;font-size: 30px; color: #cfd8dc;}
+	.subject_text{width: fit-content;background-color: #cfd8dc; padding: 2px 20px; border-radius: 11px; font-size: 13px;}
+	.avtar_img{height: 30px; width: 30px; border-radius: 50%;}
+}

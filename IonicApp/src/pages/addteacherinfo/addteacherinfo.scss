@@ -1,0 +1,19 @@
+page-addteacherinfo {
+.datetime-md {padding: 6px 8px 3px 0px;}
+
+.select-text{color:#424242; font-size:18px;}
+.select-md{padding-top:0 !important;}
+.select-md .select-icon .select-icon-inner {color: #673ab7;}
+.selectitem .label-md[floating]{margin-top:5px !important; margin-bottom:7px !important;}
+
+.item-label-floating .select-md{padding-bottom:0px;}
+
+/*For IOS*/
+.datetime-ios {padding: 6px 8px 3px 0px;}
+
+.select-ios{padding-top:0 !important;}
+.select-ios .select-icon .select-icon-inner {color: #673ab7;}
+.selectitem .label-ios[floating]{margin-top:5px !important; margin-bottom:7px !important;}
+
+.item-label-floating .select-ios{padding-bottom:0px;}
+}

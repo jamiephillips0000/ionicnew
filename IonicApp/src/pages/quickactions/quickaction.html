@@ -1,0 +1,49 @@
+<ion-header class="fontopensansbold">
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <div class="back_arrow float_left color_fff" (click)="goBack()">
+      <div class="float_left"><span class="step size-32 font40"> <i class="icon ion-ios-arrow-left"></i> </span></div>
+      <div class="float_left pl_10 lh_56 fontopensansreg font18"><span>Back</span></div>
+    </div>
+    <ion-title class="text_center p_l_5">Quick Actions</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list class="quick_list">
+    <ion-row *ngFor="let p of pages" >
+      <ion-col col-6 class="p_t_0 p_b_0" (click)="goto(p[0].title)">
+        <div class=" width100_576 m_00aa ">
+          <div class=" m_25a0 text_right quick_r_25p">
+            <button ion-button class="quick_btn_book"  >
+            <p class="fontopensansbold font18 quick_btn_pri_font">{{p[0].title}} </p>
+            </button>
+          </div>
+        </div>
+      </ion-col>
+      <ion-col col-6 class="p_t_0 p_b_0" (click)="goto(p[1].title)">
+        <div class=" width100_576 ">
+          <div class=" m_25a0 text_left quick_l_25p">
+            <button ion-button class="quick_btn_book">
+            <p class="fontopensansbold font18 quick_btn_pri_font">{{p[1].title}}</p>
+            </button>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+    <!-- <ion-row menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+      <ion-col col-12 class="p_t_0 p_b_0">
+        <div class="width45 width100_576 m_0a ">
+          <div class="width202p m_25a0">
+            <button ion-button class="quick_btn" (click)="absence()">
+            <p class="fontopensansbold font18">{{p.title}}</p>
+            </button>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row> -->
+
+  </ion-list>
+ </ion-content>

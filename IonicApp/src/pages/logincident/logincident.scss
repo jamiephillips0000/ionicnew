@@ -1,0 +1,18 @@
+page-logincident{
+.item-md .toggle-md {padding: 0 0 0 0 !important;}
+.toggle-md {width: 60px !important; height: 30px !important;}
+.toggle-md .toggle-inner {top: 0px !important; width: 29px !important; height: 29px !important;background-color: #b0bec5 !important;}
+.toggle-md .toggle-icon {background-color: #fff !important;}
+.toggle-md.toggle-checked .toggle-inner {-webkit-transform: translate3d(31px, 0, 0) !important;transform: translate3d(31px, 0, 0) !important; background-color: #673ab7 !important;}
+.up_arrow{padding: 6px 11px !important;}
+.item-md.item-block .item-inner {padding-right:0 !important;}
+.item-block {min-height: 4rem !important;}
+
+/*For IOS*/
+.item-ios .toggle-ios {padding: 0 0 0 0 !important;}
+.toggle-ios {width: 60px !important; height: 30px !important;}
+.toggle-ios .toggle-inner {top: 0px !important; width: 29px !important; height: 29px !important;background-color: #b0bec5 !important;}
+.toggle-ios .toggle-icon {background-color: #fff !important;}
+.toggle-ios.toggle-checked .toggle-inner {-webkit-transform: translate3d(31px, 0, 0) !important;transform: translate3d(31px, 0, 0) !important; background-color: #673ab7 !important;}
+.item-ios.item-block .item-inner {padding-right:0 !important;}
+}

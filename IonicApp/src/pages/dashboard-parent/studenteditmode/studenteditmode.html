@@ -1,0 +1,572 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header >
+  <ion-navbar class="bg_header_active">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title class="pl_8">User Profile</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding ng-app="familyparent">
+  <ion-grid ng-controller="familyparentCtrl">
+    <ion-row>
+      <ion-col col-12>
+        <div class="width64 width100_576 m_0a mt_40p text_center">
+          <span class="step size-32 font40 camera_icon"><i class="icon ion-camera"></i> </span>
+        </div>
+        <div class="width64 width100_576 m_0a mt_40p text_center">
+          <button ion-button class="download_btn">
+            <p class="fontopensansbold font10" >UPLOAD PHOTO</p>
+            </button>
+            </div>
+      </ion-col>
+    </ion-row>
+   <div class="width64 width100_576 m_0a ">
+    <ion-row>
+      <ion-col col-6 class="pr_30p">
+ <ion-list class="pos_rel">
+                <ion-item class="mb_15p">
+                  <ion-label floating>
+                    <p class="fontopensansbold color_b0">FULL NAME:</p>
+                  </ion-label>
+                  <ion-input type="number" class="font18 color_42 fontopensansreg" ></ion-input>
+                </ion-item>
+          </ion-list>
+      </ion-col>
+      <ion-col col-6 class="pl_30p">
+          <ion-list class="pos_rel">
+                <ion-item class="mb_15p">
+                  <ion-label floating>
+                    <p class="fontopensansbold color_b0">CLASS:</p>
+                  </ion-label>
+                  <ion-input type="number" class="font18 color_42 fontopensansreg" ></ion-input>
+                </ion-item>
+          </ion-list>
+      </ion-col>
+    </ion-row>
+    </div>
+    <div class="width64 width100_576 m_0a ">
+    <ion-row>
+      <ion-col col-6 class="pr_30p">
+          <ion-list class="pos_rel">
+                <ion-item class="mb_15p">
+                  <ion-label floating>
+                    <p class="fontopensansbold color_b0">BIRTHDAY</p>
+                  </ion-label>
+                 <!-- <ion-input type="text" class="font18 color_42 fontopensansreg" ></ion-input>-->
+                  <!--<ion-datetime id="datepicker"></ion-datetime>-->
+                <!--  <p class="fontopensansbold color_b0 font10">BIRTHDAY:</p>-->
+                  <ion-datetime displayFormat="DD.MMM.YYYY" [(ngModel)]="event.month"></ion-datetime>
+                 </ion-item>
+          </ion-list>
+      </ion-col>
+      <ion-col col-6 class="pl_30p">
+          <ion-list class="pos_rel">
+                <ion-item class="mb_15p">
+                  <ion-label floating>
+                    <p class="fontopensansbold color_b0">PHONE:</p>
+                  </ion-label>
+                  <ion-input type="number" class="font18 color_42 fontopensansreg" ></ion-input>
+                </ion-item>
+          </ion-list>
+      </ion-col>
+    </ion-row>
+    </div>
+     <div class="width64 width100_576 m_0a ">
+    <ion-row>
+      <ion-col col-6 class="pr_30p">
+          <ion-list class="pos_rel">
+                <ion-item class="mb_15p">
+                  <ion-label floating>
+                    <p class="fontopensansbold color_b0">ROLE:</p>
+                  </ion-label>
+                  <ion-input type="text" class="font18 color_42 fontopensansreg" ></ion-input>
+                </ion-item>
+          </ion-list>
+          <!--<span class="step size-32 down_arrow_icon_pos font40 color_67" ng-click="addparent()"> <i class="icon ion-android-arrow-dropdown-circle"></i> </span>-->
+          <!--<span class="step size-32 down_arrow_set"> <i class="icon ion-ios-arrow-down"></i> </span>-->
+      </ion-col>
+      <ion-col col-6 class="pl_30p">
+          <ion-list class="pos_rel">
+                <ion-item class="mb_15p">
+                  <ion-label floating>
+                    <p class="fontopensansbold color_b0">E-MAIL:</p>
+                  </ion-label>
+                  <ion-input type="text" class="font18 color_42 fontopensansreg" ></ion-input>
+                </ion-item>
+          </ion-list>
+      </ion-col>
+    </ion-row>
+    </div>
+     <ion-row>
+      <ion-col col-12 class="pl_0p pr_0p">
+        <div class="width64 width100_576 m_0a">
+          <ion-list class="pos_rel">
+                <ion-item class="">
+                  <ion-label floating>
+                    <p class="fontopensansbold color_b0">ADDRESS:</p>
+                  </ion-label>
+                  <ion-input type="text" class="font18 color_42 fontopensansreg" ></ion-input>
+                </ion-item>
+                <span class="step size-32 plus_arrow_set" ng-click="addparent()"> <i class="icon ion-android-add"></i> </span>
+          </ion-list>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+    	<ion-col col-12 class="pl_0p pr_0p">
+        <div class="width64 width100_576 m_0a">
+        	 <div class="float_left width100 bg_grey mb_5p pos_rel">
+                <div class="float_left width25">
+                  <input class="input-{{$index}} lh_49 border_none bg_grey pl_15p fontopensansreg" value="Address Name" disabled/>
+                 </div>
+                 <div class="float_left width49 text_center">
+                 	<p class="fontopensansreg font12 color_b0 lh_50p">Primary</p>
+                 </div>
+                 <div class="float_right pr_15p mt_7p">
+                  <!--<span class="step size-32 font40 minus_icon_pos color_grey" ng-click="delparent($index)"> <i class="icon ion-minus-circled"></i> </span>-->
+                 <!-- <span class="step size-32 minus_arrow_set" ng-click="delparent($index)"> <i class="icon ion-android-remove"></i> </span>-->
+                  <span class="step size-32 minus_arrow_set"> <i class="icon ion-android-remove"></i> </span>
+                  </div>
+                 </div>
+                 </div>
+        </ion-col>
+    </ion-row>
+     <ion-row>
+    	<ion-col col-12 class="pl_0p pr_0p">
+        <div class="width64 width100_576 m_0a">
+        	 <div class="float_left width100 bg_grey mb_5p pos_rel">
+                <div class="float_left width25">
+                  <input class="input-{{$index}} lh_49 border_none bg_grey pl_15p fontopensansreg" value="Address Name" disabled/>
+                 </div>
+                 <div class="float_left width49 text_center">
+                 	<p class="fontopensansreg font12 color_b0 lh_50p">Secondary</p>
+                 </div>
+                 <div class="float_right pr_15p mt_7p">
+                  <!--<span class="step size-32 font40 minus_icon_pos color_grey" ng-click="delparent($index)"> <i class="icon ion-minus-circled"></i> </span>-->
+                 <!-- <span class="step size-32 minus_arrow_set" ng-click="delparent($index)"> <i class="icon ion-android-remove"></i> </span>-->
+                  <span class="step size-32 minus_arrow_set"> <i class="icon ion-android-remove"></i> </span>
+                  </div>
+                 </div>
+                 </div>
+        </ion-col>
+    </ion-row>
+    <!--SICKNESS DIV START-->
+     <div class="width63 width100_576 m_0a ">
+    <ion-row>
+      <ion-col col-12 class="bg_grey">
+          <div class="float_left">
+          	<p class="color_42 font18 fontopensansreg lh_40 pl_15p">Sickness</p>
+          </div>
+          <div class="float_right">
+          	<button ion-button class="plus_btn">
+           	 <p class="fontopensansbold font18">+</p>
+            </button>
+          </div>
+          <div class="float_right">
+          	<button ion-button class="activities_btn">
+           	 <p class="fontopensansbold">ACTIVITIES</p>
+            </button>
+          </div>
+      </ion-col>
+     </ion-row>
+     <ion-row>
+      <ion-col col-6 class="bg_ec sickness_div pl_30p pr_30p">
+            <ion-item class="mb_15p bg_ec">
+                  <ion-label floating class="pl_40p">
+                    <p class="fontopensansbold color_b0">FROM:</p>
+                  </ion-label>
+                 <ion-datetime displayFormat="DD.MMM.YYYY" [(ngModel)]="fromdate1.month"></ion-datetime>
+                </ion-item>
+                <div class="from_date">
+            <ion-icon name="ios-calendar-outline" class="icon_calender"></ion-icon>
+          </div>
+      </ion-col>
+        <ion-col col-6 class="bg_ec sickness_div pl_30p pr_30p">
+            <ion-item class="mb_15p bg_ec">
+                  <ion-label floating class="pl_40p">
+                    <p class="fontopensansbold color_b0">TO:</p>
+                  </ion-label>
+                  <ion-datetime displayFormat="DD.MMM.YYYY" [(ngModel)]="todate1.month"></ion-datetime>
+                </ion-item>
+                <div class="from_date">
+            <ion-icon name="ios-calendar-outline" class="icon_calender"></ion-icon>
+          </div>
+           <div class="float_right minus_btn">
+           	 <p>-</p>
+          </div>
+      </ion-col>
+      <ion-col col-12 class="bg_ec information_txtbox pl_30p pr_30p">
+            <ion-item class="mb_15p bg_ec">
+                  <ion-label floating class="pl_40p">
+                    <p class="fontopensansbold color_b0">INFORMATION:</p>
+                  </ion-label>
+                  <ion-input type="text" class="font18 color_42 fontopensansreg"></ion-input>
+                </ion-item>
+      </ion-col>
+     </ion-row>
+    </div>
+    <!--SICKNESS DIV OVER-->
+    <!--NOTES DIV START-->
+     <div class="width64 width100_576 m_0a ">
+    <ion-row>
+      	<ion-col col-12>
+      	<ion-list class="pos_rel">
+            <div>
+                <ion-item class="mb_15p">
+                  <ion-label floating>
+                    <p class="fontopensansbold color_b0">NOTE:</p>
+                  </ion-label>
+                  <ion-input type="text" class="font18 color_42 fontopensansreg" #notename></ion-input>
+                </ion-item>
+                <!--<span class="step size-32 plus_icon_pos font40 color_67" ng-click="addparent()"> <i class="icon ion-plus-circled"></i> </span>-->
+                <span class="step size-32 plus_arrow_set" (click)="addNote(notename.value)"> <i class="icon ion-android-add"></i> </span>
+                <div *ngFor="let note of notes" class="float_left width100 bg_grey mb_5p pos_rel">
+                <div class="float_left width25">
+                  <input value="{{note.notename}}" class="lh_49 border_none bg_grey pl_15p" disabled/>
+                 </div>
+                 <div class="float_right pr_15p mt_7p">
+                  <!--<span class="step size-32 font40 minus_icon_pos color_grey" ng-click="delparent($index)"> <i class="icon ion-minus-circled"></i> </span>-->
+                  <span class="step size-32 minus_arrow_set" (click)="removeNote(note)"> <i class="icon ion-android-remove"></i> </span>
+                 <!-- <button ion-button class="accept_btn" (click)="removeTeacher(teacher)">
+               		 <p class="fontopensansbold color_fff" >CLOSE</p>
+                  </button>-->
+                  </div>
+                 </div>
+              </div>
+          </ion-list>
+         </ion-col>
+      </ion-row>
+    </div>
+    <!--NOTES DIV OVER-->
+   <!--PARENTS DIV START-->
+   <ion-row>
+      <ion-col col-12 class="pl_0p pr_0p">
+        <div class="width64 width100_576 m_0a">
+          <ion-list class="pos_rel">
+                <ion-item class="">
+                  <ion-label floating>
+                    <p class="fontopensansbold color_b0">PARENT(S):</p>
+                  </ion-label>
+                  <ion-input type="text" class="font18 color_42 fontopensansreg" ></ion-input>
+                </ion-item>
+                 <div class="width64 width100_576 m_0a text_center">
+          <button ion-button class="upload_btn">
+            <p class="fontopensansbold font10" >UPLOAD PHOTO</p>
+            </button>
+            </div>
+                <span class="step size-32 plus_arrow_set" ng-click="addparent()"> <i class="icon ion-android-add"></i> </span>
+          </ion-list>
+        </div>
+      </ion-col>
+    </ion-row>
+   <!--PARENTS DIV END-->
+   <!--PARENTS SUB DIV START-->
+    <div class="width63 width100_576 m_0a">
+    <ion-row>
+        <ion-col col-12 class="bg_grey border_radius2p">
+        <div class="float_left width33 width50_932">
+         <div class="float_left plr_10p mt_5p">
+      			<img src="assets/images/user.jpg" class="avtar_img">
+            </div>
+            <div class="float_left"><p class="font15 color_42 fontopensansreg lh_50p">Robert Smith</p></div>
+      </div>
+      <div class="float_left width17 width40_932">
+          <div class="float_left mt_15p"> <span class="step size-32 color_67 up_arrow"> <i class="icon ion-ios-arrow-up"></i> </span> </div>
+          <div class="float_left pl_15p">
+            <p class="font12 color_42 lh_50p">Primary</p>
+          </div>
+      </div>
+      <div class="float_left width14 width50_932">
+          <div class="float_left mt_15p mr_10p"> <span class="step size-32 color_67 up_arrow"> <i class="icon ion-ios-arrow-up"></i> </span> </div>
+          <div class="float_left mt_15p"> <span class="step size-32 color_67 up_arrow"> <i class="icon ion-ios-arrow-up"></i> </span> </div>
+      </div>
+            <div class="float_left mr_10p mt_5p">
+            <ion-item class="bg_grey">
+              <ion-toggle checked="true"></ion-toggle>
+            </ion-item>
+          </div>
+          <div class="float_left mt_7p">
+          	<button ion-button class="address_btn">
+            <p class="fontopensansbold font10" >ADDRESS</p>
+            </button>
+          </div>
+           <div class="float_right">
+            <span class="step size-32 minus_arrow_set" style="top:16px;" > <i class="icon ion-android-remove"></i> </span>
+           </div>
+        </ion-col>
+      </ion-row>
+       </div>
+   <!--PARENTS SUB DIV END-->
+    <!--PARENTS SUB DIV START-->
+    <div class="width63 width100_576 m_0a">
+    <ion-row>
+        <ion-col col-12 class="bg_grey border_radius2p">
+        <div class="float_left width33 width50_932">
+         <div class="float_left plr_10p mt_5p">
+      			<img src="assets/images/user.jpg" class="avtar_img">
+            </div>
+            <div class="float_left"><p class="font15 color_42 fontopensansreg lh_50p">Robert Smith</p></div>
+      </div>
+      <div class="float_left width17 width40_932">
+          <div class="float_left mt_15p"> <span class="step size-32 color_67 up_arrow"> <i class="icon ion-ios-arrow-up"></i> </span> </div>
+          <div class="float_left pl_15p">
+            <p class="font12 color_42 lh_50p">Secondary</p>
+          </div>
+      </div>
+      <div class="float_left width14 width50_932">
+          <div class="float_left mt_15p mr_10p"> <span class="step size-32 color_67 up_arrow"> <i class="icon ion-ios-arrow-up"></i> </span> </div>
+          <div class="float_left mt_15p"> <span class="step size-32 color_67 up_arrow"> <i class="icon ion-ios-arrow-up"></i> </span> </div>
+      </div>
+            <div class="float_left mr_10p mt_5p">
+            <ion-item class="bg_grey">
+              <ion-toggle checked="true"></ion-toggle>
+            </ion-item>
+          </div>
+          <div class="float_left mt_7p">
+          	<button ion-button class="address_btn">
+            <p class="fontopensansbold font10" >ADDRESS</p>
+            </button>
+          </div>
+           <div class="float_right">
+            <span class="step size-32 minus_arrow_set" style="top:16px;" > <i class="icon ion-android-remove"></i> </span>
+           </div>
+        </ion-col>
+      </ion-row>
+       </div>
+   <!--PARENTS SUB DIV END-->
+    
+    <ion-row>
+    <ion-col col-12 class="pl_0p pl_0p">
+    <div class="width64 width100_576 m_0a fontopensansreg radios">
+    <ion-list radio-group>
+    <ion-item>
+   		<ion-radio value="golang" checked="true"></ion-radio>
+        <ion-label class="font18 color_42">Can go home on their own</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-radio value="rust"></ion-radio>
+        <ion-label class="font18 color_42">Must be collected</ion-label>
+        </ion-item>
+	</ion-list>
+    </div>
+    </ion-col>
+    </ion-row>
+     <ion-row>
+      <ion-col col-12 class="pl_0p pr_0p">
+        <div class="width64 width100_576 m_0a">
+          <ion-list class="pos_rel">
+                <ion-item class="">
+                  <ion-label floating>
+                    <p class="fontopensansbold color_b0">PERMISSIONS:</p>
+                  </ion-label>
+                  <ion-input type="text" class="font18 color_42 fontopensansreg" ></ion-input>
+                </ion-item>
+                 <div class="width64 width100_576 m_0a text_center">
+          <button ion-button class="upload_btn">
+            <p class="fontopensansbold font10" >UPLOAD PHOTO</p>
+            </button>
+            </div>
+                <span class="step size-32 plus_arrow_set" ng-click="addparent()"> <i class="icon ion-android-add"></i> </span>
+          </ion-list>
+        </div>
+      </ion-col>
+    </ion-row>
+     <!--PRIMARY DIV START-->
+    <div class="width63 width100_576 m_0a">
+    <ion-row>
+        <ion-col col-12 class="bg_grey border_radius2p">
+        <div class="float_left mr_10p">
+            <ion-item class="bg_grey">
+              <ion-toggle checked="true"></ion-toggle>
+            </ion-item>
+          </div>
+          <div class="float_left mt_11p"> <span class="step size-32 color_67 up_arrow"> <i class="icon ion-ios-arrow-up"></i> </span> </div>
+          <div class="float_left pl_15p">
+            <p class="font18 color_42 pt_8p_b_7p">Primary</p>
+          </div>
+           <div class="float_right mt_11p" ng-click="showprimarysubdiv()"> <span class="step size-32 minus_arrow_set" ng-show ="minusarrow == '1' "> <i class="icon ion-android-remove"></i> </span>
+           																   <span class="step size-32 plus_arrow_set plus_arrow_pos" ng-show ="plusarrow == '1' "> <i class="icon ion-android-add"></i> </span>
+           				 </div>
+        </ion-col>
+      </ion-row>
+       </div>
+    <div class="width63 width100_576 m_0a primary_div" ng-show ="primarysubdiv == '1' ">
+        	<ion-row>
+            	<ion-col col-12 class="bg_ec plr_30p">
+               <ion-list class="pos_rel">
+                <ion-item class="mb_15p">
+                 <ion-avatar item-start class="mb_0p"> <img src="assets/images/user.jpg"> </ion-avatar>
+                  <ion-label floating>
+                    <p class="fontopensansbold color_b0">CONTACT PERSON*:</p>
+                  </ion-label>
+                  <ion-input type="text" class="font18 color_42 fontopensansreg" ></ion-input>
+                  
+                </ion-item>
+          </ion-list>
+          <!--<span class="step size-32 down_arrow_icon_pos font40 color_67" ng-click="addparent()"> <i class="icon ion-android-arrow-dropdown-circle"></i> </span>-->
+          <span class="step size-32 down_arrow_set"> <i class="icon ion-ios-arrow-down"></i> </span>
+            	</ion-col>
+            </ion-row>
+            <ion-row>
+      <ion-col col-6 class="p_0 plr_30p bg_ec">
+        <div class="pos_rel fromtodiv" >
+          <ion-list>
+            <ion-item>
+              <ion-label floating>
+                <p class="fontopensansbold color_b0">START:</p>
+              </ion-label>
+              <ion-datetime displayFormat="DD.MMM.YYYY" [(ngModel)]="startdate1.month"></ion-datetime>
+            </ion-item>
+           </ion-list>
+            <div class="from_date"><ion-icon name="ios-calendar-outline" class="icon_calender"></ion-icon></div>
+        </div>
+      </ion-col>
+      <ion-col col-6 class="p_0 plr_30p bg_ec">
+        <div class=" pos_rel fromtodiv">
+          <ion-list>
+            <ion-item>
+              <ion-label floating>
+                <p class="fontopensansbold color_b0">END:</p>
+              </ion-label>
+             <ion-datetime displayFormat="DD.MMM.YYYY" [(ngModel)]="enddate1.month"></ion-datetime>
+            </ion-item>
+           </ion-list>
+           <div class="to_date"><ion-icon name="ios-calendar-outline" class="icon_calender"></ion-icon></div>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+    	<ion-col col-12 class="plr_30p bg_ec">
+        	<ion-list class="pos_rel">
+                <ion-item class="">
+                  <ion-label floating>
+                    <p class="fontopensansbold color_b0">PHONE:</p>
+                  </ion-label>
+                  <ion-input type="text" class="font18 color_42 fontopensansreg" ></ion-input>
+                </ion-item>
+          </ion-list>
+        </ion-col>
+    </ion-row>
+        </div>
+  <!--PRIMARY DIV END-->
+  <!--SECONDARY DIV START-->
+  <div class="width63 width100_576 m_0a mt_20p">
+    <ion-row>
+        <ion-col col-12 class="bg_grey border_radius2p">
+        <div class="float_left mr_10p">
+            <ion-item class="bg_grey">
+              <ion-toggle checked="false"></ion-toggle>
+            </ion-item>
+          </div>
+          <div class="float_left mt_11p"> <span class="step size-32 color_67 up_arrow"> <i class="icon ion-ios-arrow-up"></i> </span> </div>
+          <div class="float_left pl_15p">
+            <p class="font18 color_fff pt_8p_b_7p">Secondary</p>
+          </div>
+           <div class="float_right mt_11p" ng-click="showsecondarysubdiv()"> <span class="step size-32 minus_arrow_set" ng-show ="minusarrow1 == '1' "> <i class="icon ion-android-remove"></i> </span>
+           					<span class="step size-32 plus_arrow_set plus_arrow_pos" ng-show ="plusarrow1 == '1' "> <i class="icon ion-android-add"></i> </span>
+ </div>
+        </ion-col>
+      </ion-row>
+       </div>
+    <div class="width63 width100_576 m_0a primary_div" ng-show ="secondarydiv == '1' ">
+        	<ion-row>
+            	<ion-col col-12 class="bg_ec plr_30p">
+               <ion-list class="pos_rel">
+                <ion-item class="mb_15p">
+                 <ion-avatar item-start class="mb_0p"> <img src="assets/images/user.jpg"> </ion-avatar>
+                  <ion-label floating>
+                    <p class="fontopensansbold color_b0">CONTACT PERSON*:</p>
+                  </ion-label>
+                  <ion-input type="text" class="font18 color_42 fontopensansreg" ></ion-input>
+                  
+                </ion-item>
+          </ion-list>
+          <!--<span class="step size-32 down_arrow_icon_pos font40 color_67" ng-click="addparent()"> <i class="icon ion-android-arrow-dropdown-circle"></i> </span>-->
+          <span class="step size-32 down_arrow_set"> <i class="icon ion-ios-arrow-down"></i> </span>
+            	</ion-col>
+            </ion-row>
+            <ion-row>
+      <ion-col col-6 class="p_0 plr_30p bg_ec">
+        <div class="pos_rel fromtodiv" >
+          <ion-list>
+            <ion-item>
+              <ion-label floating>
+                <p class="fontopensansbold color_b0">START:</p>
+              </ion-label>
+              <ion-datetime displayFormat="DD.MMM.YYYY" [(ngModel)]="startdate2.month"></ion-datetime>
+            </ion-item>
+           </ion-list>
+            <div class="from_date"><ion-icon name="ios-calendar-outline" class="icon_calender"></ion-icon></div>
+        </div>
+      </ion-col>
+      <ion-col col-6 class="p_0 plr_30p bg_ec">
+        <div class=" pos_rel fromtodiv">
+          <ion-list>
+            <ion-item>
+              <ion-label floating>
+                <p class="fontopensansbold color_b0">END:</p>
+              </ion-label>
+              <ion-datetime displayFormat="DD.MMM.YYYY" [(ngModel)]="enddate2.month"></ion-datetime>
+            </ion-item>
+           </ion-list>
+           <div class="to_date"><ion-icon name="ios-calendar-outline" class="icon_calender"></ion-icon></div>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+    	<ion-col col-12 class="plr_30p bg_ec">
+        	<ion-list class="pos_rel">
+                <ion-item class="">
+                  <ion-label floating>
+                    <p class="fontopensansbold color_b0">PHONE:</p>
+                  </ion-label>
+                  <ion-input type="text" class="font18 color_42 fontopensansreg" ></ion-input>
+                </ion-item>
+          </ion-list>
+        </ion-col>
+    </ion-row>
+        </div>
+  <!--SECONDARY DIV END-->
+  <ion-row>
+      <ion-col col-12 class="pl_0p pr_0p">
+        <div class="width64 width100_576 m_0a barred_person_div">
+          <ion-list class="pos_rel">
+                <ion-item class="">
+                <ion-avatar item-start class="mb_0p"> <img src="assets/images/user.jpg"> </ion-avatar>
+                  <ion-label floating>
+                    <p class="fontopensansbold color_b0">BARRED PERSON:</p>
+                  </ion-label>
+                  <ion-input type="text" class="font18 color_f4 fontopensansreg" ></ion-input>
+                </ion-item>
+                 <div class="width64 width100_576 m_0a text_center">
+          <button ion-button class="upload_btn">
+            <p class="fontopensansbold font10" >UPLOAD PHOTO</p>
+            </button>
+            </div>
+                <span class="step size-32 plus_arrow_set" ng-click="addparent()"> <i class="icon ion-android-add"></i> </span>
+          </ion-list>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <div class="width45 width100_576 m_0a">
+          <div class="width202p m_40a0">
+            <button ion-button class="login_btn">
+           	 <p class="fontopensansbold font18" (click)="gotoapplicationsregister()">Save</p>
+            </button>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+    </ion-row>
+  </ion-grid>
+</ion-content>

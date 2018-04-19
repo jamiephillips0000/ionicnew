@@ -1,0 +1,205 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header >
+  <ion-navbar class="bg_header_active">
+    <button ion-button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title class="pl_8">Role Call</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <div class="width63 width100_576 m_0a fontopensansreg">
+    <ion-grid>
+      <ion-row>
+         <ion-list class="width100 pos_rel mt_7p">
+             <ion-item class="selectitem">
+      		  <ion-label floating class="mt_5p mb_7p">
+                <p class="fontopensansbold color_b0">ADDRESS:</p>
+              </ion-label>
+                  <ion-select [(ngModel)]="address" interface="popover">
+                    <ion-option value="Address-1">Address-1</ion-option>
+                    <ion-option value="Address-2">Address-2</ion-option>
+                    <ion-option value="Address-3">Address-3</ion-option>
+                  </ion-select>
+                </ion-item>
+  		</ion-list>
+      </ion-row>
+      <ion-row>
+        <ion-col col-4>
+           <ion-list class="width100 pos_rel mt_7p">
+             <ion-item class="selectitem">
+      		  <ion-label floating class="mt_5p mb_7p">
+                <p class="fontopensansbold color_b0">BUILDING:</p>
+              </ion-label>
+                  <ion-select [(ngModel)]="building" interface="popover">
+                    <ion-option value="Building-1">Building-1</ion-option>
+                    <ion-option value="Building-2">Building-2</ion-option>
+                    <ion-option value="Building-3">Building-3</ion-option>
+                  </ion-select>
+                </ion-item>
+  		</ion-list>
+        </ion-col>
+        <ion-col col-4>
+          <ion-list class="width100 pos_rel mt_7p">
+             <ion-item class="selectitem">
+      		  <ion-label floating class="mt_5p mb_7p">
+                <p class="fontopensansbold color_b0">FLOOR:</p>
+              </ion-label>
+                  <ion-select [(ngModel)]="floor" interface="popover">
+                    <ion-option value="Floor-1">Floor-1</ion-option>
+                    <ion-option value="Floor-2">Floor-2</ion-option>
+                    <ion-option value="Floor-3">Floor-3</ion-option>
+                  </ion-select>
+                </ion-item>
+  		</ion-list>
+        </ion-col>
+        <ion-col col-4>
+          <ion-list class="width100 pos_rel mt_7p">
+             <ion-item class="selectitem">
+      		  <ion-label floating class="mt_5p mb_7p">
+                <p class="fontopensansbold color_b0">ROOM:</p>
+              </ion-label>
+                  <ion-select [(ngModel)]="room" interface="popover">
+                    <ion-option value="Room-1">Room-1</ion-option>
+                    <ion-option value="Room-2">Room-2</ion-option>
+                    <ion-option value="Room-3">Room-3</ion-option>
+                  </ion-select>
+                </ion-item>
+  		</ion-list>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-list class="width100 pos_rel mt_7p">
+             <ion-item class="selectitem">
+      		  <ion-label floating class="mt_5p mb_7p">
+                <p class="fontopensansbold color_b0">SUBJECT:</p>
+              </ion-label>
+                  <ion-select [(ngModel)]="subject" interface="popover">
+                    <ion-option value="Math">Math</ion-option>
+                    <ion-option value="Science">Science</ion-option>
+                    <ion-option value="Biology">Biology</ion-option>
+                  </ion-select>
+                </ion-item>
+  		</ion-list>
+      </ion-row>
+      <ion-row>
+        <ion-list class="width100">
+          <ion-item class="">
+            <ion-label floating>
+              <p class="fontopensansbold color_b0">NOTES:</p>
+            </ion-label>
+            <ion-input type="text" class="font18 color_42 fontopensansreg"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12 class="bg_grey mt_30p border_radius2p">
+          <div class="float_left mt_11p" (click)="showyear1()"> 
+          <span class="step size-32 color_67 up_arrow" *ngIf ="uparrow1 == '0' "> <i class="icon ion-ios-arrow-up"></i> </span> 
+          <span class="step size-32 color_67 up_arrow" *ngIf ="downarrow1 == '1' "> <i class="icon ion-ios-arrow-down"></i> </span> 
+          </div>
+          <div class="float_left pl_15p width80 width74_768 width70_576 text_center">
+            <p class="font18 color_42 pt_8p_b_7p">Year 1</p>
+          </div>
+          <div class="float_right">
+            <ion-item class="bg_grey">
+              <ion-toggle checked="true"></ion-toggle>
+            </ion-item>
+          </div>
+        </ion-col>
+      </ion-row>
+      <div *ngIf ="year1div == '1' ">
+        <ion-row>
+          <ion-col col-12 class="bg_ec border_radius2p mt_5p">
+            <div class="float_left pl_15p">
+              <p class="font12 color_42 ptb_11p fontopensansbold">ANDREW</p>
+            </div>
+            <div class="float_right">
+              <ion-item class="bg_ec">
+                <ion-toggle checked="true"></ion-toggle>
+              </ion-item>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-12 class="bg_ec border_radius2p mt_5p">
+            <div class="float_left pl_15p">
+              <p class="font12 color_b0 ptb_11p fontopensansbold">JAMIE</p>
+            </div>
+            <div class="float_right">
+              <ion-item class="bg_ec">
+                <ion-toggle checked="false"></ion-toggle>
+              </ion-item>
+            </div>
+          </ion-col>
+        </ion-row>
+      </div>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12 class="bg_grey border_radius2p">
+          <div class="float_left mt_11p" ng-click="opensubdiv1()"> <span class="step size-32 color_67 up_arrow"> <i class="icon ion-ios-arrow-down"></i> </span> </div>
+          <div class="float_left pl_15p width80 width74_768 width70_576 text_center">
+            <p class="font18 color_42 pt_8p_b_7p">Year 2</p>
+          </div>
+          <div class="float_right">
+            <ion-item class="bg_grey">
+              <ion-toggle checked="true"></ion-toggle>
+            </ion-item>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12 class="bg_grey  border_radius2p">
+          <div class="float_left mt_11p" ng-click="opensubdiv1()"> <span class="step size-32 color_67 up_arrow"> <i class="icon ion-ios-arrow-down"></i> </span> </div>
+          <div class="float_left pl_15p width80 width74_768 width70_576 text_center">
+            <p class="font18 color_42 pt_8p_b_7p">Year 3</p>
+          </div>
+          <div class="float_right">
+            <ion-item class="bg_grey">
+              <ion-toggle checked="true"></ion-toggle>
+            </ion-item>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12 class="bg_grey  border_radius2p">
+          <div class="float_left mt_11p" ng-click="opensubdiv1()"> <span class="step size-32 color_67 up_arrow"> <i class="icon ion-ios-arrow-down"></i> </span> </div>
+          <div class="float_left pl_15p width80 width74_768 width70_576 text_center">
+            <p class="font18 color_42 pt_8p_b_7p">Year 4</p>
+          </div>
+          <div class="float_right">
+            <ion-item class="bg_grey">
+              <ion-toggle checked="true"></ion-toggle>
+            </ion-item>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12>
+          <div class="width45 width100_576 m_0a">
+            <div class="width202p m_40a0">
+              <button ion-button class="login_btn">
+              <p class="fontopensansbold font18">Save</p>
+              </button>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

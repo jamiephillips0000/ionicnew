@@ -1,0 +1,18 @@
+page-eventdetails{
+.event_img{width:100%; height:300px;}
+.avtar_img{height:40px; width:40px; border-radius:50%;}
+.going_btn{width:95px; height:30px; border-radius:15px; background-color:transparent; box-shadow:none; border:2px solid #b0bec5;}
+.invite_btn{width:95px; height:30px; border-radius:15px; background-color:#673ab7; box-shadow:none; border:2px solid #673ab7;}
+.button-md:hover:not(.disable-hover){background-color:transparent !important;}
+.nav-tabs li{width:33.33%;}
+.nav-tabs li a{width:fit-content;}
+
+/*For IOS*/
+.button-ios:hover:not(.disable-hover){background-color:transparent !important;}
+
+@media only screen and (max-width: 767px) {
+		.event_img{height:200px;}
+		.avtar_img_767{margin:0 auto; display:table;}
+		.invites_767{width:fit-content; margin:0 auto !important;}
+	}
+}

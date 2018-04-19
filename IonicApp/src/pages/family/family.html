@@ -1,0 +1,109 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+  <ion-grid class="p_0">
+    <ion-row>
+      <ion-col col-2 class="bg_header_active br_ff">
+        <div class="width100 color_fff">
+          <p class="text_center font9_1024 font14_1600 fontopensansbold lh_15">STEP 1</p>
+        </div>
+      </ion-col>
+      <ion-col col-2 class="bg_header_active br_ff">
+        <div class="width100 color_fff">
+          <p class="text_center font9_1024 font14_1600 fontopensansbold lh_15">STEP 2</p>
+        </div>
+      </ion-col>
+      <ion-col col-2 class="bg_header_active br_ff">
+        <div class="width100 color_fff">
+          <p class="text_center font9_1024 font14_1600 fontopensansbold lh_15">STEP 3</p>
+        </div>
+      </ion-col>
+      <ion-col col-2 class="bg_header_active br_ff">
+        <div class="width100 color_fff">
+          <p class="text_center font9_1024 font14_1600 fontopensansbold lh_15">STEP 4</p>
+        </div>
+      </ion-col>
+      <ion-col col-2 class="bg_header_active br_ff">
+        <div class="width100 color_fff ">
+          <p class="text_center font9_1024 font14_1600 fontopensansbold lh_15">STEP 5</p>
+        </div>
+      </ion-col>
+      <ion-col col-2 class="bg_header_active">
+        <div class="width100 color_fff">
+          <p class="text_center font9_1024 font14_1600 fontopensansbold lh_15">STEP 6</p>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>
+<ion-content padding ng-app="familyparent">
+  <ion-grid ng-controller="familyparentCtrl">
+    <ion-row>
+      <ion-col col-12>
+        <div class="width45 width100_576 m_0a mt_40p">
+          <p class="text_center font30 fontopensansbold lh_15 color_42">Family</p>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <div class="width45 width100_576 m_0a mt_40p">
+          <ion-list class="pos_rel">
+            <div>
+              <div>
+                <ion-item class="mb_15p">
+                  <ion-label floating>
+                    <p class="fontopensansbold color_b0">PARENT(S):</p>
+                  </ion-label>
+                  <ion-input type="text" class="font18 color_42 fontopensansreg" ng-model="newitem"></ion-input>
+                </ion-item>
+                <span class="step size-32 plus_icon_pos font40 color_67" ng-click="addparent()"> <i class="icon ion-plus-circled"></i> </span>
+                <div ng-repeat="item in items" class="pos_rel bg_grey mb_5p">
+                  <input ng-model="item" id="item-{{$index}}" class="input-{{$index}} lh_49 border_none bg_grey pl_15p width91" disabled/>
+                  <span class="step size-32 font40 minus_icon_pos color_grey" ng-click="delparent($index)"> <i class="icon ion-minus-circled"></i> </span> </div>
+              </div>
+            </div>
+          </ion-list>
+        </div>
+      </ion-col>
+    </ion-row>
+     <ion-row>
+      <ion-col col-12>
+        <div class="width45 width100_576 m_0a mt_40p">
+          <ion-list class="pos_rel">
+            <div>
+              <div>
+                <ion-item class="mb_15p">
+                  <ion-label floating>
+                    <p class="fontopensansbold color_b0">STUDENT(S):</p>
+                  </ion-label>
+                  <ion-input type="text" class="font18 color_42 fontopensansreg" ng-model="newitem1"></ion-input>
+                </ion-item>
+                <span class="step size-32 plus_icon_pos font40 color_67" ng-click="addstudent()"> <i class="icon ion-plus-circled"></i> </span>
+                <div ng-repeat="item in items1" class="pos_rel bg_grey mb_5p">
+                  <input ng-model="item" id="item1-{{$index}}" class="input1-{{$index}} lh_49 border_none bg_grey pl_15p width91" disabled/>
+                  <span class="step size-32 font40 minus_icon_pos color_grey" ng-click="delstudent($index)"> <i class="icon ion-minus-circled"></i> </span> </div>
+              </div>
+            </div>
+          </ion-list>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <div class="width45 width100_576 m_0a">
+          <div class="width202p m_40a0">
+            <button ion-button class="login_btn" (click)="gototermsofuse()">
+            <p class="fontopensansbold font18">Save</p>
+            </button>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,38 @@
+page-quickaction-rolecall{
+.item-md .toggle-md {padding: 0 0 0 0 !important;}
+.toggle-md {width: 60px !important; height: 30px !important;}
+.toggle-md .toggle-inner {top: 0px !important; width: 29px !important; height: 29px !important;background-color: #b0bec5 !important;}
+.toggle-md .toggle-icon {background-color: #fff !important;}
+.toggle-md.toggle-checked .toggle-inner {-webkit-transform: translate3d(31px, 0, 0) !important;transform: translate3d(31px, 0, 0) !important; background-color: #673ab7 !important;}
+.up_arrow{padding: 6px 11px !important;}
+.item-md.item-block .item-inner {padding-right:0 !important;}
+.item-block {min-height: 4rem !important;}
+
+.chk_popup {position: absolute; right: -5px;width: 281px; height: auto; top: 67px; border-radius: 2px; -webkit-box-shadow: 0 0 12px 3px rgba(0, 0, 0, 0.05); box-shadow: 0 0 12px 3px rgba(0, 0, 0, 0.05);}
+.chk_popup .radio-md .radio-icon{opacity:0;}
+.text-input[disabled]{opacity:1;}
+.chk_popup .list-md .item-block .item-inner{padding-left:15px;}
+
+.select-text{color:#424242; font-size:18px; line-height:13px;}
+.select-md{padding-top:0 !important;}
+.select-md .select-icon .select-icon-inner {color: #673ab7;}
+.selectitem .label-md[floating]{margin-top:5px !important; margin-bottom:9px !important;}
+
+.item-label-floating .select-md{padding-bottom:0px;}
+.select-md .select-icon{margin-bottom:5px;}
+
+/*For IOS*/
+.item-ios .toggle-ios {padding: 0 0 0 0 !important;}
+.toggle-ios {width: 60px !important; height: 30px !important;}
+.toggle-ios .toggle-inner {top: 0px !important; width: 29px !important; height: 29px !important;background-color: #b0bec5 !important;}
+.toggle-ios .toggle-icon {background-color: #fff !important;}
+.toggle-ios.toggle-checked .toggle-inner {-webkit-transform: translate3d(31px, 0, 0) !important;transform: translate3d(31px, 0, 0) !important; background-color: #673ab7 !important;}
+.item-ios.item-block .item-inner {padding-right:0 !important;}
+.chk_popup .radio-ios .radio-icon{opacity:0;}
+.chk_popup .list-ios .item-block .item-inner{padding-left:15px;}
+.select-ios{padding-top:0 !important;}
+.select-ios .select-icon .select-icon-inner {color: #673ab7;}
+.selectitem .label-ios[floating]{margin-top:5px !important; margin-bottom:9px !important;}
+.item-label-floating .select-ios{padding-bottom:0px;}
+.select-ios .select-icon{margin-bottom:5px;}
+}

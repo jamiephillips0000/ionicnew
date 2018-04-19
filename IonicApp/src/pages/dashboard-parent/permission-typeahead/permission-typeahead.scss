@@ -1,0 +1,17 @@
+page-permission-typeahead {
+	.from_date {top: 25px;left: 0;}
+	.plus_arrow_set{top:25px; right:0px;}
+	
+	.select-text{color:#424242; font-size:18px;}
+.select-md{padding-top:0 !important;}
+.select-md .select-icon .select-icon-inner {color: #673ab7;}
+.selectitem .label-md[floating]{margin-top:5px !important; margin-bottom:7px !important;}
+
+.teacher_img {height: 40px; width: 40px; border-radius: 50%; margin-top: 26px; margin-right: 15px;}
+.upload_btn{width: 130px; height: 30px; border-radius: 15px; background-color: #673ab7; font-size:10.5px;position: absolute; top: 20px; right: 35px;}
+
+/*For IOS*/
+.select-ios{padding-top:0 !important;}
+.select-ios .select-icon .select-icon-inner {color: #673ab7;}
+.selectitem .label-ios[floating]{margin-top:5px !important; margin-bottom:7px !important;}
+}

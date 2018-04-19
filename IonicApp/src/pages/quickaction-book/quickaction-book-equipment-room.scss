@@ -1,0 +1,37 @@
+page-quickaction-book-equipment-room {
+
+.back-button.show-back-button {display: none;}
+.back_arrow{position: absolute; left: 15px; z-index:1; top:0px;}
+.from_date {right: 5px;}
+.to_date {right: 5px;}
+.equipment_div .text-input-md {margin: 0px 0px;}
+.equipment_div .list-md .item-block .item-inner{background-color:#eceff1; border-bottom: 2px solid #673ab7 !important;}
+.minus_arrow_set{background-color: #b0bec5; position: absolute;top: 10px; right: 5px; color: #fff; font-size: 16px; border-radius: 50%; padding: 0 6px;}
+.equipment_div .list-md {margin: -1px 0 5px;}
+.item-label-floating .select-md{padding-bottom:2px; padding-top:7px;}
+.select-text{height:19px; font-size:18px; color:#424242; font-family:open_sansregular; margin-top:-5px;}
+.down_arrow {height:30px; width:30px;font-size: 17px;}
+.down_arrow_pos{right: 0px; top: 25px; left:auto;}
+.chk_popup { position: absolute; right: 0px; width: 281px;  height: auto;  top: 71px; z-index: 1; border-radius: 2px; -webkit-box-shadow: 0 0 12px 3px rgba(0, 0, 0, 0.05); box-shadow: 0 0 12px 3px rgba(0, 0, 0, 0.05);}
+.chk_popup .radio-md .radio-icon{opacity:0;}
+.text-input[disabled]{opacity:1;}
+.chk_popup .list-md .item-block .item-inner{padding-left:15px;}
+.datetime-md {padding: 6px 8px 3px 0px;}
+
+.select-text{color:#424242; font-size:15px;}
+.select-md{padding-top:0 !important;}
+.select-md .select-icon .select-icon-inner {color: #673ab7;}
+.selectitem .label-md[floating]{margin-top:5px !important; margin-bottom:7px !important;}
+
+/*For IOS*/
+.equipment_div .text-input-ios {margin: 0px 0px;}
+.equipment_div .list-ios .item-block .item-inner{background-color:#eceff1; border-bottom: 2px solid #673ab7 !important;}
+.equipment_div .list-ios {margin: -1px 0 5px;}
+.item-label-floating .select-ios{padding-bottom:2px; padding-top:7px;}
+.chk_popup .radio-ios .radio-icon{opacity:0;}
+.chk_popup .list-ios .item-block .item-inner{padding-left:15px;}
+.datetime-ios {padding: 6px 8px 3px 0px;}
+.select-ios{padding-top:0 !important;}
+.select-ios .select-icon .select-icon-inner {color: #673ab7;}
+.selectitem .label-ios[floating]{margin-top:5px !important; margin-bottom:7px !important;}
+}

@@ -1,0 +1,33 @@
+page-inbox {
+	.back-button.show-back-button {display: none;}
+.back_arrow{position: absolute; left: 15px; z-index:1; top:0px;}
+.scroll-content{padding:0 !important;}
+.list-md .item-block .item-inner{padding-left:25px;}
+.text-input-md {margin: 10px 8px 0;}
+.search_icon_pos{position: absolute; top: 6px; left: 0px; transform:rotate(90deg);}
+
+.item-md.item-input.item-input-has-focus .item-inner,
+.item-md.item-input.input-has-focus .item-inner {border-bottom: 1px solid #673ab7 !important;-webkit-box-shadow: none !important;box-shadow: none !important;}
+
+.user_img{height:40px; width:40px; border-radius:50%;}
+.msg_num{background-color: #673ab7;  color: #fff; height: 40px; width: 40px; border-radius: 50%; text-align: center; line-height: 40px;}
+
+.receive_msg{background-color: #eceff1; width:fit-content; padding: 15px 25px;}
+.receive_msg:before {content: "\A"; border-style: solid; border-width: 5px 9px 5px 0; border-color: transparent #eceff1 transparent transparent; position: absolute;  left: -9px; top: 29px;}
+
+.send_msg{background-color:#673ab7; width:fit-content; padding: 15px 25px; color:#fff;}
+.send_msg:before {content: "\A"; border-style: solid; border-width: 5px 9px 5px 0; border-color: transparent #673ab7 transparent transparent; position: absolute; right: -9px; top: 31px; transform: rotate(180deg);}
+
+.bottom{position: absolute; bottom: 0;  width: 59.4%;}
+.bottom .list-md .item-block .item-inner{padding-left:0;}
+.send_btn{height: 60px; width: 60px; background-color: #673ab7; border-radius: 50%; text-align: center; line-height: 60px;position: absolute;right: 25px; bottom: 20px;}
+
+.inboxlist p{white-space: nowrap; overflow: hidden;  text-overflow: ellipsis;}
+
+/*For IOS*/
+.list-ios .item-block .item-inner{padding-left:25px;}
+.text-input-ios {margin: 10px 8px 0;}
+.item-ios.item-input.item-input-has-focus .item-inner,
+.item-ios.item-input.input-has-focus .item-inner {border-bottom: 1px solid #673ab7 !important;-webkit-box-shadow: none !important;box-shadow: none !important;}
+.bottom .list-ios .item-block .item-inner{padding-left:0;}
+}

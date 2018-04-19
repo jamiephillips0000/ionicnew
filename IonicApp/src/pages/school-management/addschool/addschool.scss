@@ -1,0 +1,11 @@
+page-addschool {
+	.back-button.show-back-button {display: none;}
+.back_arrow{position: absolute; left: 15px; z-index:1; top:0px;}
+.floors{width: 50px;height: 22px;border-radius: 11px;background-color: #cfd8dc;}
+.floor_no{background-color: #b0bec5; border-radius: 50%; padding: 4.5px 8px; color:#fff;}
+.building_no{height: 32px; width: 32px; background-color: #dbe1e5; border-radius: 50%;  color: #424242;text-align: center;line-height: 32px;font-size: 10.5px;}
+.room_no{height: 22px; width: 22px; background-color: #673ab7; color: #fff; text-align: center; line-height: 20px; font-size: 10.5px; border-radius:50%;}
+.minus_arrow_set{background-color: #b0bec5; position: absolute; top: 22px; right: 0;  color: #fff; font-size: 17px;  border-radius: 50%;  padding: 3px 10px 3px 10px;}
+.image_div{height: 150px; width: 150px;margin: 0 auto; background-color: #eceff1; border-radius: 50%; line-height: 150px; font-size: 18px; font-family: open_sansregular;color: #673ab7; text-align: center;}
+.file_chooser{height: 150px; width: 150px; border-radius: 50%;position: absolute; top: 5px;  opacity: 0;}
+}

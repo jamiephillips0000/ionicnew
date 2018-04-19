@@ -1,0 +1,69 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header >
+  <ion-navbar class="bg_header_active">
+    <button ion-button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title class="pl_8">Mobile Stage  </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+<div class="m_0a width64_1 width100_576">
+<ion-grid class="bg_grey mt_30p">
+<ion-row class="m_0">
+<ion-col col-12>
+<div class="float_left book_div">
+<ion-buttons>
+      <button ion-button icon-only (click)="addEvent()" class="book_btn">
+        <p>Book</p>
+      </button>
+    </ion-buttons>
+ </div>
+ <div class="width100 float_left width_75_450">
+ 	<p class="text_center font18 fontopensansreg color_42 lh_38">{{ viewTitle }}</p>
+ </div>
+ 	<div class="float_right toggle_div">
+    <div class="float_left">
+    <ion-buttons>
+            <button ion-button [disabled]="isToday" (click)="today()" class="today_btn mt_7p">
+            <p>TODAY</p>
+            </button>
+ </ion-buttons>
+ </div>
+ <div class="float_left">
+         <ion-item class="bg_grey">
+           <ion-toggle checked="true"></ion-toggle>
+        </ion-item>
+        </div>
+    </div>
+ </ion-col>
+</ion-row>
+</ion-grid>
+  <calendar [eventSource]="eventSource"
+        [calendarMode]="calendar.mode"
+        [currentDate]="calendar.currentDate"
+        (onEventSelected)="onEventSelected($event)"
+        (onTitleChanged)="onViewTitleChanged($event)"
+        (onTimeSelected)="onTimeSelected($event)"
+        step="30"
+        class="calendar">
+  </calendar>
+  <!--THIS IS STATIC VALUE ITS REMOVE WHEN WE DO FUNCTIONALITY-->
+  <ion-grid class="p_0">
+  	<ion-row class="m_0">
+    	<ion-col col-12 class="bt2_bb1_a9">
+        	<div><p>TIME : 12:00 - 01:00</p></div>
+            <div><p>CLASS : Class Name</p></div>
+            <div><p>ROOM NO : 10</p></div>
+        </ion-col>
+    </ion-row>
+  </ion-grid>
+  <!--THIS IS STATIC VALUE ITS REMOVE WHEN WE DO FUNCTIONALITY-->
+      </div>
+</ion-content>

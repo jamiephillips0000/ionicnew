@@ -1,0 +1,37 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header >
+  <ion-navbar class="bg_header_active">
+    <button ion-button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title class="pl_8">Add Terms</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <div class="width63 width100_576 m_0a fontopensansreg">
+    <ion-grid>
+        <ion-row>
+        <ion-col col-12 class="mt_30">
+          <ion-list>
+            <ion-item>
+              <ion-label floating>
+                <p class="fontopensansbold color_b0">TERMS:</p>
+              </ion-label>
+              <ion-datetime class="font18 color_42 fontopensansreg" displayFormat="DD.MMM.YYYY" [(ngModel)]="terms.month"></ion-datetime>
+            </ion-item>
+            <span class="step size-32 plus_arrow_set" (click)="goaddyears()"> <i class="icon ion-android-add"></i> </span>
+          </ion-list>
+          <div class="from_date">
+            <ion-icon name="ios-calendar-outline" class="icon_calender"></ion-icon>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

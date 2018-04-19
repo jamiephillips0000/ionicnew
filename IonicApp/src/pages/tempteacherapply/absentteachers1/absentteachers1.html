@@ -1,0 +1,62 @@
+<ion-header class="fontopensansbold">
+  <ion-navbar>
+    <button ion-button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+    </button>
+   <!-- <div class="back_arrow float_left color_fff" (click)="goBack()">
+      <div class="float_left"><span class="step size-32 font40"> <i class="icon ion-ios-arrow-left"></i> </span></div>
+      <div class="float_left pl_10 lh_56 fontopensansreg font18"><span>Back</span></div>
+    </div>-->
+    <ion-title class="text_center pl_80p">Absent Teachers</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding  ng-app="familyparent">
+  <div class="width63 width100_768 m_0a fontopensansreg" ng-controller="familyparentCtrl">
+    <ion-grid>
+      <ion-row>
+      	<ion-col col-12>
+      	<ion-list class="pos_rel">
+            <div>
+                <ion-item class="mb_15p">
+                  <ion-label floating>
+                    <p class="fontopensansbold color_b0">TEACHER NAME:</p>
+                  </ion-label>
+                  <ion-input type="text" class="font18 color_42 fontopensansreg" #teachername></ion-input>
+                </ion-item>
+                <!--<span class="step size-32 plus_icon_pos font40 color_67" ng-click="addparent()"> <i class="icon ion-plus-circled"></i> </span>-->
+                <span class="step size-32 plus_arrow_set" (click)="addTeacher(teachername.value)"> <i class="icon ion-android-add"></i> </span>
+                <div *ngFor="let teacher of teachers" class="float_left width100 bg_grey mb_5p">
+                <div class="float_left width25">
+                  <input value="{{teacher.teachername}}" class="lh_49 border_none bg_grey pl_15p" disabled/>
+                 </div>
+                 <div class="float_left width49 text_center">
+                 	<p class="fontopensansreg font15 color_42 lh_50p">07.11.2017 - 09.11.2017 (3 days)</p>
+                 </div>
+                 <div class="float_right pr_15p mt_7p">
+                  <!--<span class="step size-32 font40 minus_icon_pos color_grey" ng-click="delparent($index)"> <i class="icon ion-minus-circled"></i> </span>-->
+                 <!-- <span class="step size-32 minus_arrow_set" ng-click="delparent($index)"> <i class="icon ion-android-remove"></i> </span>-->
+                  <button ion-button class="accept_btn" (click)="removeTeacher(teacher)">
+               		 <p class="fontopensansbold color_fff" >CLOSE</p>
+                  </button>
+                  </div>
+                 </div>
+              </div>
+          </ion-list>
+         </ion-col>
+      </ion-row>
+    </ion-grid>
+    <!--<ion-grid>
+      <ion-row>
+        <ion-col col-12>
+          <div class="width45 width100_576 m_0a">
+            <div class="width202p m_20a0">
+              <button ion-button class="login_btn">
+              <p class="fontopensansbold font18">Apply</p>
+              </button>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>-->
+  </div>
+</ion-content>

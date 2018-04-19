@@ -1,0 +1,9 @@
+page-event-modal {
+	.row{margin-left:-21px; margin-right:-21px;}
+	.button-md{background-color:#673ab7 !important;}
+	.item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner{box-shadow:none !important;}
+/*For IOS*/
+	.button-ios{background-color:#673ab7 !important;}
+	.item-ios.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, .item-ios.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner{box-shadow:none !important;}
+
+}

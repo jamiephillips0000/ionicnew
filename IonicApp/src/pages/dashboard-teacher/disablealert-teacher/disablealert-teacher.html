@@ -1,0 +1,173 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header class="fontopensansbold">
+  <ion-navbar>
+    <button ion-button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+    </button>
+    <div class="back_arrow float_left color_fff" (click)="goBack()">
+      <div class="float_left"><span class="step size-32 font40"> <i class="icon ion-ios-arrow-left"></i> </span></div>
+      <div class="float_left pl_10 lh_56 fontopensansreg font18"><span>Back</span></div>
+    </div>
+    <ion-title class="text_center pl_80p">Math</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding  ng-app="familyparent">
+  <div class="width100" ng-controller="familyparentCtrl">
+  <div class="width100">
+  		<p class="font6 color_b0 text_center">TEACHER PROFILE  / PETER SMITH    /     <span class="color_67"> MATH</span></p>
+  </div>
+    <ul class="nav nav-tabs m_0a width310p fontopensansbold mt_50p">
+      <li class="active border_none float_left"><a data-toggle="tab" href="#ukcurriculum" class="p_0">UK CURRICULUM</a></li>
+      <li class="text_center border_none float_right"><a data-toggle="tab" href="#decurriculum" class="p_0">DE CURRICULUM</a></li>
+    </ul>
+    <div class="width63 width100_576 m_0a">
+    <div class="tab-content">
+      <div id="ukcurriculum" class="tab-pane fade in active">
+
+        <ion-grid class="width286p width100_576">
+      <ion-row class="mlr_0_576">
+        <ion-col col-12 class="colwidth100_576">
+          <ion-list class="width100 pos_rel mt_7p">
+             <ion-item class="selectitem">
+      		  <ion-label floating class="mt_5p mb_7p">
+                <p class="fontopensansbold color_b0">YEARS:</p>
+              </ion-label>
+                  <ion-select [(ngModel)]="years" interface="popover">
+                    <ion-option value="2016-2017">2016-2017</ion-option>
+                    <ion-option value="2017-2018">2017-2018</ion-option>
+                    <ion-option value="2018-2019">2018-2019</ion-option>
+                  </ion-select>
+                </ion-item>
+  		</ion-list>
+        </ion-col>
+        </ion-row>
+        <ion-row class="mlr_0_576">
+        <ion-col col-12 class="colwidth100_576">
+          <ion-list class="width100 pos_rel mt_7p">
+             <ion-item class="selectitem">
+      		  <ion-label floating class="mt_5p mb_7p">
+                <p class="fontopensansbold color_b0">SUBJECT:</p>
+              </ion-label>
+                  <ion-select [(ngModel)]="subject" interface="popover">
+                    <ion-option value="Math">Math</ion-option>
+                    <ion-option value="Science">Science</ion-option>
+                    <ion-option value="English">English</ion-option>
+                  </ion-select>
+                </ion-item>
+  		</ion-list>
+        </ion-col>
+      </ion-row>
+      <ion-row class="mlr_0_576">
+      <ion-col col-12 class="colwidth100_576">
+          <ion-list class="width100 pos_rel mt_7p">
+             <ion-item class="selectitem">
+      		  <ion-label floating class="mt_5p mb_7p">
+                <p class="fontopensansbold color_b0">CLASS:</p>
+              </ion-label>
+                  <ion-select [(ngModel)]="class" interface="popover">
+                    <ion-option value="Class-1">Class-1</ion-option>
+                    <ion-option value="Class-2">Class-2</ion-option>
+                    <ion-option value="Class-3">Class-3</ion-option>
+                  </ion-select>
+                </ion-item>
+  		</ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+     <!--ACTIVE ASSIGNMENTS DIV START-->
+    <ion-grid>
+      <ion-row class="bg_grey border_radius2p floor_div mlr_0_576">
+        <ion-col col-6 >
+          <div class="float_left pl_15p pl_0p_479">
+                <p class="fontopensansreg color_42 font18 lh_40 font14_479">Active Assignments</p>
+                </div>
+        </ion-col>
+         <ion-col col-6 >
+          <div class="float_right mt_11p" (click)="subject1()"> 
+          <span class="step size-32 color_67 up_arrow" *ngIf ="uparrow1 == '0' "> <i class="icon ion-ios-arrow-up"></i> </span> 
+          <span class="step size-32 color_67 up_arrow" *ngIf ="downarrow1 == '1' "> <i class="icon ion-ios-arrow-down"></i> </span> 
+          </div>
+           <div class="float_right pr_20p pr_5p_479">
+         	 <button ion-button class="assignment_btn">
+              <p class="fontopensansbold">All Assignments</p>
+              </button>
+         </div>
+        </ion-col>
+      </ion-row>
+      <div *ngIf ="subject1div == '1' ">
+        <ion-row class="bg_ec border_radius2p floor_subdiv pt_20p_b_10p bb_db mlr_0_576">
+          <ion-col col-12 class="pos_rel plr_30p">
+          <div class="float_left assignmentdiv mb_10p mr_5p">
+          		<div class="float_left plr_15p font10_5 color_42"><p class="lh_22">Assigment Name</p></div>
+                <div class="float_left right_arrow"> <span class="step size-32"> <i class="icon ion-ios-arrow-right"></i> </span> </div> 
+          </div>
+           <div class="float_left assignmentdiv mb_10p mr_5p">
+          		<div class="float_left plr_15p font10_5 color_42"><p class="lh_22">Assigment Name</p></div>
+                <div class="float_left right_arrow"> <span class="step size-32"> <i class="icon ion-ios-arrow-right"></i> </span> </div> 
+          </div>
+           <div class="float_left assignmentdiv mb_10p mr_5p">
+          		<div class="float_left plr_15p font10_5 color_42"><p class="lh_22">Assigment Name</p></div>
+                <div class="float_left right_arrow"> <span class="step size-32"> <i class="icon ion-ios-arrow-right"></i> </span> </div> 
+          </div>
+           <div class="float_left assignmentdiv mb_10p mr_5p">
+          		<div class="float_left plr_15p font10_5 color_42"><p class="lh_22">Assigment Name</p></div>
+                <div class="float_left right_arrow"> <span class="step size-32"> <i class="icon ion-ios-arrow-right"></i> </span> </div> 
+          </div>
+           <div class="float_left assignmentdiv mb_10p mr_5p">
+          		<div class="float_left plr_15p font10_5 color_42"><p class="lh_22">Assigment Name</p></div>
+                <div class="float_left right_arrow"> <span class="step size-32"> <i class="icon ion-ios-arrow-right"></i> </span> </div> 
+          </div>
+           <div class="float_left assignmentdiv mb_10p mr_5p">
+          		<div class="float_left plr_15p font10_5 color_42"><p class="lh_22">Assigment Name</p></div>
+                <div class="float_left right_arrow"> <span class="step size-32"> <i class="icon ion-ios-arrow-right"></i> </span> </div> 
+          </div>
+        </ion-col>
+        </ion-row>
+      </div>
+    </ion-grid>
+    <!--ACTIVE ASSIGNMENTS DIV OVER-->
+    <ion-grid>
+    <!--Compulsory DIV START-->
+      <ion-row class="mlr_0_576">
+        <ion-col col-12 class="bg_grey mt_30p border_radius2p">
+        <div class="float_left toggle_btns">
+            <ion-item class="bg_grey">
+              <ion-toggle checked="false"></ion-toggle>
+            </ion-item>
+          </div>
+          <div class="float_left pl_15p width100 text_center">
+            <p class="font18 color_42 pt_8p_b_7p">Alerts</p>
+          </div>
+        </ion-col>
+      </ion-row>
+      <!--Compulsory DIV OVER-->
+      <!--Gradable DIV START-->
+      <ion-row class="mlr_0_576">
+        <ion-col col-12 class="bg_grey mt_30p border_radius2p">
+        <div class="float_left toggle_btns">
+            <ion-item class="bg_grey">
+              <ion-toggle checked="false"></ion-toggle>
+            </ion-item>
+          </div>
+          <div class="float_left pl_15p width100 text_center">
+            <p class="font18 color_42 pt_8p_b_7p">Individual Alerts</p>
+          </div>
+        </ion-col>
+      </ion-row>
+      <!--Gradable DIV OVER-->
+    </ion-grid>
+      </div>
+      <div id="decurriculum" class="tab-pane fade"> 
+        <!--<h3>Menu 1</h3>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>--> 
+      </div>
+    </div>
+  </div>
+  </div>
+</ion-content>

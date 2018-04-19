@@ -1,0 +1,235 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header >
+  <ion-navbar class="bg_header_active">
+    <button ion-button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title class="pl_8">Class Shedule</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <div class="width63 width100_576 m_0a fontopensansreg">
+    <ion-grid>
+      <ion-row>
+      <ion-col col-6>
+      	<ion-list class="width100">
+          <ion-item class="">
+            <ion-label floating>
+              <p class="fontopensansbold color_b0">CLASS NAME:</p>
+            </ion-label>
+            <ion-input type="text" class="font18 color_42 fontopensansreg"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+      <ion-col col-6>
+        <ion-list class="width100 pos_rel mt_7p">
+             <ion-item class="selectitem">
+      		  <ion-label floating class="mt_5p mb_7p">
+                <p class="fontopensansbold color_b0">CLASS GROUP:</p>
+              </ion-label>
+                  <ion-select [(ngModel)]="classgroup" interface="popover">
+                    <ion-option value="Group-1">Group-1</ion-option>
+                    <ion-option value="Group-2">Group-2</ion-option>
+                    <ion-option value="Group-3">Group-3</ion-option>
+                  </ion-select>
+                </ion-item>
+  		</ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+    	<ion-row>
+        	<ion-col col-12 class="bg_ec">
+            	<div class="float_left">
+                	<p class="font12 color_42 lh_49 fontopensansbold pl_15p">MONDAY</p>
+                </div>
+                <div class="float_right">
+                	<ion-item>
+                      <ion-datetime displayFormat="hh:mm" class="bg_ec" pickerFormat="h mm" [(ngModel)]="endtime.timeStarts"></ion-datetime>
+                    </ion-item>
+                </div>
+                <div class="float_right">
+                	<p class="font18 color_42 fontopensansbold lh_42">-</p>
+                </div>
+                <div class="float_right">
+                	<ion-item>
+                      <ion-datetime displayFormat="hh:mm" class="bg_ec" pickerFormat="h mm" [(ngModel)]="starttime.timeStarts"></ion-datetime>
+                    </ion-item>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+<!--CURRICULUM DIV START-->
+    <ion-grid>
+    <ion-row>
+      	<ion-col col-12>
+      	<ion-list class="pos_rel">
+            <div class="terms_div">
+                <ion-item class="mb_15p">
+                  <ion-label floating>
+                    <p class="fontopensansreg color_b0 font18">Curriculum</p>
+                  </ion-label>
+                  <ion-input type="text" class="font18 color_42 fontopensansreg" disabled></ion-input>
+                </ion-item>
+                <span class="step size-32 plus_arrow_set" (click) = "opencurriculumbox()"> <i class="icon ion-android-add"></i> </span>
+                
+                <div id="carriculumdiv" class="float_left width100 mb_5p">
+                 </div>
+                 
+                <div class="chk_popup" *ngIf="myVarcur == '1'">
+          <ion-list>
+			<ion-item class="bb_ec h_52p chkbox" >
+              <ion-label class="fontopensansreg color_b0 font18">UK-Curriculum-2016-2017</ion-label>
+            </ion-item>
+            <ion-item class="bb_ec h_52p chkbox" >
+              <ion-label class="fontopensansreg color_b0 font15">Maths (5 hrs per week)</ion-label>
+              <ion-checkbox [(ngModel)]="carriculumselected['UK-Curriculum-2016-2017']" (ionChange)='savecarriculum()'></ion-checkbox>
+            </ion-item>
+            <ion-item class="bb_ec h_52p chkbox" >
+              <ion-label class="fontopensansreg color_b0 font15">English (5 hrs per week)</ion-label>
+              <ion-checkbox ></ion-checkbox>
+            </ion-item>
+            <ion-item class="bb_ec h_52p chkbox">
+              <ion-label>USA-Curriculum-2016-2017</ion-label>
+            </ion-item>
+            <ion-item class="bb_ec h_52p chkbox" >
+              <ion-label class="fontopensansreg color_b0 font15">Maths (5 hrs per week)</ion-label>
+              <ion-checkbox [(ngModel)]="carriculumselected['USA-Curriculum-2016-2017']" (ionChange)='savecarriculum()'></ion-checkbox>
+            </ion-item>
+            <ion-item class="bb_ec h_52p chkbox" >
+              <ion-label class="fontopensansreg color_b0 font15">English (5 hrs per week)</ion-label>
+              <ion-checkbox ></ion-checkbox>
+            </ion-item>
+          </ion-list>
+        </div>
+              </div>
+          </ion-list>
+         </ion-col>
+      </ion-row>
+    </ion-grid>
+<!--CURRICULUM DIV OVER-->
+<!--ROOM DIV START-->
+    <ion-grid>
+    <ion-row>
+      	<ion-col col-12>
+      	<ion-list class="pos_rel">
+            <div class="terms_div">
+                <ion-item class="mb_15p">
+                  <ion-label floating>
+                    <p class="fontopensansreg color_b0 font18">Rooms</p>
+                  </ion-label>
+                  <ion-input type="text" class="font18 color_42 fontopensansreg" disabled></ion-input>
+                </ion-item>
+                <span class="step size-32 plus_arrow_set"> <i class="icon ion-android-add"></i> </span>
+              </div>
+          </ion-list>
+         </ion-col>
+      </ion-row>
+    </ion-grid>
+<!--ROOM DIV OVER-->
+<!--EQUIPMENT DIV START-->
+    <ion-grid>
+    <ion-row>
+        <ion-col col-6 class="equipment">
+          <ion-list class="width100 pos_rel">
+            <ion-item class="">
+              <ion-label floating>
+                <p class="fontopensansreg color_b0">Equipment</p>
+              </ion-label>
+              <ion-input type="text" class="font18 color_42 fontopensansreg" disabled></ion-input>
+            </ion-item>
+            <span class="step size-32 plus_arrow_set" (click) = "openequipmentbox()"> <i class="icon ion-android-add"></i> </span> </ion-list>
+             <div class="chk_popup" *ngIf="myVarequipment == '1'">
+          <ion-list>
+            <ion-item class="bb_ec h_52p chkbox" >
+              <ion-label class="fontopensansreg color_b0 font18">Projector</ion-label>
+              <ion-checkbox [(ngModel)]="equipment2selected['Projector']" (ionChange)='saveequipment()'></ion-checkbox>
+            </ion-item>
+            <ion-item class="bb_ec h_52p chkbox" >
+              <ion-label>Board</ion-label>
+              <ion-checkbox [(ngModel)]="equipment2selected['Board']" (ionChange)='saveequipment()'></ion-checkbox>
+            </ion-item>
+            <ion-item class="bb_ec h_52p chkbox">
+              <ion-label>Something-Else</ion-label>
+              <ion-checkbox [(ngModel)]="equipment2selected['Something-Else']" (ionChange)='saveequipment()'></ion-checkbox>
+            </ion-item>
+          </ion-list>
+        </div>
+        </ion-col>
+        <ion-col col-6>
+          <ion-list class="width100">
+            <ion-item class="">
+              <ion-label floating>
+                <p class="fontopensansreg color_b0">Equipment Capacity</p>
+              </ion-label>
+              <ion-input type="number" class="font18 color_42 fontopensansreg" disabled></ion-input>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+        <div id="equipment2div" class="float_left width100 mb_5p">
+                 </div>
+      </ion-row>
+    </ion-grid>
+<!--EQUIPMENT DIV OVER-->
+<!--TEACHER DIV START-->
+    <ion-grid>
+    <ion-row>
+      	<ion-col col-12>
+      	<ion-list class="pos_rel">
+            <div class="terms_div">
+                <ion-item class="mb_15p">
+                  <ion-label floating>
+                    <p class="fontopensansbold color_b0">TEACHER NAME</p>
+                  </ion-label>
+                  <ion-input type="text" class="font18 color_42 fontopensansreg"></ion-input>
+                </ion-item>
+                <span class="step size-32 plus_arrow_set"> <i class="icon ion-android-add"></i> </span>
+              </div>
+          </ion-list>
+         </ion-col>
+      </ion-row>
+      <ion-row>
+      	<ion-col col-12 class="bg_ec">
+        	<div class="float_left plr_10p mt_5p">
+      			<img src="assets/images/user.jpg" class="avtar_img">
+            </div>
+            <div class="float_left"><p class="font15 color_42 fontopensansreg lh_50p">Peret Smith</p></div>
+            <div class="float_right">
+            	<span class="step size-32 remove_icon"> <i class="icon ion-android-remove"></i> </span>
+            </div>
+        </ion-col>
+      </ion-row>
+      <ion-row class="mt_5p">
+      	<ion-col col-12 class="bg_ec">
+        	<div class="float_left plr_10p mt_5p">
+      			<img src="assets/images/user.jpg" class="avtar_img">
+            </div>
+            <div class="float_left"><p class="font15 color_42 fontopensansreg lh_50p">Mike Parker</p></div>
+            <div class="float_right">
+            	<span class="step size-32 remove_icon"> <i class="icon ion-android-remove"></i> </span>
+            </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+<!--TEACHER DIV OVER-->
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12>
+          <div class="width45 width100_576 m_0a">
+            <div class="width202p m_40a0">
+              <button ion-button class="login_btn">
+              <p class="fontopensansbold font18">Save</p>
+              </button>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

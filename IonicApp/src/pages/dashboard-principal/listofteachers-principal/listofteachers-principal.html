@@ -1,0 +1,86 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header class="fontopensansbold">
+  <ion-navbar>
+    <button ion-button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+    </button>
+    <div class="back_arrow float_left color_fff" (click)="goBack()">
+      <div class="float_left"><span class="step size-32 font40"> <i class="icon ion-ios-arrow-left"></i> </span></div>
+      <div class="float_left pl_10 lh_56 fontopensansreg font18"><span>Back</span></div>
+    </div>
+    <ion-title class="text_center pl_80p">Teachers</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding  ng-app="familyparent">
+  <div class="width100" ng-controller="familyparentCtrl">
+  <div class="width100">
+  		<p class="font6 color_b0 text_center">PRINCIPAL     /     <span class="color_67">TEACHERS</span></p>
+  </div>
+    <ul class="nav nav-tabs m_0a width40 width60_576 fontopensansbold mt_50p">
+      <li class="active border_none float_left"><a data-toggle="tab" href="#activeschools" class="color_b0 font12 p_0">ACTIVE</a></li>
+      <li class="text_center border_none float_right"><a data-toggle="tab" href="#inactiveschools" class="color_b0 font12 p_0">ARCHIVED</a></li>
+    </ul>
+    <div class="tab-content mt_50p">
+      <div id="activeschools" class="tab-pane fade in active">
+        <ion-grid class="">
+          <ion-row class="bg_ec">
+          	<ion-col col-4 class="pl_15p">
+            	<div class=""><p class="color_42 font15 fontopensansbold ptb_9_5p">Teacher Name</p></div>
+            </ion-col>
+            <ion-col col-4 class="pl_15p">
+            <div class=""><p class="color_42 font15 font13_576 fontopensansbold ptb_9_5p">Primary/Secondary</p></div>
+            </ion-col>
+             <ion-col col-3 class="pl_15p">
+            <div class=""><p class="color_42 font15 fontopensansbold ptb_9_5p">Subject</p></div>
+            </ion-col>
+            <ion-col col-1>
+                <span class="step size-32 plus_arrow_set"> <i class="icon ion-android-add"></i> </span>
+            </ion-col>
+          </ion-row>
+          <ion-row class="bb_ec">
+          	<ion-col col-4 class="pl_15p">
+            	<div class="float_left mt_5p mr_10p"><img src="assets/images/user.jpg" class="avtar_img"></div>
+            	<div class="float_left"><p class="color_42 font13 fontopensansreg lh_40">Matthew Smith</p></div>
+            </ion-col>
+            <ion-col col-4 class="pl_15p">
+            <div class="float_left width100"><p class="color_42 font13 fontopensansreg lh_40">Secondary</p></div>
+            </ion-col>
+             <ion-col col-3 class="pl_15p">
+            <div class="float_left width100 mt_10p"><p class="color_42 subject_text fontopensansreg">Math</p></div>
+            </ion-col>
+            <ion-col col-1>
+               <span class="step size-32 trash_icon"> <i class="icon ion-ios-trash-outline"></i> </span>
+            </ion-col>
+          </ion-row>
+           <ion-row class="bb_ec">
+          	<ion-col col-4 class="pl_15p">
+            	<div class="float_left mt_5p mr_10p"><img src="assets/images/user.jpg" class="avtar_img"></div>
+            	<div class="float_left"><p class="color_42 font13 fontopensansreg lh_40">Peter  Parker</p></div>
+            </ion-col>
+            <ion-col col-4 class="pl_15p">
+            <div class="float_left width100"><p class="color_42 font13 fontopensansreg lh_40">Primary</p></div>
+            </ion-col>
+             <ion-col col-3 class="pl_15p">
+            <div class="float_left width100 mt_10p"><p class="color_42 subject_text fontopensansreg">Physics</p></div>
+            </ion-col>
+            <ion-col col-1>
+               <span class="step size-32 trash_icon"> <i class="icon ion-ios-trash-outline"></i> </span>
+            </ion-col>
+          </ion-row>
+           
+          
+        </ion-grid>
+      </div>
+      <div id="inactiveschools" class="tab-pane fade"> 
+        <!--<h3>Menu 1</h3>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>--> 
+      </div>
+    </div>
+  </div>
+</ion-content>

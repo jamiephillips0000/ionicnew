@@ -1,0 +1,505 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header >
+  <ion-navbar class="bg_header_active">
+    <button ion-button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title class="pl_8">New Assigment</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding  ng-app="familyparent" (click)="hidebox()">
+  <div class="width100" ng-controller="familyparentCtrl">
+    <ul class="nav nav-tabs m_0a width40 fontopensansbold mt_50p">
+      <li class="active border_none float_left"><a data-toggle="tab" href="#details" class="color_b0 font12 p_0">DETAILS</a></li>
+      <li class="text_center border_none float_right"><a data-toggle="tab" href="#submission" class="color_b0 font12 p_0">SUBMISSION</a></li>
+    </ul>
+    <div class="tab-content mt_50p"> 
+      <!--DETAILS START-->
+      <div id="details" class="tab-pane fade in active width640p m_0a width100_768">
+      	<!--CURRICULUM & SUBSECTION DIV START-->
+        	<ion-grid>
+              <ion-row>
+            	<ion-col col-6 class="colwidth100_576">
+                	<ion-item class="mb_15p bb2_67">
+                <ion-label floating>
+                  <p class="fontopensansreg color_b0 font18">Curriculum</p>
+                </ion-label>
+                <ion-input type="text" class="font18 color_42 fontopensansreg" disabled></ion-input>
+              </ion-item>
+              <span class="step size-32 plus_arrow_set" (click) = "opencurgroupbox()"> <i class="icon ion-android-add"></i> </span>
+              <div class="chk_popup width300p chk_popup_pos" *ngIf="mycurgroup == '1'">
+                    	<ul class="nav nav-tabs bg_fff color_cf font15 fontopensansbold">
+                            <li class="active"><a data-toggle="tab" href="#UK16-17">UK 16-17</a></li>
+                            <li><a data-toggle="tab" href="#DE16-17">DE 16-17</a></li>
+                            <li><a data-toggle="tab" href="#USA16-17">USA 16-17</a></li>
+                          </ul>
+                        <div class="tab-content">
+                          <div id="UK16-17" class="tab-pane fade in active">
+                            <ion-list>
+                              <ion-item class="bb_ec h_52p chkbox" >
+                                <ion-label class="fontopensansreg color_b0 font10">Class-1</ion-label>
+                                <ion-checkbox [(ngModel)]="curriculumselected['UK-Curriculum-2016-2017']" (ionChange)='savecurriculum()'></ion-checkbox>
+                              </ion-item>
+                              <ion-item class="bb_ec h_52p chkbox" >
+                                <ion-label>Class 2</ion-label>
+                                <ion-checkbox></ion-checkbox>
+                              </ion-item>
+                              <ion-item class="bb_ec h_52p chkbox">
+                                <ion-label>Class 3</ion-label>
+                                <ion-checkbox></ion-checkbox>
+                              </ion-item>
+                            </ion-list>
+                          </div>
+                          <div id="DE16-17" class="tab-pane fade">
+                            <ion-list>
+                              <ion-item class="bb_ec h_52p chkbox" >
+                                <ion-label class="fontopensansreg color_b0">Class-1</ion-label>
+                                <ion-checkbox [(ngModel)]="curriculumselected['DE-Curriculum-2016-2017']" (ionChange)='savecurriculum()'></ion-checkbox>
+                              </ion-item>
+                              <ion-item class="bb_ec h_52p chkbox" >
+                                <ion-label>Class 2</ion-label>
+                                <ion-checkbox></ion-checkbox>
+                              </ion-item>
+                              <ion-item class="bb_ec h_52p chkbox">
+                                <ion-label>Class 3</ion-label>
+                                <ion-checkbox></ion-checkbox>
+                              </ion-item>
+                            </ion-list>
+                          </div>
+                          <div id="USA16-17" class="tab-pane fade">
+                            <ion-list>
+                              <ion-item class="bb_ec h_52p chkbox" >
+                                <ion-label class="fontopensansreg color_b0">Class-1</ion-label>
+                                <ion-checkbox [(ngModel)]="curriculumselected['USA-Curriculum-2016-2017']" (ionChange)='savecurriculum()'></ion-checkbox>
+                              </ion-item>
+                              <ion-item class="bb_ec h_52p chkbox" >
+                                <ion-label>Class 2</ion-label>
+                                <ion-checkbox></ion-checkbox>
+                              </ion-item>
+                              <ion-item class="bb_ec h_52p chkbox">
+                                <ion-label>Class 3</ion-label>
+                                <ion-checkbox></ion-checkbox>
+                              </ion-item>
+                            </ion-list>
+                          </div>
+                      </div>
+                    </div>
+                     <div id="curriculumdiv">
+                    	<!--<div class="width100 float_left">
+                    	<div class="float_left color_42 cur_text mt_7p"><p>DE Curiculum 2016-2017</p></div>
+                        </div>
+                        <div class="width100 float_left">
+                    	<div class="float_left color_42 cur_text mt_7p"><p>DE Curiculum 2016-2017</p></div>
+                        </div>-->
+                    </div>
+                </ion-col>
+                <ion-col col-6 class="colwidth100_576">
+                	<ion-item class="mb_15p bb2_67">
+                <ion-label floating>
+                  <p class="fontopensansreg color_b0 font18">Subsection</p>
+                </ion-label>
+                <ion-input type="text" class="font18 color_42 fontopensansreg" disabled></ion-input>
+              </ion-item>
+              <span class="step size-32 plus_arrow_set" (click) = "opensubsectionbox()"> <i class="icon ion-android-add"></i> </span>
+              <div class="chk_popup width300p chk_popup_pos" *ngIf="mysubsection == '1'">
+                    	<ion-list>
+                          <ion-item class="bb_ec h_52p chkbox" >
+                            <ion-label class="fontopensansreg color_b0 font18">Subsection-1</ion-label>
+                            <ion-checkbox [(ngModel)]="subsectionselected['Subsection-1']" (ionChange)='savesubsection()'></ion-checkbox>
+                          </ion-item>
+                          <ion-item class="bb_ec h_52p chkbox" >
+                            <ion-label>Subsection-2</ion-label>
+                            <ion-checkbox [(ngModel)]="subsectionselected['Subsection-2']" (ionChange)='savesubsection()'></ion-checkbox>
+                          </ion-item>
+                          <ion-item class="bb_ec h_52p chkbox">
+                            <ion-label>Subsection-3</ion-label>
+                            <ion-checkbox [(ngModel)]="subsectionselected['Subsection-3']" (ionChange)='savesubsection()'></ion-checkbox>
+                          </ion-item>
+                        </ion-list>
+                    </div>
+                     <div id="subsectiondiv">
+                    	<!--<div class="width100 float_left">
+                    	<div class="float_left color_42 cur_text mt_7p"><p>DE Curiculum 2016-2017</p></div>
+                        </div>
+                        <div class="width100 float_left">
+                    	<div class="float_left color_42 cur_text mt_7p"><p>DE Curiculum 2016-2017</p></div>
+                        </div>-->
+                    </div>
+                </ion-col>
+                 </ion-row>
+            </ion-grid>
+        <!--CURRICULUM & SUBSECTION DIV END-->
+        <!--TITLE DIV START-->
+        <ion-grid>
+        	<ion-row>
+            	<ion-col col-12>
+                	<ion-item class="mb_15p bb2_ec">
+                        <ion-label floating>
+                          <p class="fontopensansbold color_b0">TITLE:</p>
+                        </ion-label>
+                        <ion-input type="text" class="font18 color_42 fontopensansreg"></ion-input>
+                      </ion-item>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+        <!--TITLE DIV END-->
+        <!--INTRODUCTION DIV START-->
+        <ion-grid>
+        	<ion-row>
+            	<ion-col col-12>
+                	<p class="color_b0 font8 opensansbold">INDTRODUCTION:</p>
+                </ion-col>
+            	<ion-col col-12>
+                  <ckeditor name="desc" [(ngModel)]="description"debounce="500"></ckeditor> 
+                </ion-col>
+             </ion-row>
+        </ion-grid>
+
+        <!--INTRODUCTION DIV END-->
+        <!--UPLOAD FILE DIV START-->
+        <ion-grid>
+        	<ion-row>
+            	<ion-col col-12>
+                	<ion-list class="pos_rel">
+            <div>
+                <ion-item class="mb_15p bb2_ec">
+                  <ion-label floating>
+                    <p class="fontopensansred font18 color_b0">Upload File:</p>
+                  </ion-label>
+                  <ion-input type="text" class="font18 color_42 fontopensansreg" #newfilename></ion-input>
+                </ion-item>
+                <!--<span class="step size-32 plus_icon_pos font40 color_67" ng-click="addparent()"> <i class="icon ion-plus-circled"></i> </span>-->
+                <span class="step size-32 plus_arrow_set" (click)="addUploadfile(newfilename.value)"> <i class="icon ion-android-add"></i> </span>
+                <div *ngFor="let uploadfile of uploadfiles" class="float_left width100 bg_grey mb_5p pos_rel">
+                <div class="float_left width65">
+                  <input value="{{uploadfile.newfilename}}" class="lh_49 border_none bg_grey pl_15p" disabled/>
+                 </div>
+                  <span class="step size-32 minus_arrow_set" (click)="removeUploadfile(uploadfile)"> <i class="icon ion-android-remove"></i></span>
+                 </div>
+              </div>
+          </ion-list>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+        <!--UPLOAD FILE DIV END-->
+        <!--ADD QUESTION DIV START-->
+        <ion-grid>
+        	<ion-row>
+            	<ion-col col-12>
+                	<ion-item class="mb_15p bb2_67">
+                    <ion-label floating>
+                      <p class="fontopensansreg color_b0 font18">Add Question</p>
+                    </ion-label>
+                    <ion-input type="text" class="font18 color_42 fontopensansreg" #questionname disabled></ion-input>
+                  </ion-item>
+                  <span class="step size-32 plus_arrow_set" (click)="addQuestion(questionname.value)"> <i class="icon ion-android-add"></i> </span>
+                </ion-col>
+            </ion-row>
+            <div class="addquestiondiv mb_15p" *ngFor="let question of questions; let i = index">
+            	<ion-row class="bg_grey">
+                	<ion-col col-1>
+                    	<div class="float_left quenum mt_5p">
+                        	<p>{{i+1}}</p>
+                        </div>
+                    </ion-col>
+                    <ion-col col-10>
+                    	<ul class="nav nav-tabs bg_grey fontopensansbold">
+                            <li class="active"><a data-toggle="tab" href="#multipleanswer{{i}}" class="">MULTIPLE ANSWER</a></li>
+                            <li><a data-toggle="tab" href="#essay{{i}}">ESSAY</a></li>
+                            <li><a data-toggle="tab" href="#simpleanswer{{i}}" class="border_none">SIMPLE ANSWER</a></li>
+                        </ul>
+                    </ion-col>
+                    <ion-col col-1>
+                    	<span class="step size-32 minus_arrow_set" (click)="removeQuestion(question)"> <i class="icon ion-android-remove"></i></span>
+                    </ion-col>
+                </ion-row>
+                <ion-row class="bg_ec">
+                	<div class="tab-content width100 float_left mt_40p_624">
+                          <div id="multipleanswer{{i}}" class="tab-pane fade in active width100 float_left">
+                          	<ion-row class="m_0">
+                          	<ion-col col-6 class="plr_15p colwidth100_576">
+                            		<ion-item class="mb_15p bb2_67 bg_ec">
+                                        <ion-label floating>
+                                          <p class="fontopensansbold color_b0">QUESTION:</p>
+                                        </ion-label>
+                                        <ion-input type="text" class="font18 color_42 fontopensansreg"></ion-input>
+                                      </ion-item>
+                            </ion-col>
+                            <ion-col col-6 class="plr_15p colwidth100_576">
+                           <div class="float_left width100 pos_rel">
+                            <div class="float_left quenum mt_5p abcd_div">
+                        		<p>a</p>
+                      		</div>
+                            		<ion-item class="mb_15p bb2_67 bg_ec pl_40p">
+                                        <ion-label floating>
+                                          <p class="fontopensansbold color_b0">ANSWER:</p>
+                                        </ion-label>
+                                        <ion-input type="text" class="font18 color_42 fontopensansreg"></ion-input>
+                                      </ion-item>
+                                      <span class="step size-32 plus_arrow_set"> <i class="icon ion-android-add"></i> </span>
+                           </div>
+                           <div class="float_left width100 pos_rel">
+                            <div class="float_left quenum mt_5p abcd_div active">
+                        		<p>b</p>
+                      		</div>
+                            		<ion-item class="mb_15p bb2_67 bg_ec pl_40p">
+                                        <ion-label floating>
+                                          <p class="fontopensansbold color_b0">ANSWER:</p>
+                                        </ion-label>
+                                        <ion-input type="text" class="font18 color_42 fontopensansreg"></ion-input>
+                                      </ion-item>
+                                     <span class="step size-32 minus_arrow_set minus_arrow_in"> <i class="icon ion-android-remove"></i></span>
+                           </div>
+                           <div class="float_left width100 pos_rel">
+                            <div class="float_left quenum mt_5p abcd_div">
+                        		<p>c</p>
+                      		</div>
+                            		<ion-item class="mb_15p bb2_67 bg_ec pl_40p">
+                                        <ion-label floating>
+                                          <p class="fontopensansbold color_b0">ANSWER:</p>
+                                        </ion-label>
+                                        <ion-input type="text" class="font18 color_42 fontopensansreg"></ion-input>
+                                      </ion-item>
+                                     <span class="step size-32 minus_arrow_set minus_arrow_in"> <i class="icon ion-android-remove"></i></span>
+                           </div>
+                            </ion-col>
+                            </ion-row>
+                          </div>
+                          <div id="essay{{i}}" class="tab-pane fade">
+                          	<ion-row class="m_0">
+                          	<ion-col col-12 class="plr_15p colwidth100_576">
+                            		<ion-item class="mb_15p bb2_67 bg_ec">
+                                        <ion-label floating>
+                                          <p class="fontopensansbold color_b0">THEME OF ESSAY:</p>
+                                        </ion-label>
+                                        <ion-input type="text" class="font18 color_42 fontopensansreg"></ion-input>
+                                      </ion-item>
+                                      <span class="step size-32 drive_icon"> <i class="icon ion-ios-cloud-upload-outline"></i> </span>
+                            </ion-col>
+                            </ion-row>
+                          </div>
+                          <div id="simpleanswer{{i}}" class="tab-pane fade">
+                          	<ion-row class="m_0">
+                          	<ion-col col-6 class="plr_15p colwidth100_576">
+                            		<ion-item class="mb_15p bb2_67 bg_ec">
+                                        <ion-label floating>
+                                          <p class="fontopensansbold color_b0">QUESTION:</p>
+                                        </ion-label>
+                                        <ion-input type="text" class="font18 color_42 fontopensansreg"></ion-input>
+                                      </ion-item>
+                            </ion-col>
+                            <ion-col col-6 class="plr_15p colwidth100_576">
+                            		<ion-item class="mb_15p bb2_67 bg_ec">
+                                        <ion-label floating>
+                                          <p class="fontopensansbold color_b0">RIGHT ANSWER:</p>
+                                        </ion-label>
+                                        <ion-input type="text" class="font18 color_42 fontopensansreg"></ion-input>
+                                      </ion-item>
+                            </ion-col>
+                            </ion-row>
+                          </div>
+                    </div>
+                </ion-row>
+            </div>
+        </ion-grid>
+        <!--ADD QUESTION DIV END-->
+        <!--ASSIGNMENT DATE DIV START-->
+        	<ion-grid class="date_div">
+            	<ion-row>
+                	<ion-col col-4 class="colwidth100_576">
+                    	<ion-list>
+                            <ion-item class="bb2_67">
+                              <ion-label floating>
+                                <p class="fontopensansbold color_b0 font8">ASSIGNMENT BECOMES ACTIVE:</p>
+                              </ion-label>
+                              <ion-datetime class="font18 color_42 fontopensansreg" displayFormat="DD.MMM.YYYY" [(ngModel)]="becomeactive.month"></ion-datetime>
+                            </ion-item>
+                          </ion-list>
+                          <div class="from_date">
+            <ion-icon name="ios-calendar-outline" class="icon_calender"></ion-icon>
+          </div>
+                    </ion-col>
+                    <ion-col col-4 class="colwidth100_576">
+                    	<ion-list>
+                            <ion-item class="bb2_67">
+                              <ion-label floating>
+                                <p class="fontopensansbold color_b0 font8">ASSIGNMENT DUE DATE:</p>
+                              </ion-label>
+                              <ion-datetime class="font18 color_42 fontopensansreg" displayFormat="DD.MMM.YYYY" [(ngModel)]="duedate.month"></ion-datetime>
+                            </ion-item>
+                          </ion-list>
+                          <div class="from_date">
+            <ion-icon name="ios-calendar-outline" class="icon_calender"></ion-icon>
+          </div>
+                    </ion-col>
+                    <ion-col col-4 class="colwidth100_576">
+                    	<ion-list>
+                            <ion-item class="bb2_67">
+                              <ion-label floating>
+                                <p class="fontopensansbold color_b0 font8">GRADED BY DATE:</p>
+                              </ion-label>
+                              <ion-datetime class="font18 color_42 fontopensansreg" displayFormat="DD.MMM.YYYY" [(ngModel)]="bydate.month"></ion-datetime>
+                            </ion-item>
+                          </ion-list>
+                          <div class="from_date">
+            <ion-icon name="ios-calendar-outline" class="icon_calender"></ion-icon>
+          </div>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        <!--ASSIGNMENT DATE DIV END-->
+       </div>
+      <!--DETAILS END--> 
+      <!--SUBMISSION START-->
+      <div id="submission" class="tab-pane fade width640p m_0a width100_768">
+        <ion-grid class="">
+          <ion-row>
+            <ion-col col-12 class="text_center mb_10p">
+              <p class="font18 color_b0 fontopensansreg">Class Name</p>
+            </ion-col>
+          </ion-row>
+          <ion-row class="bg_ec m_0">
+            <ion-col col-4 class="plr_10p ptm_2p colwidth50_576">
+              <ion-item class="bg_ec">
+                <ion-avatar item-start> <img src="assets/images/user.jpg"> </ion-avatar>
+                <!--<p class="font8 color_b0">NAME:</p>-->
+                <p class="font15 color_42">Peret Smith</p>
+              </ion-item>
+            </ion-col>
+            <ion-col col-3 class="plr_10p ptm_2p colwidth50_576">
+              <ion-item class="bg_ec h_56p">
+                <p class="font8 color_b0">DATE SUBMITTED:</p>
+                <p class="font15 color_8b">05.05.2017</p>
+              </ion-item>
+            </ion-col>
+            <ion-col col-4 class="plr_10p ptm_2p colwidth50_576">
+              <ion-item class="bg_ec h_56p">
+                <p class="font8 color_b0">ATTACHMENTS:</p>
+                <p class="color_42 bg_grey filename">file_name.pdf</p>
+              </ion-item>
+            </ion-col>
+            <ion-col col-1 class="plr_10p ptm_2p colwidth50_576">
+              <div class="float_right eye_icon"> <span class="step size-32"> <i class="icon ion-ios-eye-outline"></i> </span> </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <ion-grid class="">
+          <ion-row class="bg_ec m_0">
+            <ion-col col-4 class="plr_10p ptm_2p colwidth50_576">
+              <ion-item class="bg_ec">
+                <ion-avatar item-start> <img src="assets/images/user.jpg"> </ion-avatar>
+                <!--<p class="font8 color_b0">NAME:</p>-->
+                <p class="font15 color_42">Mike Parker</p>
+              </ion-item>
+            </ion-col>
+            <ion-col col-3 class="plr_10p ptm_2p colwidth50_576">
+              <ion-item class="bg_ec h_56p">
+                <p class="font8 color_b0">DATE SUBMITTED:</p>
+                <p class="font15 color_8b">05.05.2017</p>
+              </ion-item>
+            </ion-col>
+            <ion-col col-4 class="plr_10p ptm_2p colwidth50_576">
+              <ion-item class="bg_ec h_56p">
+                <p class="font8 color_b0">ATTACHMENTS:</p>
+                <p class="color_42 bg_grey filename">file_name.pdf</p>
+              </ion-item>
+            </ion-col>
+            <ion-col col-1 class="plr_10p ptm_2p colwidth50_576">
+              <div class="float_right eye_icon"> <span class="step size-32"> <i class="icon ion-ios-eye-outline"></i> </span> </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <ion-grid class="">
+          <ion-row class="bg_ec m_0">
+            <ion-col col-4 class="plr_10p ptm_2p colwidth50_576">
+              <ion-item class="bg_ec">
+                <ion-avatar item-start> <img src="assets/images/user.jpg"> </ion-avatar>
+                <!--<p class="font8 color_b0">NAME:</p>-->
+                <p class="font15 color_42">Elizabeth Simpson</p>
+              </ion-item>
+            </ion-col>
+            <ion-col col-3 class="plr_10p ptm_2p colwidth50_576">
+              <ion-item class="bg_ec h_56p">
+                <p class="font8 color_b0">DATE SUBMITTED:</p>
+                <p class="font15 color_8b">05.05.2017</p>
+              </ion-item>
+            </ion-col>
+            <ion-col col-4 class="plr_10p ptm_2p colwidth50_576">
+              <ion-item class="bg_ec h_56p">
+                <p class="font8 color_b0">ATTACHMENTS:</p>
+                <p class="color_42 bg_grey filename">file_name.pdf</p>
+              </ion-item>
+            </ion-col>
+            <ion-col col-1 class="plr_10p ptm_2p colwidth50_576">
+              <div class="float_right eye_icon"> <span class="step size-32"> <i class="icon ion-ios-eye-outline"></i> </span> </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <ion-grid class="mt_50p">
+          <ion-row>
+            <ion-col col-12 class="text_center mb_10p">
+              <p class="font18 color_b0 fontopensansreg">Class Name</p>
+            </ion-col>
+          </ion-row>
+          <ion-row class="bg_ec m_0">
+            <ion-col col-4 class="plr_10p ptm_2p colwidth50_576">
+              <ion-item class="bg_ec">
+                <ion-avatar item-start> <img src="assets/images/user.jpg"> </ion-avatar>
+                <!--<p class="font8 color_b0">NAME:</p>-->
+                <p class="font15 color_42">Frederick Addo</p>
+              </ion-item>
+            </ion-col>
+            <ion-col col-3 class="plr_10p ptm_2p colwidth50_576">
+              <ion-item class="bg_ec h_56p">
+                <p class="font8 color_b0">DATE SUBMITTED:</p>
+                <p class="font15 color_8b">05.05.2017</p>
+              </ion-item>
+            </ion-col>
+            <ion-col col-4 class="plr_10p ptm_2p colwidth50_576">
+              <ion-item class="bg_ec h_56p">
+                <p class="font8 color_b0">ATTACHMENTS:</p>
+                <p class="color_42 bg_grey filename">file_name.pdf</p>
+              </ion-item>
+            </ion-col>
+            <ion-col col-1 class="plr_10p ptm_2p colwidth50_576">
+              <div class="float_right eye_icon"> <span class="step size-32"> <i class="icon ion-ios-eye-outline"></i> </span> </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <ion-grid class="">
+          <ion-row class="bg_ec m_0">
+            <ion-col col-4 class="plr_10p ptm_2p colwidth50_576">
+              <ion-item class="bg_ec">
+                <ion-avatar item-start> <img src="assets/images/user.jpg"> </ion-avatar>
+                <!--<p class="font8 color_b0">NAME:</p>-->
+                <p class="font15 color_42">Johnny Way</p>
+              </ion-item>
+            </ion-col>
+            <ion-col col-3 class="plr_10p ptm_2p colwidth50_576">
+              <ion-item class="bg_ec h_56p">
+                <p class="font8 color_b0">DATE SUBMITTED:</p>
+                <p class="font15 color_8b">05.05.2017</p>
+              </ion-item>
+            </ion-col>
+            <ion-col col-4 class="plr_10p ptm_2p colwidth50_576">
+              <ion-item class="bg_ec h_56p">
+                <p class="font8 color_b0">ATTACHMENTS:</p>
+                <p class="color_42 bg_grey filename">file_name.pdf</p>
+              </ion-item>
+            </ion-col>
+            <ion-col col-1 class="plr_10p ptm_2p colwidth50_576">
+              <div class="float_right eye_icon"> <span class="step size-32"> <i class="icon ion-ios-eye-outline"></i> </span> </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+      <!--SUBMISSION OVER--> 
+    </div>
+  </div>
+</ion-content>

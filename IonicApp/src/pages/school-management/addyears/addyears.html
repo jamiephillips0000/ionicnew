@@ -1,0 +1,601 @@
+<ion-header class="fontopensansbold">
+  <ion-navbar>
+    <button ion-button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+    </button>
+    <div class="back_arrow float_left color_fff" (click)="goBack()">
+      <div class="float_left"><span class="step size-32 font40"> <i class="icon ion-ios-arrow-left"></i> </span></div>
+      <div class="float_left pl_10 lh_56 fontopensansreg font18"><span>Back</span></div>
+    </div>
+    <ion-title class="text_center pl_80p">Add Years</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding  ng-app="familyparent">
+  <div class="width63 width100_576 m_0a fontopensansreg" ng-controller="familyparentCtrl">
+    <ion-grid>
+      <ion-row>
+        <ion-col col-6>
+          <ion-list class="width100 pos_rel">
+            <ion-item class="">
+              <ion-label floating>
+                <p class="fontopensansbold color_b0">YEARS:</p>
+              </ion-label>
+              <ion-input type="number" class="font18 color_42 fontopensansreg"></ion-input>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+        <ion-col col-6>
+          <ion-list class="width100 pos_rel">
+            <ion-item class="">
+              <ion-label floating>
+                <p class="fontopensansbold color_b0">&nbsp;</p>
+              </ion-label>
+              <ion-input type="number" class="font18 color_42 fontopensansreg"></ion-input>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-12>
+          <ion-list class="pos_rel">
+            <div class="terms_div">
+              <ion-item class="mb_15p">
+                <ion-label floating>
+                  <p class="fontopensansbold color_b0">TERMS:</p>
+                </ion-label>
+                <ion-input type="text" class="font18 color_42 fontopensansreg"></ion-input>
+              </ion-item>
+              <span class="step size-32 plus_arrow_set" (click)="gototerms()"> <i class="icon ion-android-add"></i> </span>
+              <div class="from_date">
+                <ion-icon name="ios-calendar-outline" class="icon_calender"></ion-icon>
+              </div>
+              <div class="float_left width100 bg_grey mb_5p pos_rel">
+                <div class="float_left width65">
+                  <input class="lh_49 border_none bg_grey pl_15p color_42 font12 width100" value="Winter (10 weeks) 01 November 2016 to 31 December 2016" disabled/>
+                </div>
+                <span class="step size-32 minus_arrow_set"> <i class="icon ion-android-remove"></i></span> </div>
+            </div>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-12>
+          <ion-list class="pos_rel">
+            <div class="terms_div">
+              <ion-item class="mb_15p">
+                <ion-label floating>
+                  <p class="fontopensansbold color_b0">HOLIDAYS:</p>
+                </ion-label>
+                <ion-input type="text" class="font18 color_42 fontopensansreg"></ion-input>
+              </ion-item>
+              <span class="step size-32 plus_arrow_set" (click)="gotoholydays()"> <i class="icon ion-android-add"></i> </span>
+              <div class="from_date">
+                <ion-icon name="ios-calendar-outline" class="icon_calender"></ion-icon>
+              </div>
+              <div class="float_left width100 bg_grey mb_5p pos_rel">
+                <div class="float_left width65">
+                  <input class="lh_49 border_none bg_grey pl_15p color_42 font12 width100" value="31 December 2016 -  Full Day Off" disabled/>
+                </div>
+                <span class="step size-32 minus_arrow_set"> <i class="icon ion-android-remove"></i></span> </div>
+            </div>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12 class="bg_grey mt_30p border_radius2p">
+          <div class="width100 float_left">
+            <div class="float_left pl_15p">
+              <p class="font12 color_42 pt_14p fontopensansbold">MONDAY</p>
+            </div>
+            <div class="float_right">
+              <ion-item class="bg_grey" >
+                <ion-toggle checked="false" (ionChange)='showmondaydiv()'></ion-toggle>
+              </ion-item>
+            </div>
+          </div>
+          <div class="mondaysubdiv" *ngIf="mondaydiv == '1' ">
+            <div class="float_left pl_15p width35">
+              <ion-input type="text" class="font18 color_42 fontopensansreg" #newclass></ion-input>
+            </div>
+            <div class="float_left pl_15p width20">
+              <ion-input type="text" class="font18 color_42 fontopensansreg" #newtime1></ion-input>
+            </div>
+            <div class="float_left pl_15p width20">
+              <ion-input type="text" class="font18 color_42 fontopensansreg" #newtime2></ion-input>
+            </div>
+            <div class="width20 float_left mt_15p ml_10p"> <span class="step size-32 plus_arrow_set" (click)="addMonday(newclass.value,newtime1.value,newtime2.value)"> <i class="icon ion-android-add"></i> </span> </div>
+          </div>
+          <div class="float_left width100" *ngIf="mondaydiv == '1' ">
+            <div *ngFor="let monday of mondays" class="bg_grey mb_5p mondaydynamicdiv">
+              <div class="float_left pl_15p width35">
+                <ion-input  value="{{monday.newclass}}" class="font18 color_42 border_none bg_grey pl_15p" disabled></ion-input>
+              </div>
+              <div class="float_left pl_15p width20">
+                <ion-input  value="{{monday.newtime1}}" class="font18 color_42 border_none bg_grey pl_15p" disabled></ion-input>
+              </div>
+              <div class="float_left pl_15p width20">
+                <ion-input  value="{{monday.newtime2}}" class="font18 color_42 border_none bg_grey pl_15p" disabled></ion-input>
+              </div>
+              <div class="width20 float_left mt_15p ml_11p"> <span class="step size-32 minus_arrow_set" (click)="removeMonday(monday)"> <i class="icon ion-android-remove"></i></span> </div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12 class="bg_grey border_radius2p">
+          <div class="width100 float_left">
+            <div class="float_left pl_15p">
+              <p class="font12 color_42 pt_14p fontopensansbold">TUESDAY</p>
+            </div>
+            <div class="float_right">
+              <ion-item class="bg_grey" >
+                <ion-toggle checked="false" (ionChange)='showtuesdaydiv()'></ion-toggle>
+              </ion-item>
+            </div>
+          </div>
+          <div class="mondaysubdiv" *ngIf="tuesdaydiv == '1' ">
+            <div class="float_left pl_15p width35">
+              <ion-input type="text" class="font18 color_42 fontopensansreg" #newclasstuesday></ion-input>
+            </div>
+            <div class="float_left pl_15p width20">
+              <ion-input type="text" class="font18 color_42 fontopensansreg" #newtime1tuesday></ion-input>
+            </div>
+            <div class="float_left pl_15p width20">
+              <ion-input type="text" class="font18 color_42 fontopensansreg" #newtime2tuesday></ion-input>
+            </div>
+            <div class="width20 float_left mt_15p ml_10p"> <span class="step size-32 plus_arrow_set" (click)="addTuesday(newclasstuesday.value,newtime1tuesday.value,newtime2tuesday.value)"> <i class="icon ion-android-add"></i> </span> </div>
+          </div>
+          <div class="float_left width100" *ngIf="tuesdaydiv == '1' ">
+            <div *ngFor="let tuesday of tuesdays" class="bg_grey mb_5p mondaydynamicdiv">
+              <div class="float_left pl_15p width35">
+                <ion-input  value="{{tuesday.newclasstuesday}}" class="font18 color_42 border_none bg_grey pl_15p" disabled></ion-input>
+              </div>
+              <div class="float_left pl_15p width20">
+                <ion-input  value="{{tuesday.newtime1tuesday}}" class="font18 color_42 border_none bg_grey pl_15p" disabled></ion-input>
+              </div>
+              <div class="float_left pl_15p width20">
+                <ion-input  value="{{tuesday.newtime2tuesday}}" class="font18 color_42 border_none bg_grey pl_15p" disabled></ion-input>
+              </div>
+              <div class="width20 float_left mt_15p ml_11p"> <span class="step size-32 minus_arrow_set" (click)="removeTuesday(tuesday)"> <i class="icon ion-android-remove"></i></span> </div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12 class="bg_grey border_radius2p">
+          <div class="width100 float_left">
+            <div class="float_left pl_15p">
+              <p class="font12 color_42 pt_14p fontopensansbold">WEDNESDAY</p>
+            </div>
+            <div class="float_right">
+              <ion-item class="bg_grey" >
+                <ion-toggle checked="false" (ionChange)='showwednesdaydiv()'></ion-toggle>
+              </ion-item>
+            </div>
+          </div>
+          <div class="mondaysubdiv" *ngIf="wednesdaydiv == '1' ">
+            <div class="float_left pl_15p width35">
+              <ion-input type="text" class="font18 color_42 fontopensansreg" #newclasswednesday></ion-input>
+            </div>
+            <div class="float_left pl_15p width20">
+              <ion-input type="text" class="font18 color_42 fontopensansreg" #newtime1wednesday></ion-input>
+            </div>
+            <div class="float_left pl_15p width20">
+              <ion-input type="text" class="font18 color_42 fontopensansreg" #newtime2wednesday></ion-input>
+            </div>
+            <div class="width20 float_left mt_15p ml_10p"> <span class="step size-32 plus_arrow_set" (click)="addWednesday(newclasswednesday.value,newtime1wednesday.value,newtime2wednesday.value)"> <i class="icon ion-android-add"></i> </span> </div>
+          </div>
+          <div class="float_left width100" *ngIf="wednesdaydiv == '1' ">
+            <div *ngFor="let wednesday of wednesdays" class="bg_grey mb_5p mondaydynamicdiv">
+              <div class="float_left pl_15p width35">
+                <ion-input  value="{{wednesday.newclasswednesday}}" class="font18 color_42 border_none bg_grey pl_15p" disabled></ion-input>
+              </div>
+              <div class="float_left pl_15p width20">
+                <ion-input  value="{{wednesday.newtime1wednesday}}" class="font18 color_42 border_none bg_grey pl_15p" disabled></ion-input>
+              </div>
+              <div class="float_left pl_15p width20">
+                <ion-input  value="{{wednesday.newtime2wednesday}}" class="font18 color_42 border_none bg_grey pl_15p" disabled></ion-input>
+              </div>
+              <div class="width20 float_left mt_15p ml_11p"> <span class="step size-32 minus_arrow_set" (click)="removeWednesday(wednesday)"> <i class="icon ion-android-remove"></i></span> </div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12 class="bg_grey border_radius2p">
+          <div class="width100 float_left">
+            <div class="float_left pl_15p">
+              <p class="font12 color_42 pt_14p fontopensansbold">THURSDAY</p>
+            </div>
+            <div class="float_right">
+              <ion-item class="bg_grey" >
+                <ion-toggle checked="false" (ionChange)='showthursdaydiv()'></ion-toggle>
+              </ion-item>
+            </div>
+          </div>
+          <div class="mondaysubdiv" *ngIf="thursdaydiv == '1' ">
+            <div class="float_left pl_15p width35">
+              <ion-input type="text" class="font18 color_42 fontopensansreg" #newclassthursday></ion-input>
+            </div>
+            <div class="float_left pl_15p width20">
+              <ion-input type="text" class="font18 color_42 fontopensansreg" #newtime1thursday></ion-input>
+            </div>
+            <div class="float_left pl_15p width20">
+              <ion-input type="text" class="font18 color_42 fontopensansreg" #newtime2thursday></ion-input>
+            </div>
+            <div class="width20 float_left mt_15p ml_10p"> <span class="step size-32 plus_arrow_set" (click)="addThursday(newclassthursday.value,newtime1thursday.value,newtime2thursday.value)"> <i class="icon ion-android-add"></i> </span> </div>
+          </div>
+          <div class="float_left width100" *ngIf="thursdaydiv == '1' ">
+            <div *ngFor="let thursday of thursdays" class="bg_grey mb_5p mondaydynamicdiv">
+              <div class="float_left pl_15p width35">
+                <ion-input  value="{{thursday.newclassthursday}}" class="font18 color_42 border_none bg_grey pl_15p" disabled></ion-input>
+              </div>
+              <div class="float_left pl_15p width20">
+                <ion-input  value="{{thursday.newtime1thursday}}" class="font18 color_42 border_none bg_grey pl_15p" disabled></ion-input>
+              </div>
+              <div class="float_left pl_15p width20">
+                <ion-input  value="{{thursday.newtime2thursday}}" class="font18 color_42 border_none bg_grey pl_15p" disabled></ion-input>
+              </div>
+              <div class="width20 float_left mt_15p ml_11p"> <span class="step size-32 minus_arrow_set" (click)="removeThursday(thursday)"> <i class="icon ion-android-remove"></i></span> </div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12 class="bg_grey border_radius2p">
+          <div class="width100 float_left">
+            <div class="float_left pl_15p">
+              <p class="font12 color_42 pt_14p fontopensansbold">FRIDAY</p>
+            </div>
+            <div class="float_right">
+              <ion-item class="bg_grey" >
+                <ion-toggle checked="false" (ionChange)='showfridaydiv()'></ion-toggle>
+              </ion-item>
+            </div>
+          </div>
+          <div class="mondaysubdiv" *ngIf="fridaydiv == '1' ">
+            <div class="float_left pl_15p width35">
+              <ion-input type="text" class="font18 color_42 fontopensansreg" #newclassfriday></ion-input>
+            </div>
+            <div class="float_left pl_15p width20">
+              <ion-input type="text" class="font18 color_42 fontopensansreg" #newtime1friday></ion-input>
+            </div>
+            <div class="float_left pl_15p width20">
+              <ion-input type="text" class="font18 color_42 fontopensansreg" #newtime2friday></ion-input>
+            </div>
+            <div class="width20 float_left mt_15p ml_10p"> <span class="step size-32 plus_arrow_set" (click)="addFriday(newclassfriday.value,newtime1friday.value,newtime2friday.value)"> <i class="icon ion-android-add"></i> </span> </div>
+          </div>
+          <div class="float_left width100" *ngIf="fridaydiv == '1' ">
+            <div *ngFor="let friday of fridays" class="bg_grey mb_5p mondaydynamicdiv">
+              <div class="float_left pl_15p width35">
+                <ion-input  value="{{friday.newclassfriday}}" class="font18 color_42 border_none bg_grey pl_15p" disabled></ion-input>
+              </div>
+              <div class="float_left pl_15p width20">
+                <ion-input  value="{{friday.newtime1friday}}" class="font18 color_42 border_none bg_grey pl_15p" disabled></ion-input>
+              </div>
+              <div class="float_left pl_15p width20">
+                <ion-input  value="{{friday.newtime2friday}}" class="font18 color_42 border_none bg_grey pl_15p" disabled></ion-input>
+              </div>
+              <div class="width20 float_left mt_15p ml_11p"> <span class="step size-32 minus_arrow_set" (click)="removeFriday(friday)"> <i class="icon ion-android-remove"></i></span> </div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12 class="bg_grey border_radius2p">
+          <div class="width100 float_left">
+            <div class="float_left pl_15p">
+              <p class="font12 color_42 pt_14p fontopensansbold">SATURDAY</p>
+            </div>
+            <div class="float_right">
+              <ion-item class="bg_grey" >
+                <ion-toggle checked="false" (ionChange)='showsaturdaydiv()'></ion-toggle>
+              </ion-item>
+            </div>
+          </div>
+          <div class="mondaysubdiv" *ngIf="saturdaydiv == '1' ">
+            <div class="float_left pl_15p width35">
+              <ion-input type="text" class="font18 color_42 fontopensansreg" #newclasssaturday></ion-input>
+            </div>
+            <div class="float_left pl_15p width20">
+              <ion-input type="text" class="font18 color_42 fontopensansreg" #newtime1saturday></ion-input>
+            </div>
+            <div class="float_left pl_15p width20">
+              <ion-input type="text" class="font18 color_42 fontopensansreg" #newtime2saturday></ion-input>
+            </div>
+            <div class="width20 float_left mt_15p ml_10p"> <span class="step size-32 plus_arrow_set" (click)="addSaturday(newclasssaturday.value,newtime1saturday.value,newtime2saturday.value)"> <i class="icon ion-android-add"></i> </span> </div>
+          </div>
+          <div class="float_left width100" *ngIf="saturdaydiv == '1' ">
+            <div *ngFor="let saturday of saturdays" class="bg_grey mb_5p mondaydynamicdiv">
+              <div class="float_left pl_15p width35">
+                <ion-input  value="{{saturday.newclasssaturday}}" class="font18 color_42 border_none bg_grey pl_15p" disabled></ion-input>
+              </div>
+              <div class="float_left pl_15p width20">
+                <ion-input  value="{{saturday.newtime1saturday}}" class="font18 color_42 border_none bg_grey pl_15p" disabled></ion-input>
+              </div>
+              <div class="float_left pl_15p width20">
+                <ion-input  value="{{saturday.newtime2saturday}}" class="font18 color_42 border_none bg_grey pl_15p" disabled></ion-input>
+              </div>
+              <div class="width20 float_left mt_15p ml_11p"> <span class="step size-32 minus_arrow_set" (click)="removeSaturday(saturday)"> <i class="icon ion-android-remove"></i></span> </div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12 class="bg_grey border_radius2p">
+          <div class="width100 float_left">
+            <div class="float_left pl_15p">
+              <p class="font12 color_42 pt_14p fontopensansbold">SUNDAY</p>
+            </div>
+            <div class="float_right">
+              <ion-item class="bg_grey" >
+                <ion-toggle checked="false" (ionChange)='showsundaydiv()'></ion-toggle>
+              </ion-item>
+            </div>
+          </div>
+          <div class="mondaysubdiv" *ngIf="sundaydiv == '1' ">
+            <div class="float_left pl_15p width35">
+              <ion-input type="text" class="font18 color_42 fontopensansreg" #newclasssunday></ion-input>
+            </div>
+            <div class="float_left pl_15p width20">
+              <ion-input type="text" class="font18 color_42 fontopensansreg" #newtime1sunday></ion-input>
+            </div>
+            <div class="float_left pl_15p width20">
+              <ion-input type="text" class="font18 color_42 fontopensansreg" #newtime2sunday></ion-input>
+            </div>
+            <div class="width20 float_left mt_15p ml_10p"> <span class="step size-32 plus_arrow_set" (click)="addSunday(newclasssunday.value,newtime1sunday.value,newtime2sunday.value)"> <i class="icon ion-android-add"></i> </span> </div>
+          </div>
+          <div class="float_left width100" *ngIf="sundaydiv == '1' ">
+            <div *ngFor="let sunday of sundays" class="bg_grey mb_5p mondaydynamicdiv">
+              <div class="float_left pl_15p width35">
+                <ion-input  value="{{sunday.newclasssunday}}" class="font18 color_42 border_none bg_grey pl_15p" disabled></ion-input>
+              </div>
+              <div class="float_left pl_15p width20">
+                <ion-input  value="{{sunday.newtime1sunday}}" class="font18 color_42 border_none bg_grey pl_15p" disabled></ion-input>
+              </div>
+              <div class="float_left pl_15p width20">
+                <ion-input  value="{{sunday.newtime2sunday}}" class="font18 color_42 border_none bg_grey pl_15p" disabled></ion-input>
+              </div>
+              <div class="width20 float_left mt_15p ml_11p"> <span class="step size-32 minus_arrow_set" (click)="removeSunday(sunday)"> <i class="icon ion-android-remove"></i></span> </div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12>
+          <ion-list class="pos_rel">
+            <div class="terms_div">
+              <ion-item class="mb_15p">
+                <ion-label floating>
+                  <p class="fontopensansreg color_b0 font18">Active Curricula</p>
+                </ion-label>
+                <ion-input type="text" class="font18 color_42 fontopensansreg" disabled></ion-input>
+              </ion-item>
+              <span class="step size-32 plus_arrow_set" (click) = "opencurriculumbox()"> <i class="icon ion-android-add"></i> </span>
+              <div class="from_date">
+                <ion-icon name="ios-calendar-outline" class="icon_calender"></ion-icon>
+              </div>
+              <div id="carriculumdiv" class="float_left width100 mb_5p"> </div>
+              <div class="chk_popup" *ngIf="myVarcur == '1'">
+                <ion-list>
+                  <ion-item class="bb_ec h_52p chkbox" >
+                    <ion-label class="fontopensansreg color_b0 font18">UK-Curriculum-2016-2017</ion-label>
+                    <ion-checkbox [(ngModel)]="carriculumselected['UK-Curriculum-2016-2017']" (ionChange)='savecarriculum()'></ion-checkbox>
+                  </ion-item>
+                  <ion-item class="bb_ec h_52p chkbox" >
+                    <ion-label>DE-Curriculum-2016-2017</ion-label>
+                    <ion-checkbox [(ngModel)]="carriculumselected['DE-Curriculum-2016-2017']" (ionChange)='savecarriculum()'></ion-checkbox>
+                  </ion-item>
+                  <ion-item class="bb_ec h_52p chkbox">
+                    <ion-label>USA-Curriculum-2016-2017</ion-label>
+                    <ion-checkbox [(ngModel)]="carriculumselected['USA-Curriculum-2016-2017']" (ionChange)='savecarriculum()'></ion-checkbox>
+                  </ion-item>
+                </ion-list>
+              </div>
+            </div>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12>
+          <ion-list class="pos_rel">
+            <div class="terms_div">
+              <ion-item class="mb_15p">
+                <ion-label floating>
+                  <p class="fontopensansreg color_b0 font18">School Class</p>
+                </ion-label>
+                <ion-input type="text" class="font18 color_42 fontopensansreg" #classname></ion-input>
+              </ion-item>
+              <span class="step size-32 plus_arrow_set" (click)="addSchoolclass(classname.value)"> <i class="icon ion-android-add"></i> </span>
+              <div class="from_date">
+                <ion-icon name="ios-calendar-outline" class="icon_calender"></ion-icon>
+              </div>
+              <div *ngFor="let schoolclass of schoolclasses" class="float_left width100 bg_grey mb_5p pos_rel">
+                <div class="float_left width40">
+                  <input class="lh_49 border_none bg_grey pl_15p color_42 font15 width100" value="{{schoolclass.classname}}" disabled/>
+                </div>
+                <div class="float_left width60">
+                  <div class="float_left">
+                    <p class="lh_49 color_42 font15">Class Group:</p>
+                  </div>
+                  <div class="float_left mt_14p ml_10p"> <span class="step size-32 class_group_plus_arrow"> <i class="icon ion-android-add"></i> </span> </div>
+                </div>
+                <span class="step size-32 minus_arrow_set" (click)="removeSchoolclass(schoolclass)"> <i class="icon ion-android-remove"></i></span>
+                <div  class="float_left width100 bg_ec pos_rel">
+                  <div class="float_left pl_15p">
+                    <p class="font12 color_42 lh_49">Age:</p>
+                  </div>
+                  <div class="float_left pl_15p">
+                    <input class="bg_ec border_none lh_49 pl_15p color_42 font15 width100 age_txtbox"/>
+                  </div>
+                </div>
+              </div>
+              <!--CURRICULUM DIV START-->
+              <div class="float_left width100 bg_grey mb_5p pos_rel">
+                <div class="float_left width40">
+                  <input class="lh_49 border_none bg_grey pl_15p color_42 font15 width100" value="Group 1" disabled/>
+                </div>
+                <div class="float_left width60 ">
+                  <div class="float_left">
+                    <p class="lh_49 color_42 font15">Curriculum:</p>
+                  </div>
+                  <div class="float_left mt_14p ml_10p pos_rel"> <span class="step size-32 class_group_plus_arrow" (click) = "opencurgroupbox()"> <i class="icon ion-android-add"></i> </span>
+                  	<div class="chk_popup width300p chk_popup_pos" *ngIf="mycurgroup == '1'">
+                    	<ul class="nav nav-tabs bg_fff color_cf font15 fontopensansbold">
+                            <li class="active"><a data-toggle="tab" href="#UK16-17">UK 16-17</a></li>
+                            <li><a data-toggle="tab" href="#DE16-17">DE 16-17</a></li>
+                            <li><a data-toggle="tab" href="#USA16-17">USA 16-17</a></li>
+                          </ul>
+                        <div class="tab-content">
+                          <div id="UK16-17" class="tab-pane fade in active">
+                            <ion-list>
+                              <ion-item class="bb_ec h_52p chkbox" >
+                                <ion-label class="fontopensansreg color_b0 font10">Class-1</ion-label>
+                                <ion-checkbox [(ngModel)]="carriculumgroupselected['UK-Curriculum-2016-2017']" (ionChange)='savecarriculumgroup()'></ion-checkbox>
+                              </ion-item>
+                              <ion-item class="bb_ec h_52p chkbox" >
+                                <ion-label>Class 2</ion-label>
+                                <ion-checkbox></ion-checkbox>
+                              </ion-item>
+                              <ion-item class="bb_ec h_52p chkbox">
+                                <ion-label>Class 3</ion-label>
+                                <ion-checkbox></ion-checkbox>
+                              </ion-item>
+                            </ion-list>
+                          </div>
+                          <div id="DE16-17" class="tab-pane fade">
+                            <ion-list>
+                              <ion-item class="bb_ec h_52p chkbox" >
+                                <ion-label class="fontopensansreg color_b0">Class-1</ion-label>
+                                <ion-checkbox [(ngModel)]="carriculumgroupselected['DE-Curriculum-2016-2017']" (ionChange)='savecarriculumgroup()'></ion-checkbox>
+                              </ion-item>
+                              <ion-item class="bb_ec h_52p chkbox" >
+                                <ion-label>Class 2</ion-label>
+                                <ion-checkbox></ion-checkbox>
+                              </ion-item>
+                              <ion-item class="bb_ec h_52p chkbox">
+                                <ion-label>Class 3</ion-label>
+                                <ion-checkbox></ion-checkbox>
+                              </ion-item>
+                            </ion-list>
+                          </div>
+                          <div id="USA16-17" class="tab-pane fade">
+                            <ion-list>
+                              <ion-item class="bb_ec h_52p chkbox" >
+                                <ion-label class="fontopensansreg color_b0">Class-1</ion-label>
+                                <ion-checkbox [(ngModel)]="carriculumgroupselected['USA-Curriculum-2016-2017']" (ionChange)='savecarriculumgroup()'></ion-checkbox>
+                              </ion-item>
+                              <ion-item class="bb_ec h_52p chkbox" >
+                                <ion-label>Class 2</ion-label>
+                                <ion-checkbox></ion-checkbox>
+                              </ion-item>
+                              <ion-item class="bb_ec h_52p chkbox">
+                                <ion-label>Class 3</ion-label>
+                                <ion-checkbox></ion-checkbox>
+                              </ion-item>
+                            </ion-list>
+                          </div>
+                      </div>
+                    </div>
+                   </div>
+                </div>
+                <span class="step size-32 minus_arrow_set"> <i class="icon ion-android-remove"></i></span>
+                <div class="float_left width100 bg_ec pos_rel">
+                  <ion-row class="m_0">
+                  	<ion-col col-5>
+                    	<div class="float_left people_icon pos_rel">
+                        	<span class="step size-32"> <i class="icon ion-person-stalker"></i> </span> 
+                            <div class="tag">
+                            	<p>23</p>
+                            </div>
+                        </div>
+                    </ion-col>
+                    <ion-col col-7>
+                    <div id="carriculumgroupdiv">
+                    	<!--<div class="width100 float_left">
+                    	<div class="float_left color_42 cur_text mt_7p"><p>DE Curiculum 2016-2017</p></div>
+                        </div>
+                        <div class="width100 float_left">
+                    	<div class="float_left color_42 cur_text mt_7p"><p>DE Curiculum 2016-2017</p></div>
+                        </div>-->
+                    </div>
+                    </ion-col>
+                  </ion-row>
+                </div>
+              </div>
+              <!--CURRICULUM DIV OVER--> 
+            </div>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12>
+          <ion-list class="pos_rel">
+            <div class="terms_div">
+              <ion-item class="mb_15p">
+                <ion-label floating>
+                  <p class="fontopensansreg color_b0 font18">Languages</p>
+                </ion-label>
+                <ion-input type="text" class="font18 color_42 fontopensansreg" disabled></ion-input>
+              </ion-item>
+              <span class="step size-32 plus_arrow_set" (click) = "openlanguagebox()"> <i class="icon ion-android-add"></i> </span>
+              <div class="from_date">
+                <ion-icon name="ios-calendar-outline" class="icon_calender"></ion-icon>
+              </div>
+              <div id="languagediv" class="float_left width100 mb_5p"> </div>
+              <div class="chk_popup" *ngIf="myVarlang == '1'">
+                <ion-list>
+                  <ion-item class="bb_ec h_52p chkbox" >
+                    <ion-label class="fontopensansreg color_b0 font18">English</ion-label>
+                    <ion-checkbox [(ngModel)]="languageselected['English']" (ionChange)='savelanguage()'></ion-checkbox>
+                  </ion-item>
+                  <ion-item class="bb_ec h_52p chkbox" >
+                    <ion-label>French</ion-label>
+                    <ion-checkbox [(ngModel)]="languageselected['French']" (ionChange)='savelanguage()'></ion-checkbox>
+                  </ion-item>
+                  <ion-item class="bb_ec h_52p chkbox">
+                    <ion-label>Spanish</ion-label>
+                    <ion-checkbox [(ngModel)]="languageselected['Spanish']" (ionChange)='savelanguage()'></ion-checkbox>
+                  </ion-item>
+                </ion-list>
+              </div>
+            </div>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12>
+          <div class="width45 width100_576 m_0a">
+            <div class="width202p m_40a0">
+              <button ion-button class="login_btn">
+              <p class="fontopensansbold font18">Save</p>
+              </button>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

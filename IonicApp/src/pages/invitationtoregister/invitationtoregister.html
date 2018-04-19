@@ -1,0 +1,126 @@
+
+
+<ion-header >
+  <ion-navbar class="bg_header_active">
+    <button ion-button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Invitation to Register</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding ng-app="familyparent">
+  <ion-grid ng-controller="familyparentCtrl">
+    <ion-row>
+      <ion-col col-12>
+        <div class="width64 width100_576 m_0a mt_40p">
+          <ion-list class="pos_rel">
+            <div>
+              <div> <span class="step size-32 email_icon_pos font40 color_grey"> <i class="icon ion-ios-email-outline"></i> </span>
+                <ion-item class="mb_15p">
+                  <ion-label floating class="ml_40p">
+                    <p class="fontopensansreg color_b0 font18">Invitation to Register</p>
+                  </ion-label>
+                  <ion-input type="text" class="font18 color_42 fontopensansreg pl_40p" ng-model="newinvitation"></ion-input>
+                </ion-item>
+                <span class="step size-32 plus_icon_pos font40 color_67" > <i class="icon ion-plus-circled"></i> </span>
+                <div ng-repeat="item in invitation" class="pos_rel bg_grey mb_5p">
+                  <input ng-model="item" id="item-{{$index}}" class="input-{{$index}} lh_49 border_none bg_grey pl_15p width91"/>
+                </div>
+              </div>
+            </div>
+          </ion-list>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <div class="bg_ec plr_15p width64 width100_576 m_0a pos_rel">
+        <div class="pos_rel"> <span class="step size-32 email_icon_pos font40 color_grey"> <i class="icon ion-ios-email-outline"></i> </span>
+          <ion-item class="mb_15p bg_ec">
+            <ion-label floating class="ml_40p">
+              <p class="fontopensansreg color_b0">E-MAIL:</p>
+            </ion-label>
+            <ion-input type="text" class="font18 color_42 fontopensansreg pl_40p"></ion-input>
+          </ion-item>
+        </div>
+        <div class="pos_rel"> <span class="step size-32 email_icon_pos font40 color_grey"> <i class="icon ion-ios-email-outline"></i> </span>
+          <ion-item class="mb_15p bg_ec">
+            <ion-label floating class="ml_40p">
+              <p class="fontopensansreg color_b0 font18">Registration Type</p>
+            </ion-label>
+            <ion-input type="text" class="font18 color_42 fontopensansreg pl_40p"></ion-input>
+          </ion-item>
+          <span class="step size-32 plus_icon_pos font40 color_67" ng-click = "openselectbox()"> <i class="icon ion-plus-circled"></i> </span> </div>
+          <div>
+          <div id="demo1">
+           
+          <!--<div class="float_left mb_20p mr_5p"  >
+          
+          	<div class="float_left bg_grey h_22p  border_radius11 pos_rel"><p class="pl_15p pr_26p" ></p> <span class="step size-32 font40 color_grey minus_icon_position" ng-click="delstudent($index)"> <i class="icon ion-minus-circled"></i></span></div>
+          </div>-->
+          </div>
+          
+<!--             <div class="float_left mb_20p mr_5p">
+              <div class="float_left bg_grey h_22p  border_radius11 pos_rel"><p class="pl_15p pr_26p">Teacher</p> <span class="step size-32 font40 color_grey minus_icon_position" ng-click="delstudent($index)"> <i class="icon ion-minus-circled"></i></span></div>
+            </div>
+             <div class="float_left mb_20p mr_5p">
+              <div class="float_left bg_grey h_22p  border_radius11 pos_rel"><p class="pl_15p pr_26p">Principal</p> <span class="step size-32 font40 color_grey minus_icon_position" ng-click="delstudent($index)"> <i class="icon ion-minus-circled"></i></span></div>
+            </div>
+             <div class="float_left mb_20p mr_5p">
+              <div class="float_left bg_grey h_22p  border_radius11 pos_rel"><p class="pl_15p pr_26p">PTA</p> <span class="step size-32 font40 color_grey minus_icon_position" ng-click="delstudent($index)"> <i class="icon ion-minus-circled"></i></span></div>
+            </div>
+             <div class="float_left mb_20p mr_5p">
+              <div class="float_left bg_grey h_22p  border_radius11 pos_rel"><p class="pl_15p pr_26p">Board</p> <span class="step size-32 font40 color_grey minus_icon_position" ng-click="delstudent($index)"> <i class="icon ion-minus-circled"></i></span></div>
+            </div>
+             <div class="float_left mb_20p mr_5p">
+              <div class="float_left bg_grey h_22p  border_radius11 pos_rel"><p class="pl_15p pr_26p">Temp Teacher</p> <span class="step size-32 font40 color_grey minus_icon_position" ng-click="delstudent($index)"> <i class="icon ion-minus-circled"></i></span></div>
+            </div>
+-->          </div>
+
+
+        <div class="chk_popup" ng-show ="chk == '1' ">
+          <ion-list>
+
+            <ion-item class="bb_ec h_52p chkbox" >
+              <ion-label class="fontopensansreg color_b0 font18">Family</ion-label>
+              <ion-checkbox [(ngModel)]="friendsSelected['Family']" (ionChange)='save()'></ion-checkbox>
+            </ion-item>
+            <ion-item class="bb_ec h_52p chkbox" >
+              <ion-label>Teacher</ion-label>
+              <ion-checkbox [(ngModel)]="friendsSelected['Teacher']" (ionChange)='save()'></ion-checkbox>
+            </ion-item>
+            <ion-item class="bb_ec h_52p chkbox">
+              <ion-label>Principal</ion-label>
+              <ion-checkbox [(ngModel)]="friendsSelected['Principal']" (ionChange)='save()'></ion-checkbox>
+            </ion-item>
+            <ion-item class="bb_ec h_52p chkbox">
+              <ion-label>PTA</ion-label>
+              <ion-checkbox [(ngModel)]="friendsSelected['PTA']" (ionChange)='save()'></ion-checkbox>
+            </ion-item>
+            <ion-item class="bb_ec h_52p chkbox">
+              <ion-label>Board</ion-label>
+              <ion-checkbox [(ngModel)]="friendsSelected['Board']" (ionChange)='save()'></ion-checkbox>
+            </ion-item>
+            <ion-item class="h_52p chkbox">
+              <ion-label>Temp Teacher</ion-label>
+              <ion-checkbox [(ngModel)]="friendsSelected['Temp Teacher']" (ionChange)='save()'></ion-checkbox>
+            </ion-item>
+          </ion-list>
+        </div>
+      </div>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <div class="width45 width100_576 m_0a">
+          <div class="width202p m_40a0">
+            <button ion-button class="login_btn" >
+            <p class="fontopensansbold font18">Send</p>
+            </button>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+ 
+  
+</ion-content>

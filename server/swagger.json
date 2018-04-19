@@ -1,0 +1,316 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"version": "1.0.0",
+		"title": "Yet Another Node.js Blogg Application API",
+		"description": "Yet Another Node.js Blogg Application API",
+		"license": {
+			"name": "MIT",
+			"url": "https://opensource.org/licenses/MIT"
+		}
+	},
+	"host": "localhost:3000",
+	"basePath": "/api/v1",
+	"tags": [{
+		"name": "Users",
+		"description": "API for users in the system"
+	}],
+	"schemes": [
+		"http"
+	],
+	"consumes": [
+		"application/json"
+	],
+	"produces": [
+		"application/json"
+	],
+	"paths": {
+		"/users": {
+			"post": {
+				"tags": [
+					"Users"
+				],
+				"description": "Create new user in system",
+				"parameters": [{
+					"name": "user",
+					"in": "body",
+					"description": "User that we want to create",
+					"schema": {
+						"$ref": "#/definitions/User"
+					}
+				}],
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "New user is created",
+						"schema": {
+							"$ref": "#/definitions/User"
+						}
+					}
+				}
+			},
+			"get": {
+				"tags": [
+					"Users"
+				],
+				"summary": "Get all users in system",
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/Users"
+						}
+					}
+				}
+			}
+		},
+		"/users/{userId}": {
+			"parameters": [{
+				"name": "userId",
+				"in": "path",
+				"required": true,
+				"description": "ID of user that we want to find",
+				"type": "string"
+			}],
+			"get": {
+				"tags": [
+					"Users"
+				],
+				"summary": "Get user with given ID",
+				"responses": {
+					"200": {
+						"description": "User is found",
+						"schema": {
+							"$ref": "#/definitions/User"
+						}
+					}
+				}
+			},
+			"delete": {
+				"summary": "Delete user with given ID",
+				"tags": [
+					"Users"
+				],
+				"responses": {
+					"200": {
+						"description": "User is deleted",
+						"schema": {
+							"$ref": "#/definitions/User"
+						}
+					}
+				}
+			},
+			"put": {
+				"summary": "Update user with give ID",
+				"tags": [
+					"Users"
+				],
+				"parameters": [{
+					"name": "user",
+					"in": "body",
+					"description": "User with new values of properties",
+					"schema": {
+						"$ref": "#/definitions/User"
+					}
+				}],
+				"responses": {
+					"200": {
+						"description": "User is updated",
+						"schema": {
+							"$ref": "#/definitions/User"
+						}
+					}
+				}
+			}
+		}
+	},
+	"definitions": {
+		"User": {
+			"required": [
+				"email",
+				"_id"
+			],
+			"properties": {
+				"_id": {
+					"type": "string",
+					"uniqueItems": true
+				},
+				"email": {
+					"type": "string",
+					"uniqueItems": true
+				},
+				"lastName": {
+					"type": "string"
+				},
+				"firstName": {
+					"type": "string"
+				}
+			}
+		},
+		"Users": {
+			"type": "array",
+			"$ref": "#/definitions/User"
+		},
+		"Address": {
+			"required": [
+				"type",
+				"line1",
+				"city",
+				"country",
+				"_id"
+			],
+			"properties": {
+				"_id": {
+					"type": "string",
+					"uniqueItems": true
+				},
+				"type": {
+					"type": "string",
+					"uniqueItems": true
+				},
+				"line1": {
+					"type": "string"
+				},
+				"line2": {
+					"type": "string"
+				},
+				"line3": {
+					"type": "string"
+				},
+				"line4": {
+					"type": "string"
+				},
+				"city": {
+					"type": "string"
+				},
+				"region": {
+					"type": "string"
+				},
+				"postcode": {
+					"type": "string"
+				},
+				"country": {
+					"type": "string"
+				}
+			}
+		},
+		"Addresses": {
+			"type": "array",
+			"$ref": "#/definitions/Address"
+		},
+		"Application": {
+
+			"required": [
+				"family_name"
+			],
+			"properties": {
+				"_id": {
+					"type": "string",
+					"uniqueItems": true
+				},
+				"family_name": {
+					"type": "string",
+					"uniqueItems": false
+				},
+				"applicants": {
+					"registration_type": {
+						"type": "string"
+					},
+					"first_name": {
+						"type": "string"
+					},
+					"last_name": {
+						"type": "string"
+					},
+					"email": {
+						"type": "string"
+					},
+					"email_verified": {
+						"type": "boolean"
+					},
+					"phone": {
+						"type": "string"
+					},
+					"phone_verified": {
+						"type": "boolean"
+					},
+					"terms": {
+						"is_accepted": {
+							"type": "boolean"
+						},
+						"date_accepted": {
+							"type": "date"
+						}
+					},
+					"privacy": {
+						"is_accepted": {
+							"type": "boolean"
+						},
+						"date_accepted": {
+							"type": "date"
+						}
+					},
+					"subjects": {
+						"name": {
+							"type": "String"
+						},
+						"type": "array"
+					},
+					"qualifications": {
+						"name": {
+							"type": "String"
+						},
+						"level": {
+							"type": "String"
+						},
+						"institution": {
+							"type": "String"
+						},
+						"type": "array"
+					},
+					"type": "array"
+				},
+
+				"addresses": {
+					"isPrimary": {
+						"type": "string"
+					},
+					"line1": {
+						"type": "string"
+					},
+					"line2": {
+						"type": "string"
+					},
+					"line3": {
+						"type": "string"
+					},
+					"line4": {
+						"type": "string"
+					},
+					"city": {
+						"type": "string"
+					},
+					"region": {
+						"type": "string"
+					},
+					"postcode": {
+						"type": "string"
+					},
+					"country": {
+						"type": "string"
+					}
+				},
+				"type": "array"
+        
+			}
+		},
+		"Applications": {
+			"type": "array",
+			"$ref": "#/definitions/Applications"
+		}
+
+
+	}
+}

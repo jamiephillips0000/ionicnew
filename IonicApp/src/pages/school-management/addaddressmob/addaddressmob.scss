@@ -1,0 +1,13 @@
+page-addaddressmob {
+	.back-button.show-back-button {display: none;}
+.back_arrow{position: absolute; left: 15px; z-index:1; top:0px;}
+.floor_div .plus_arrow_set{position:unset;}
+.floor_div .up_arrow{padding: 5px 11px; background: #b0bec5; border-radius: 50%; color: #fff;}
+.floor_subdiv .minus_arrow{padding: 5px 11px;background: #b0bec5;border-radius: 50%; color: #fff; position: absolute; right: 5px; top: 20px; height: 30px; width: 30px;}
+.floor_subdiv .minus_arrow_set{right: 20px;}
+.floors{width: 50px;height: 22px;border-radius: 11px;background-color: #cfd8dc;}
+.floor_no{background-color: #b0bec5; border-radius: 50%; padding: 4.5px 8px; color:#fff;}
+.no_border{border:none;}
+.plus_arrow_set_floor {background-color: #673ab7;position: absolute; top: 10px; right: 5px; color: #fff; font-size: 17px; border-radius: 50%; padding: 3px 10px 3px 10px;}
+.floor_subdiv .minus_arrow1 {padding: 5px 11px; background: #b0bec5; border-radius: 50%; color: #fff; position: absolute; right: 5px; top: 9px; height: 30px;  width: 30px;}
+}

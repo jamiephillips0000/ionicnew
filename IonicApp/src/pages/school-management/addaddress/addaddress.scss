@@ -1,0 +1,11 @@
+page-addaddress {
+	.back-button.show-back-button {display: none;}
+.back_arrow{position: absolute; left: 15px; z-index:1; top:0px;}
+.floor_div .plus_arrow_set{position:unset;}
+.floor_div .up_arrow{padding: 5px 11px; background: #b0bec5; border-radius: 50%; color: #fff;}
+.floor_subdiv .minus_arrow{padding: 1px 7px; background: #b0bec5; border-radius: 50%; color: #fff; position: absolute; right: 5px; top: 14px; height: 22px; width: 22px;}
+.floor_subdiv .minus_arrow_set{right: 20px;}
+.floors{width: 50px;height: 22px;border-radius: 11px;background-color: #cfd8dc;}
+.floor_no{background-color: #b0bec5; border-radius: 50%; padding: 4.5px 8px; color:#fff;}
+.no_border{border:none;}
+}

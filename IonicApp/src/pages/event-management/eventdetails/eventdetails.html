@@ -1,0 +1,152 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header >
+  <ion-navbar class="bg_header_active">
+    <button ion-button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title class="pl_8">Event Details</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding  ng-app="familyparent">
+  <div class="width640p width100_768 m_0a fontopensansreg" ng-controller="familyparentCtrl"> 
+    <!--EVENT IMAGE DIV START-->
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12 class="mt_30p"> <img src="assets/images/event.jpg" class="event_img"> </ion-col>
+      </ion-row>
+    </ion-grid>
+    <!--EVENT IMAGE DIV END--> 
+    <!--EVENT DETAILS DIV START-->
+    <ion-grid>
+      <ion-row>
+        <ion-col col-6 class="colwidth100_768">
+          <div class="color_42 font15 fontopensansbold">
+            <p>Michelle’s Birthday Party</p>
+          </div>
+          <div class="color_b0 font8 fontopensansbold mt_10p">
+            <p>24 JUNE AT 16:00</p>
+          </div>
+          <div class="color_42 font12 fontopensansreg mb_10p">
+            <p>Indoor Karting Track, Islington, London</p>
+          </div>
+          <div class="color_b0 font8 fontopensansreg">
+            <p>Michelle Dempsey invited you to her private event</p>
+          </div>
+          <div class="width100 mt_30p float_left">
+            <div class="float_left width33_33_767">
+              <button ion-button class="going_btn width95_767">
+              <p class="fontopensansbold color_42 font10_5">GOING</p>
+              </button>
+            </div>
+            <div class="float_left width33_33_767">
+              <button ion-button class="going_btn width95_767">
+              <p class="fontopensansbold color_42 font10_5">MAYBE</p>
+              </button>
+            </div>
+            <div class="float_left width33_33_767">
+              <button ion-button class="going_btn width95_767">
+              <p class="fontopensansbold color_42 font10_5">CAN'T GO</p>
+              </button>
+            </div>
+          </div>
+        </ion-col>
+        <ion-col col-6 class="pt_44p colwidth100_768">
+          <div class="float_left mr_10p width100_768"><img src="assets/images/user.jpg" class="avtar_img avtar_img_767"></div>
+          <div class="float_left color_42 font15 fontopensansreg lh_39 width100_768">
+            <p class="invites_767">Peret Smith invited you</p>
+          </div>
+          <div class="width100 mt_30p float_left">
+            <div class="float_left width100 width100p_767 float_none_767 m_0a_767">
+              <button ion-button class="invite_btn">
+              <p class="fontopensansbold font10_5 color_fff">INVITE</p>
+              </button>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <!--EVENT DETAILS DIV END--> 
+    <!--LAST DIV START-->
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12>
+          <ul class="nav nav-tabs width100 fontopensansbold mt_50p">
+            <li class="active border_none"><a data-toggle="tab" href="#going" class="color_b0 font12 p_0">29 GOING</a></li>
+            <li class="border_none"><a data-toggle="tab" href="#maybe" class="color_b0 font12 p_0 m_0a">11 MAYBE</a></li>
+            <li class="border_none"><a data-toggle="tab" href="#invited" class="color_b0 font12 p_0 float_right">74 INVITED</a></li>
+          </ul>
+          <div class="tab-content mt_50p">
+            <div id="going" class="tab-pane fade in active">
+              <ion-grid class="">
+                <ion-row>
+                  <ion-col col-12 class="pl_15p">
+                    <div class="float_left mr_20p">
+                    	<div><img src="assets/images/user.jpg" class="avtar_img"></div>
+                        <div class="font10_5 color_42 text_center mt_5p">Peter <br> Smith</div>
+                    </div>
+                     <div class="float_left mr_20p">
+                    	<div><img src="assets/images/user.jpg" class="avtar_img"></div>
+                        <div class="font10_5 color_42 text_center mt_5p">Mike <br> Parker</div>
+                    </div>
+                     <div class="float_left mr_20p">
+                    	<div><img src="assets/images/user.jpg" class="avtar_img"></div>
+                        <div class="font10_5 color_42 text_center mt_5p">Elizabeth <br> Simpson</div>
+                    </div>
+                   </ion-col>
+                </ion-row>
+              </ion-grid>
+            </div>
+            <div id="maybe" class="tab-pane fade"> 
+              <ion-grid class="">
+                <ion-row>
+                  <ion-col col-12 class="pl_15p">
+                    <div class="float_left mr_20p">
+                    	<div><img src="assets/images/user.jpg" class="avtar_img"></div>
+                        <div class="font10_5 color_42 text_center mt_5p">Peter <br> Smith</div>
+                    </div>
+                     <div class="float_left mr_20p">
+                    	<div><img src="assets/images/user.jpg" class="avtar_img"></div>
+                        <div class="font10_5 color_42 text_center mt_5p">Mike <br> Parker</div>
+                    </div>
+                     <div class="float_left mr_20p">
+                    	<div><img src="assets/images/user.jpg" class="avtar_img"></div>
+                        <div class="font10_5 color_42 text_center mt_5p">Elizabeth <br> Simpson</div>
+                    </div>
+                   </ion-col>
+                </ion-row>
+              </ion-grid>
+            </div>
+            <div id="invited" class="tab-pane fade"> 
+              <ion-grid class="">
+                <ion-row>
+                  <ion-col col-12 class="pl_15p">
+                    <div class="float_left mr_20p">
+                    	<div><img src="assets/images/user.jpg" class="avtar_img"></div>
+                        <div class="font10_5 color_42 text_center mt_5p">Peter <br> Smith</div>
+                    </div>
+                     <div class="float_left mr_20p">
+                    	<div><img src="assets/images/user.jpg" class="avtar_img"></div>
+                        <div class="font10_5 color_42 text_center mt_5p">Mike <br> Parker</div>
+                    </div>
+                     <div class="float_left mr_20p">
+                    	<div><img src="assets/images/user.jpg" class="avtar_img"></div>
+                        <div class="font10_5 color_42 text_center mt_5p">Elizabeth <br> Simpson</div>
+                    </div>
+                   </ion-col>
+                </ion-row>
+              </ion-grid>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <!--LAST DIV END--> 
+    
+  </div>
+</ion-content>

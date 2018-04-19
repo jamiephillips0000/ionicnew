@@ -1,0 +1,8 @@
+page-addroom {
+	.back-button.show-back-button {display: none;}
+.back_arrow{position: absolute; left: 15px; z-index:1; top:0px;}
+.chk_popup {right: -1px; width: 308px; height: auto;top: 74px;}
+.minus_arrow_set{background-color: #b0bec5; position: absolute;top: 10px; right: 5px; color: #fff; font-size: 16px; border-radius: 50%; padding: 0 6px;}
+.remove_icon{background-color: #b0bec5; position: absolute; top: 25px; height: 30px; right: 0; color: #fff;font-size: 16px; border-radius: 50%; padding: 4px 9.6px; width: 30px;}
+.add_btn{background-color: #673ab7; position: absolute; bottom: 0; right: 25px; color: #fff; font-size: 30px; border-radius: 50%; padding: 7px 18px; height: 55px; width: 55px;}
+}

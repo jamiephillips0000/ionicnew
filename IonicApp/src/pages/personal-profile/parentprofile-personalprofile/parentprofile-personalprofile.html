@@ -1,0 +1,334 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header class="fontopensansbold">
+  <ion-navbar>
+    <button ion-button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+    </button>
+    <div class="back_arrow float_left color_fff" (click)="goBack()">
+      <div class="float_left"><span class="step size-32 font40"> <i class="icon ion-ios-arrow-left"></i> </span></div>
+      <div class="float_left pl_10 lh_56 fontopensansreg font18"><span>Back</span></div>
+    </div>
+    <ion-title class="text_center pl_80p">Parent Profile</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <!--<div class="width100">
+  		<p class="font6 color_b0 text_center">TEACHER PROFILE  / <span class="color_67"> PETER SMITH</span></p>
+  </div>-->
+  <ion-grid>
+  	 <ion-row class="border_radius2p">
+          <ion-col col-12>
+                <img src="assets/images/user.jpg" class="teacher_img">
+                <p class="text_center color_42 font15 fontopensansbold mt_15p">Peter Smith</p>
+                <p class="text_center color_b0 font8 fontopensansbold mt_15p">AGE 11   /   YEAR 5</p>
+        </ion-col>
+        </ion-row>
+  </ion-grid>
+  <div class="width63 width100_576 m_0a">
+      <ion-grid class="width286p width100_576">
+      <ion-row class="mlr_0_576">
+        <ion-col col-12 class="colwidth100_576">
+          <ion-list class="width100 pos_rel mt_7p">
+             <ion-item class="selectitem">
+      		  <ion-label floating class="mt_5p mb_7p">
+                <p class="fontopensansbold color_b0">STUDENT:</p>
+              </ion-label>
+                  <ion-select [(ngModel)]="student" interface="popover">
+                    <ion-option value="Pater Smith">Pater Smith</ion-option>
+                    <ion-option value="Pater Smith1">Pater Smith1</ion-option>
+                    <ion-option value="Pater Smith2">Pater Smith2</ion-option>
+                  </ion-select>
+                </ion-item>
+  		</ion-list>
+        </ion-col>
+        </ion-row>
+     </ion-grid>
+  </div>
+  <ul class="nav nav-tabs m_0a width310p fontopensansbold mt_10p">
+      <li class="active border_none float_left"><a data-toggle="tab" href="#ukcurriculum" class="p_0">UK CURRICULUM</a></li>
+      <li class="text_center border_none float_right"><a data-toggle="tab" href="#decurriculum" class="p_0">DE CURRICULUM</a></li>
+    </ul>
+    <div class="width63 width100_576 m_0a">
+    <div class="tab-content">
+      <div id="ukcurriculum" class="tab-pane fade in active">
+      <ion-grid class="width286p width100_576">
+      <ion-row class="mlr_0_576">
+        <ion-col col-12 class="colwidth100_576">
+          <ion-list class="width100 pos_rel mt_7p">
+             <ion-item class="selectitem">
+      		  <ion-label floating class="mt_5p mb_7p">
+                <p class="fontopensansbold color_b0">YEARS:</p>
+              </ion-label>
+                  <ion-select [(ngModel)]="year" interface="popover">
+                    <ion-option value="2016-2017">2016-2017</ion-option>
+                    <ion-option value="2017-2018">2017-2018</ion-option>
+                    <ion-option value="2018-2019">2018-2019</ion-option>
+                  </ion-select>
+                </ion-item>
+  		</ion-list>
+        </ion-col>
+        </ion-row>
+        <ion-row class="mlr_0_576">
+        <ion-col col-12 class="colwidth100_576">
+          <ion-list class="width100 pos_rel mt_7p">
+             <ion-item class="selectitem">
+      		  <ion-label floating class="mt_5p mb_7p">
+                <p class="fontopensansbold color_b0">CLASS:</p>
+              </ion-label>
+                  <ion-select [(ngModel)]="class" interface="popover">
+                    <ion-option value="Year-1">Year-1</ion-option>
+                    <ion-option value="Year-2">Year-2</ion-option>
+                    <ion-option value="Year-3">Year-3</ion-option>
+                  </ion-select>
+                </ion-item>
+  		</ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+	<!--SCHOOL 1 DIV START-->
+    <ion-grid>
+      <ion-row class="bg_grey border_radius2p floor_div mt_50p">
+        <ion-col col-11 >
+         <div class="floa_left">
+         	 <button ion-button class="lesson_btn_fill">
+              <p class="fontopensansbold">Math</p>
+              </button>
+         </div>
+        </ion-col>
+         <ion-col col-1 >
+          <div class="float_right mt_11p" (click)="school1()"> 
+          <span class="step size-32 color_67 up_arrow" *ngIf ="uparrow1 == '0' "> <i class="icon ion-ios-arrow-up"></i> </span> 
+          <span class="step size-32 color_67 up_arrow" *ngIf ="downarrow1 == '1' "> <i class="icon ion-ios-arrow-down"></i> </span> 
+          </div>
+        </ion-col>
+      </ion-row>
+      <div *ngIf ="school1div == '1' ">
+        <ion-row class="bg_ec border_radius2p floor_subdiv pb_10p bb_db">
+         <ion-col col-12 class="plr_25p">
+          <div class="float_left">
+         	<p class="font18 color_b0 lh_40">Curriculum Alerts</p>
+            </div>
+         </ion-col>
+        <ion-col col-8 class="plr_25p colwidth100_767">
+        <div>
+        	<p class="font8 color_b0 mb_2p">EMERGENT:</p>
+        	<div class="progress mb_0p">
+                <div class="progress-bar progress-bar-success progress-bar-striped bg_ffc" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                  50
+                </div>
+                 <div class="progress-bar progress-bar-success progress-bar-striped bg_f44" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width:30%">
+                  30
+                </div>
+              </div>
+           </div>
+           <div class="mt_15p">
+           	<p class="font8 color_b0 mb_2p">EXPECTED:</p>
+        	<div class="progress mb_0p">
+                <div class="progress-bar progress-bar-success progress-bar-striped bg_ccd" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                  50
+                </div>
+                 <div class="progress-bar progress-bar-success progress-bar-striped bg_f44" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width:20%">
+                  20
+                </div>
+              </div>
+           </div>
+           <div class="mt_15p">
+           	<p class="font8 color_b0 mb_2p">EXCEEDING:</p>
+        	<div class="progress mb_0p">
+                <div class="progress-bar progress-bar-success progress-bar-striped bg_8bc" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100" style="width:5%">
+                  5
+                </div>
+                 <div class="progress-bar progress-bar-success progress-bar-striped bg_f44" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width:20%">
+                  20
+                </div>
+              </div>
+           </div>
+        </ion-col> 
+        <ion-col col-4 class="colwidth100_767 plr_25p">
+                   <canvas baseChart 
+                [data]="doughnutChartData"
+                [labels]="doughnutChartLabels"
+                [colors]="pieChartColors"
+                [chartType]="doughnutChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
+        </ion-col>
+        </ion-row>
+        
+        
+      </div>
+    </ion-grid>
+    <!--SCHOOL 1 DIV OVER-->
+    <!--SCHOOL 2 DIV START-->
+    <ion-grid>
+      <ion-row class="bg_grey border_radius2p floor_div mt_50p">
+        <ion-col col-11 >
+         <div class="floa_left">
+         	 <button ion-button class="lesson_btn_fill">
+              <p class="fontopensansbold">Physic</p>
+              </button>
+         </div>
+        </ion-col>
+         <ion-col col-1 >
+          <div class="float_right mt_11p" (click)="school2()"> 
+          <span class="step size-32 color_67 up_arrow" *ngIf ="uparrow2 == '0' "> <i class="icon ion-ios-arrow-up"></i> </span> 
+          <span class="step size-32 color_67 up_arrow" *ngIf ="downarrow2 == '1' "> <i class="icon ion-ios-arrow-down"></i> </span> 
+          </div>
+        </ion-col>
+      </ion-row>
+      <div *ngIf ="school2div == '1' ">
+        <ion-row class="bg_ec border_radius2p floor_subdiv pb_10p bb_db">
+         <ion-col col-12 class="plr_25p">
+          <div class="float_left">
+         	<p class="font18 color_b0 lh_40">Curriculum Alerts</p>
+            </div>
+         </ion-col>
+        <ion-col col-8 class="plr_25p colwidth100_767">
+        <div>
+        	<p class="font8 color_b0 mb_2p">EMERGENT:</p>
+        	<div class="progress mb_0p">
+                <div class="progress-bar progress-bar-success progress-bar-striped bg_ffc" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                  50
+                </div>
+                 <div class="progress-bar progress-bar-success progress-bar-striped bg_f44" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width:30%">
+                  30
+                </div>
+              </div>
+           </div>
+           <div class="mt_15p">
+           	<p class="font8 color_b0 mb_2p">EXPECTED:</p>
+        	<div class="progress mb_0p">
+                <div class="progress-bar progress-bar-success progress-bar-striped bg_ccd" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                  50
+                </div>
+                 <div class="progress-bar progress-bar-success progress-bar-striped bg_f44" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width:20%">
+                  20
+                </div>
+              </div>
+           </div>
+           <div class="mt_15p">
+           	<p class="font8 color_b0 mb_2p">EXCEEDING:</p>
+        	<div class="progress mb_0p">
+                <div class="progress-bar progress-bar-success progress-bar-striped bg_8bc" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100" style="width:5%">
+                  5
+                </div>
+                 <div class="progress-bar progress-bar-success progress-bar-striped bg_f44" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width:20%">
+                  20
+                </div>
+              </div>
+           </div>
+        </ion-col> 
+        <ion-col col-4 class="colwidth100_767 plr_25p">
+                    <canvas baseChart 
+                [data]="doughnutChartData"
+                [labels]="doughnutChartLabels"
+                [colors]="pieChartColors"
+                [chartType]="doughnutChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
+        </ion-col>
+        </ion-row>
+      </div>
+    </ion-grid>
+    <!--SCHOOL 2 DIV OVER-->
+    <!--SCHOOL 3 DIV START-->
+    <ion-grid>
+      <ion-row class="bg_grey border_radius2p floor_div mt_50p">
+        <ion-col col-11 >
+         <div class="floa_left">
+         	 <button ion-button class="lesson_btn_fill">
+              <p class="fontopensansbold">Painting</p>
+              </button>
+         </div>
+        </ion-col>
+         <ion-col col-1 >
+          <div class="float_right mt_11p" (click)="school3()"> 
+          <span class="step size-32 color_67 up_arrow" *ngIf ="uparrow3 == '0' "> <i class="icon ion-ios-arrow-up"></i> </span> 
+          <span class="step size-32 color_67 up_arrow" *ngIf ="downarrow3 == '1' "> <i class="icon ion-ios-arrow-down"></i> </span> 
+          </div>
+        </ion-col>
+      </ion-row>
+      <div *ngIf ="school3div == '1' ">
+        <ion-row class="bg_ec border_radius2p floor_subdiv pb_10p bb_db">
+         <ion-col col-12 class="plr_25p">
+          <div class="float_left">
+         	<p class="font18 color_b0 lh_40">Curriculum Alerts</p>
+            </div>
+         </ion-col>
+        <ion-col col-8 class="plr_25p colwidth100_767">
+        <div>
+        	<p class="font8 color_b0 mb_2p">EMERGENT:</p>
+        	<div class="progress mb_0p">
+                <div class="progress-bar progress-bar-success progress-bar-striped bg_ffc" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                  50
+                </div>
+                 <div class="progress-bar progress-bar-success progress-bar-striped bg_f44" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width:30%">
+                  30
+                </div>
+              </div>
+           </div>
+           <div class="mt_15p">
+           	<p class="font8 color_b0 mb_2p">EXPECTED:</p>
+        	<div class="progress mb_0p">
+                <div class="progress-bar progress-bar-success progress-bar-striped bg_ccd" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                  50
+                </div>
+                 <div class="progress-bar progress-bar-success progress-bar-striped bg_f44" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width:20%">
+                  20
+                </div>
+              </div>
+           </div>
+           <div class="mt_15p">
+           	<p class="font8 color_b0 mb_2p">EXCEEDING:</p>
+        	<div class="progress mb_0p">
+                <div class="progress-bar progress-bar-success progress-bar-striped bg_8bc" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100" style="width:5%">
+                  5
+                </div>
+                 <div class="progress-bar progress-bar-success progress-bar-striped bg_f44" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width:20%">
+                  20
+                </div>
+              </div>
+           </div>
+        </ion-col> 
+        <ion-col col-4 class="colwidth100_767 plr_25p">
+                    <canvas baseChart 
+                [data]="doughnutChartData"
+                [labels]="doughnutChartLabels"
+                [colors]="pieChartColors"
+                [chartType]="doughnutChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
+        </ion-col>
+        </ion-row>
+      </div>
+    </ion-grid>
+    <!--SCHOOL 3 DIV OVER-->
+        
+      </div>
+      <div id="decurriculum" class="tab-pane fade"> 
+        <!--<h3>Menu 1</h3>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>--> 
+      </div>
+    </div>
+  </div>
+    
+    <!--<ion-grid>
+      <ion-row>
+        <ion-col col-12>
+          <div class="width45 width100_576 m_0a">
+            <div class="width202p m_40a0">
+              <button ion-button class="login_btn" (click)="goBack()">
+              <p class="fontopensansbold font18">Save</p>
+              </button>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>-->
+</ion-content>

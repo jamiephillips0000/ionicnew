@@ -1,0 +1,171 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header >
+  <ion-navbar class="bg_header_active">
+    <button ion-button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title class="pl_8">Event Details</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding  ng-app="familyparent">
+  <div class="width100" ng-controller="familyparentCtrl">
+    <div class="width640p m_0a width100_768"> 
+      <!--PHOTO & EVENT NAME DIV START-->
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6 class="colwidth100_576 h_150p_576">
+          	<div class="pos_rel photo_div">
+                <button ion-button class="download_btn">
+               	 <p class="fontopensansbold font10" >UPLOAD PHOTO</p>
+                </button>
+            </div>
+          </ion-col>
+          <ion-col col-6 class="colwidth100_576">
+          	 <ion-row class="m_0">
+              <ion-col col-12>
+            <ion-list class="width100 pos_rel mt_7p">
+             <ion-item class="selectitem bb2_ec">
+      		  <ion-label floating class="mt_5p mb_7p">
+                <p class="fontopensansbold color_b0">EVENT HOST:</p>
+              </ion-label>
+                  <ion-select [(ngModel)]="eventhost" interface="popover">
+                    <ion-option value="PTA">PTA</ion-option>
+                    <ion-option value="School">School</ion-option>
+                    <ion-option value="Class">Class</ion-option>
+                    <ion-option value="External">External</ion-option>
+                  </ion-select>
+                </ion-item>
+  		</ion-list>
+            </ion-col>
+            </ion-row>
+            <ion-row class="m_0">
+            <ion-col col-12>
+            <ion-item class="bb2_ec">
+              <ion-label floating>
+                <p class="fontopensansbold color_b0">LOCATION:</p>
+              </ion-label>
+              <ion-input type="text" class="font18 color_42 fontopensansreg"></ion-input>
+            </ion-item>
+            </ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+      </ion-grid> 
+      <!--PHOTO & EVENT NAME DIV END--> 
+      <!--START & END DATE DIV START-->
+      <ion-grid class="date_div">
+        <ion-row>
+          <ion-col col-6 class="colwidth100_576">
+            <ion-list>
+              <ion-item class="bb2_67">
+                <ion-label floating>
+                  <p class="fontopensansbold color_b0">START:</p>
+                </ion-label>
+                <ion-datetime class="font18 color_42 fontopensansreg" displayFormat="DD.MMM.YYYY h:mm A" [(ngModel)]="start.month"></ion-datetime>
+              </ion-item>
+            </ion-list>
+            <div class="from_date">
+              <ion-icon name="ios-calendar-outline" class="icon_calender"></ion-icon>
+            </div>
+          </ion-col>
+          <ion-col col-6 class="colwidth100_576">
+            <ion-list>
+              <ion-item class="bb2_67">
+                <ion-label floating>
+                  <p class="fontopensansbold color_b0">END:</p>
+                </ion-label>
+                <ion-datetime class="font18 color_42 fontopensansreg" displayFormat="DD.MMM.YYYY h:mm A" [(ngModel)]="end.month"></ion-datetime>
+              </ion-item>
+            </ion-list>
+            <div class="from_date">
+              <ion-icon name="ios-calendar-outline" class="icon_calender"></ion-icon>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <!--START & END DATE DIV END--> 
+      <!--DESCREPTION DIV START-->
+      <ion-grid>
+        <ion-row>
+          <ion-col col-12>
+            <ion-item class="bb2_ec">
+              <ion-label floating>
+                <p class="fontopensansbold color_b0">DESCREPTION:</p>
+              </ion-label>
+              <ion-input type="text" class="font18 color_42 fontopensansreg"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <!--DESCREPTION DIV END--> 
+      <!--INVITE DIV START-->
+      <ion-grid>
+        <ion-row>
+          <ion-col col-12>
+            <ion-item class="mb_15p bb2_67">
+              <ion-label floating>
+                <p class="fontopensansreg color_b0 font18">Invite</p>
+              </ion-label>
+              <ion-input type="text" class="font18 color_42 fontopensansreg" disabled></ion-input>
+            </ion-item>
+            <span class="step size-32 plus_arrow_set pos_set_plus" (click) = "openinvitebox()"> <i class="icon ion-android-add"></i> </span>
+            <div class="chk_popup width300p chk_popup_pos" *ngIf="myinvite == '1'">
+              <ion-list>
+                <ion-item class="bb_ec h_52p chkbox" >
+                  <ion-label class="fontopensansreg color_b0 font18">Year-1(20)</ion-label>
+                  <ion-checkbox [(ngModel)]="inviteselected['Year-1(20)']" (ionChange)='saveinvite()'></ion-checkbox>
+                </ion-item>
+                <ion-item class="bb_ec h_52p chkbox" >
+                  <ion-label>Year-2(Andrew)</ion-label>
+                  <ion-checkbox [(ngModel)]="inviteselected['Year-2(Andrew)']" (ionChange)='saveinvite()'></ion-checkbox>
+                </ion-item>
+              </ion-list>
+            </div>
+            <div id="invitediv"> 
+              <!--<div class="float_left color_42 cur_text mt_7p mr_10p"><p>DE Curiculum 2016-2017</p></div>
+                    	<div class="float_left color_42 cur_text mt_7p mr_10p"><p>DE Curiculum 2016-2017</p></div>--> 
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <!--INVITE DIV END--> 
+      <!--INVITE VIA EMAIL DIV START-->
+      <ion-grid>
+        <ion-row>
+          <ion-col col-12>
+            <ion-item class="mb_15p bb2_67">
+              <ion-label floating>
+                <p class="fontopensansreg color_b0 font18">Invite via E-mail</p>
+              </ion-label>
+              <ion-input type="text" class="font18 color_42 fontopensansreg" disabled></ion-input>
+            </ion-item>
+            <span class="step size-32 plus_arrow_set pos_set_plus" (click) = "openinviteviaemailbox()"> <i class="icon ion-android-add"></i> </span>
+            <div class="chk_popup width300p chk_popup_pos" *ngIf="myinviteviaemail == '1'">
+              <ion-list>
+                <ion-item class="bb_ec h_52p chkbox" >
+                  <ion-label class="fontopensansreg color_b0 font18">example@gmail.com</ion-label>
+                  <ion-checkbox [(ngModel)]="inviteviaemailselected['example@gmail.com']" (ionChange)='saveinviteviaemail()'></ion-checkbox>
+                </ion-item>
+                <ion-item class="bb_ec h_52p chkbox" >
+                  <ion-label>example1@gmail.com</ion-label>
+                  <ion-checkbox [(ngModel)]="inviteviaemailselected['example1@gmail.com']" (ionChange)='saveinviteviaemail()'></ion-checkbox>
+                </ion-item>
+              </ion-list>
+            </div>
+            <div id="inviteviaemaildiv"> 
+              <!--<div class="float_left color_42 cur_text mt_7p mr_10p"><p>DE Curiculum 2016-2017</p></div>
+                    	<div class="float_left color_42 cur_text mt_7p mr_10p"><p>DE Curiculum 2016-2017</p></div>--> 
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <!--INVITE VIA EMAIL DIV END--> 
+    </div>
+  </div>
+</ion-content>

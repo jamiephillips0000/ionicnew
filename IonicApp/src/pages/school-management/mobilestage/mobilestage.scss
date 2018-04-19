@@ -1,0 +1,44 @@
+page-mobilestage {
+.row{margin-left:-21px; margin-right:-21px;}
+.book_btn{width: 100px;height: 30px; border-radius: 15px; background-color: #673ab7; border: solid 1px #673ab7;}
+.today_btn{width: 80px;height: 30px;border-radius: 15px; background-color:transparent; box-shadow:none; color:#424242; border: solid 1px #673ab7; font-size:10.5px;}
+
+small{font-size:12px;font-family: 'open_sansbold'; color:#424242; text-transform: uppercase;}
+table{background-color:#eceff1 !important; border:1px solid #fff !important;}
+th{border:none !important; line-height:normal !important; height:49px !important; text-align:right !important;}
+td{border:1px solid #fff !important; color:#424242 !important; line-height:normal !important; text-align:right !important; height:91px;}
+.text-muted{color:#999 !important;}
+
+.monthview-primary-with-event{background-color:#673ab7 !important; color:#fff !important;}
+.monthview-selected{background-color:#009900 !important; color:#fff !important;}
+
+.item-md .toggle-md {padding: 0 0 0 0 !important;}
+.toggle-md {width: 60px !important; height: 30px !important;}
+.toggle-md .toggle-inner {top: 0px !important; width: 29px !important; height: 29px !important;background-color: #b0bec5 !important;}
+.toggle-md .toggle-icon {background-color: #fff !important;}
+.toggle-md.toggle-checked .toggle-inner {-webkit-transform: translate3d(31px, 0, 0) !important;transform: translate3d(31px, 0, 0) !important; background-color: #673ab7 !important;}
+
+.book_div{position:absolute; left:0;}
+.toggle_div{position:absolute; right:0;}
+
+/*For IOS*/
+.item-ios .toggle-ios {padding: 0 0 0 0 !important;}
+.toggle-ios {width: 60px !important; height: 30px !important;}
+.toggle-ios .toggle-inner {top: 0px !important; width: 29px !important; height: 29px !important;background-color: #b0bec5 !important;}
+.toggle-ios .toggle-icon {background-color: #fff !important;}
+.toggle-ios.toggle-checked .toggle-inner {-webkit-transform: translate3d(31px, 0, 0) !important;transform: translate3d(31px, 0, 0) !important; background-color: #673ab7 !important;}
+
+@media only screen and (max-width: 932px) {
+		td{height:44px !important;}
+	}
+	
+@media only screen and (max-width: 450px) {
+		.book_btn{width: 60px;}
+		.today_btn{width: 60px;}
+		.width_75_450{width:75%;}
+	}
+	
+@media only screen and (max-width: 400px) {
+		td{height:30px !important;}
+	}
+}

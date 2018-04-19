@@ -1,0 +1,176 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header >
+  <ion-navbar class="bg_header_active">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title class="pl_8">User Profile</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding ng-app="familyparent">
+  <ion-grid ng-controller="familyparentCtrl">
+    <ion-row>
+      <ion-col col-12>
+        <div class="width44 width100_576 m_0a mt_40p text_center">
+          <span class="step size-32 font40 camera_icon"><i class="icon ion-camera"></i> </span>
+        </div>
+        <div class="width44 width100_576 m_0a mt_40p text_center">
+          <button ion-button class="download_btn">
+            <p class="fontopensansbold font10" >UPLOAD PHOTO</p>
+            </button>
+            </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <div class="width44 width100_576 m_0a mt_40p">
+          <ion-list class="pos_rel">
+                <ion-item class="">
+                  <ion-label floating>
+                    <p class="fontopensansbold color_b0">FULL NAME:</p>
+                  </ion-label>
+                  <ion-input type="text" class="font18 color_42 fontopensansreg" ></ion-input>
+                </ion-item>
+          </ion-list>
+        </div>
+      </ion-col>
+    </ion-row>
+    <div class="width44 width100_576 m_0a ">
+    <ion-row>
+      <ion-col col-12 class="">
+          <ion-list class="pos_rel">
+                <ion-item class="mb_15p">
+                  <ion-label floating>
+                    <p class="fontopensansbold color_b0">BIRTHDAY</p>
+                  </ion-label>
+                 <!-- <ion-input type="text" class="font18 color_42 fontopensansreg" ></ion-input>-->
+                  <!--<ion-datetime id="datepicker"></ion-datetime>-->
+                 <!-- <p class="fontopensansbold color_b0 font10">BIRTHDAY:</p>-->
+                  <ion-datetime displayFormat="DD.MMM.YYYY" [(ngModel)]="birthday.month"></ion-datetime>
+                 </ion-item>
+          </ion-list>
+      </ion-col>
+      <ion-col col-12 class="">
+          <ion-list class="pos_rel">
+                <ion-item class="mb_15p">
+                  <ion-label floating>
+                    <p class="fontopensansbold color_b0">ADDRESS:</p>
+                  </ion-label>
+                  <ion-input type="number" class="font18 color_42 fontopensansreg" ></ion-input>
+                </ion-item>
+          </ion-list>
+      </ion-col>
+    </ion-row>
+    </div>
+     <div class="width44 width100_576 m_0a ">
+    <ion-row>
+      <ion-col col-12 class="">
+          <ion-list class="pos_rel">
+                <ion-item class="mb_15p">
+                  <ion-label floating>
+                    <p class="fontopensansbold color_b0">PHONE:</p>
+                  </ion-label>
+                  <ion-input type="text" class="font18 color_42 fontopensansreg" ></ion-input>
+                </ion-item>
+          </ion-list>
+          <span class="step size-32 down_arrow_icon_pos1" ng-click="addparent()"> <i class="icon ion-iphone"></i> </span>
+      </ion-col>
+    </ion-row>
+    </div>
+     <div class="width44 width100_576 m_0a ">
+    <ion-row>
+      <ion-col col-12 class="">
+          <ion-list class="pos_rel">
+                <ion-item class="mb_15p">
+                  <ion-label floating>
+                    <p class="fontopensansbold color_b0">EMAIL:</p>
+                  </ion-label>
+                  <ion-input type="text" class="font18 color_42 fontopensansreg" ></ion-input>
+                </ion-item>
+          </ion-list>
+          <span class="step size-32 down_arrow_icon_pos1" ng-click="addparent()"> <i class="icon ion-ios-email-outline"></i> </span>
+      </ion-col>
+    </ion-row>
+    </div>
+     <ion-row>
+      <ion-col col-12>
+        <div class="width44 width100_576 m_0a">
+          <ion-list class="pos_rel">
+                <ion-item class="">
+                  <ion-label floating>
+                    <p class="fontopensansbold color_b0">ADDRESS:</p>
+                  </ion-label>
+                  <ion-input type="text" class="font18 color_42 fontopensansreg" ></ion-input>
+                </ion-item>
+          </ion-list>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <div class="width44 width100_576 m_0a">
+          <ion-list class="pos_rel">
+                <ion-item class="">
+                  <ion-label floating>
+                    <p class="fontopensansbold color_b0">ROLE:</p>
+                  </ion-label>
+                  <ion-input type="text" class="font18 color_42 fontopensansreg" ></ion-input>
+                </ion-item>
+          </ion-list>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <div class="width44 width100_576 m_0a">
+          <ion-list class="pos_rel">
+                <ion-item class="">
+                  <ion-label floating>
+                    <p class="fontopensansbold color_b0">SUBJECT:</p>
+                  </ion-label>
+                  <ion-input type="text" class="font18 color_42 fontopensansreg" ></ion-input>
+                </ion-item>
+          </ion-list>
+        </div>
+      </ion-col>
+    </ion-row>
+     <ion-row>
+      <ion-col col-12>
+        <div class="width45 width100_576 m_0a">
+          <div class="float_left width50 pr_10p_932">
+            <button ion-button class="down_btns">
+            <p class="fontopensansbold">ASSIGNMENTS</p>
+            </button>
+          </div>
+          <div class="float_left width50 pr_10p_932">
+            <button ion-button class="down_btns">
+            <p class="fontopensansbold">CLASSES</p>
+            </button>
+          </div>
+          <!--<div class="float_left width33_33 pr_10p_932">
+            <button ion-button class="down_btns">
+            <p class="fontopensansbold">TEACHERS</p>
+            </button>
+          </div>-->
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <div class="width45 width100_576 m_0a">
+          <div class="width202p m_40a0">
+            <button ion-button class="login_btn">
+            <p class="fontopensansbold font18" (click)="gotoaddstudentinfo()">Save</p>
+            </button>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

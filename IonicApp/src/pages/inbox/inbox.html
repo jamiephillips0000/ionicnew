@@ -1,0 +1,281 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header class="fontopensansbold">
+  <ion-navbar>
+    <button ion-button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+    </button>
+    <div class="back_arrow float_left color_fff" (click)="goBack()">
+      <div class="float_left"><span class="step size-32 font40"> <i class="icon ion-ios-arrow-left"></i> </span></div>
+      <div class="float_left pl_10 lh_56 fontopensansreg font18"><span>Back</span></div>
+    </div>
+    <ion-title class="text_center pl_80p">{{title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding class="pos_rel"  ng-app="familyparent">
+  <div class="width100 float_left"> 
+    <!--INBOX LIST DIV START-->
+    <div class="float_left bg_ec width40_6 overflow_scroll inboxlist" [style.height.px]="height - 56">
+      <ion-grid class="p_0">
+        <ion-row class="m_0">
+          <ion-col col-12 class="mt_20p plr_25p">
+            <ion-list class="pos_rel">
+              <ion-item class="bg_ec">
+                <ion-input type="text" placeholder="Search" class="font18 color_42 fontopensansreg"></ion-input>
+              </ion-item>
+              <span class="step size-32 color_b0 search_icon_pos"> <i class="icon ion-ios-search font30"></i> </span> </ion-list>
+          </ion-col>
+        </ion-row>
+        <div class="overflow_scroll" [style.height.px]="height - 145">
+        <ion-row class="m_0 ptb_5p" [ngStyle]="{'background-color': activecolor}" (click)="chat1()">
+          <ion-col col-12 class="plr_25p">
+            <div class="float_left mr_15p"> <img src="assets/images/user.jpg" class="user_img"> </div>
+            <div class="float_left fontopensansreg width63">
+              <p class="font15 mb_2p" [ngStyle]="{'color': fontcolor1}">Peret Smith</p>
+              <p class="font9" [ngStyle]="{'color': fontcolor2}">You:Hello</p>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="m_0 ptb_5p" [ngStyle]="{'background-color': activecolor1}" (click)="chat2()">
+          <ion-col col-12 class="plr_25p">
+            <div class="float_left mr_15p"> <img src="assets/images/user1.jpg" class="user_img"> </div>
+            <div class="float_left fontopensansreg width63">
+              <p class="font15 mb_2p" [ngStyle]="{'color': fontcolor3}">Mike Parker</p>
+              <p class="color_78 font9" [ngStyle]="{'color': fontcolor4}">It is a long established fact that a reader will be...</p>
+            </div>
+           <!-- <div class="float_right msg_num">
+              <p>1</p>
+            </div>-->
+          </ion-col>
+        </ion-row>
+        <ion-row class="m_0 ptb_5p">
+          <ion-col col-12 class="plr_25p">
+            <div class="float_left mr_15p"> <img src="assets/images/user.jpg" class="user_img"> </div>
+            <div class="float_left fontopensansreg width63">
+              <p class="font15 color_42 mb_2p">Elizabeth Simpson</p>
+              <p class="color_78 font9">You: It is a long established fact that a reader will be...</p>
+            </div>
+            <!--<div class="float_right msg_num">
+                	<p>1</p>
+                </div>--> 
+          </ion-col>
+        </ion-row>
+        <ion-row class="m_0 ptb_5p">
+          <ion-col col-12 class="plr_25p">
+            <div class="float_left mr_15p"> <img src="assets/images/user.jpg" class="user_img"> </div>
+            <div class="float_left fontopensansreg width63">
+              <p class="font15 color_42 mb_2p">Frederick Addo</p>
+              <p class="color_78 font9">It is a long established fact that a reader will be...</p>
+            </div>
+          <!--  <div class="float_right msg_num">
+              <p>2</p>
+            </div>-->
+          </ion-col>
+        </ion-row>
+        <ion-row class="m_0 ptb_5p">
+          <ion-col col-12 class="plr_25p">
+            <div class="float_left mr_15p"> <img src="assets/images/user.jpg" class="user_img"> </div>
+            <div class="float_left fontopensansreg width63">
+              <p class="font15 color_42 mb_2p">Johnny Way</p>
+              <p class="color_78 font9">You: It is a long established fact that a reader will be...</p>
+            </div>
+            <!--<div class="float_right msg_num">
+                	<p>1</p>
+                </div>--> 
+          </ion-col>
+        </ion-row>
+        <ion-row class="m_0 ptb_5p">
+          <ion-col col-12 class="plr_25p">
+            <div class="float_left mr_15p"> <img src="assets/images/user.jpg" class="user_img"> </div>
+            <div class="float_left fontopensansreg width63">
+              <p class="font15 color_42  mb_2p">Gregg Moor</p>
+              <p class="color_78 font9">You: It is a long established fact that a reader will be...</p> 
+            </div>
+            <!--<div class="float_right msg_num">
+                	<p>1</p>
+                </div>--> 
+          </ion-col>
+        </ion-row>
+        <ion-row class="m_0 ptb_5p">
+          <ion-col col-12 class="plr_25p">
+            <div class="float_left mr_15p"> <img src="assets/images/user.jpg" class="user_img"> </div>
+            <div class="float_left fontopensansreg width63">
+              <p class="font15 color_42 mb_2p">Mike Parker</p>
+              <p class="color_78 font9">It is a long established fact that a reader will be...</p>
+            </div>
+            <div class="float_right msg_num">
+              <p>1</p>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="m_0 ptb_5p">
+          <ion-col col-12 class="plr_25p">
+            <div class="float_left mr_15p"> <img src="assets/images/user.jpg" class="user_img"> </div>
+            <div class="float_left fontopensansreg width63">
+              <p class="font15 color_42 mb_2p">Elizabeth Simpson</p>
+              <p class="color_78 font9">You: It is a long established fact that a reader will be...</p>
+            </div>
+            <!--<div class="float_right msg_num">
+                	<p>1</p>
+                </div>--> 
+          </ion-col>
+        </ion-row>
+        <ion-row class="m_0 ptb_5p">
+          <ion-col col-12 class="plr_25p">
+            <div class="float_left mr_15p"> <img src="assets/images/user.jpg" class="user_img"> </div>
+            <div class="float_left fontopensansreg width63">
+              <p class="font15 color_42 mb_2p">Frederick Addo</p>
+              <p class="color_78 font9">It is a long established fact that a reader will be...</p>
+            </div>
+            <div class="float_right msg_num">
+              <p>2</p>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="m_0 ptb_5p">
+          <ion-col col-12 class="plr_25p">
+            <div class="float_left mr_15p"> <img src="assets/images/user.jpg" class="user_img"> </div>
+            <div class="float_left fontopensansreg width63">
+              <p class="font15 color_42 mb_2p">Elizabeth Simpson</p>
+              <p class="color_78 font9">You: It is a long established fact that a reader will be...</p>
+            </div>
+            <!--<div class="float_right msg_num">
+                	<p>1</p>
+                </div>--> 
+          </ion-col>
+        </ion-row>
+        <ion-row class="m_0 ptb_5p">
+          <ion-col col-12 class="plr_25p">
+            <div class="float_left mr_15p"> <img src="assets/images/user.jpg" class="user_img"> </div>
+            <div class="float_left fontopensansreg width63">
+              <p class="font15 color_42 mb_2p">Elizabeth Simpson</p>
+              <p class="color_78 font9">You: It is a long established fact that a reader will be...</p>
+            </div>
+            <!--<div class="float_right msg_num">
+                	<p>1</p>
+                </div>--> 
+          </ion-col>
+        </ion-row>
+        </div>
+      </ion-grid>
+    </div>
+    <!--INBOX LIST DIV END--> 
+    <!--CHAT LIST DIV START-->
+      <!--CHAT 1 START-->
+    <div class="float_left width59_4 overflow_scroll" [style.height.px]="height - 136" *ngIf="mychat1 == '1'">
+      <ion-grid class="p_0">
+        <ion-row class="m_0">
+          <ion-col col-12 class="plr_25p mt_20p">
+          	<div class="float_left mr_10p mt_15p"> <img src="assets/images/user.jpg" class="user_img"> </div>
+            <div class="float_left fontopensansreg pos_rel width87">
+            	<p class="color_b0 font9">01.03.2017 at 09:00 AM</p>
+                <p class="receive_msg">It is a long established fact that a reader will be... </p>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="m_0">
+          <ion-col col-12 class="plr_25p">
+            <div class="float_right fontopensansreg pos_rel">
+            	<p class="color_b0 font9 text_right">Yesterday at 09:00 AM</p>
+                <p class="send_msg float_right">Hello </p>
+            </div>
+          </ion-col>
+        </ion-row>
+         <ion-row class="m_0">
+          <ion-col col-12 class="plr_25p">
+          	<div class="float_left mr_10p mt_15p"> <img src="assets/images/user.jpg" class="user_img"> </div>
+            <div class="float_left fontopensansreg pos_rel width87">
+            	<p class="color_b0 font9">12:00 AM</p>
+                <p class="receive_msg">Hello back </p>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="m_0 bottom">
+          <ion-col col-12 class="plr_25p">
+          <div class="float_left mr_15p lh_40">
+          	<span class="step size-32 color_b0"> <i class="icon ion-ios-photos-outline font30"></i> </span>
+          </div>
+          <div class="float_left mr_15p lh_40">
+          	<span class="step size-32 color_b0"> <i class="icon ion-ios-camera-outline font38"></i> </span>
+          </div>
+          <div class="float_left mr_15p lh_40 rotate45">
+          	<span class="step size-32 color_b0"> <i class="icon ion-paperclip font36"></i> </span>
+          </div>
+          <div class="float_left width60">
+          	<ion-list class="pos_rel">
+              <ion-item class="">
+                <ion-input type="text" placeholder="Type a Message" class="font18 color_42 fontopensansreg"></ion-input>
+              </ion-item>
+              <!--<span class="step size-32 color_b0 search_icon_pos"> <i class="icon ion-ios-search font30"></i> </span>--> </ion-list>
+              </div>
+              <div class="float_left send_btn">
+          	<span class="step size-32 color_fff"> <i class="icon ion-paper-airplane font30"></i> </span>
+          </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+    	<!--CHAT 1 END-->
+         <!--CHAT 2 START-->
+    <div class="float_left width59_4 overflow_scroll" [style.height.px]="height - 136" *ngIf="mychat2 == '1'">
+      <ion-grid class="p_0">
+        <ion-row class="m_0">
+          <ion-col col-12 class="plr_25p mt_20p">
+          	<div class="float_left mr_10p mt_15p"> <img src="assets/images/user1.jpg" class="user_img"> </div>
+            <div class="float_left fontopensansreg pos_rel width87">
+            	<p class="color_b0 font9">01.03.2017 at 09:00 AM</p>
+                <p class="receive_msg">HI this is mike parker </p>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="m_0">
+          <ion-col col-12 class="plr_25p">
+            <div class="float_right fontopensansreg pos_rel">
+            	<p class="color_b0 font9 text_right">Yesterday at 09:00 AM</p>
+                <p class="send_msg float_right">Hello How r u? </p>
+            </div>
+          </ion-col>
+        </ion-row>
+         <ion-row class="m_0">
+          <ion-col col-12 class="plr_25p">
+          	<div class="float_left mr_10p mt_15p"> <img src="assets/images/user1.jpg" class="user_img"> </div>
+            <div class="float_left fontopensansreg pos_rel width87">
+            	<p class="color_b0 font9">12:00 AM</p>
+                <p class="receive_msg">Same here!! </p>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="m_0 bottom">
+          <ion-col col-12 class="plr_25p">
+          <div class="float_left mr_15p lh_40">
+          	<span class="step size-32 color_b0"> <i class="icon ion-ios-photos-outline font30"></i> </span>
+          </div>
+          <div class="float_left mr_15p lh_40">
+          	<span class="step size-32 color_b0"> <i class="icon ion-ios-camera-outline font38"></i> </span>
+          </div>
+          <div class="float_left mr_15p lh_40 rotate45">
+          	<span class="step size-32 color_b0"> <i class="icon ion-paperclip font36"></i> </span>
+          </div>
+          <div class="float_left width60">
+          	<ion-list class="pos_rel">
+              <ion-item class="">
+                <ion-input type="text" placeholder="Type a Message" class="font18 color_42 fontopensansreg"></ion-input>
+              </ion-item>
+              <!--<span class="step size-32 color_b0 search_icon_pos"> <i class="icon ion-ios-search font30"></i> </span>--> </ion-list>
+              </div>
+              <div class="float_left send_btn">
+          	<span class="step size-32 color_fff"> <i class="icon ion-paper-airplane font30"></i> </span>
+          </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+    	<!--CHAT 2 END-->
+    <!--CHAT LIST DIV START--> 
+  </div>
+</ion-content>

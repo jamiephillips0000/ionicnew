@@ -1,0 +1,14 @@
+page-principal-userprofile {
+.datetime-md {padding: 6px 8px 3px 0px;}
+.down_arrow_icon_pos1{position: absolute;right: 6px;top: 27px;height: 30px;width: 30px;background: #673ab7;border-radius: 50%;color: #fff;font-size: 22px;text-align: center;}
+
+.down_btns{width: 130px;height: 30px;border-radius: 15px;background-color: #673ab7; font-size:10.5px; display:table; margin:4px auto;}
+
+.datetime-ios {padding: 6px 8px 3px 0px;}
+@media only screen and (max-width: 932px) {
+		.down_btns{width: 100%;}
+		.pr_10p_932{padding-right:10px;}
+	}
+}
+
+    
