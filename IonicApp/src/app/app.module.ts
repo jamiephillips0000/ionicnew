@@ -16,6 +16,7 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
+import { NewRegistrationPage } from '../pages/new-registration/new-registration';
 import { ConfirmemailPage } from '../pages/confirmemail/confirmemail';
 import { EmailisverifiedPage } from '../pages/emailisverified/emailisverified';
 import { PhonenumberPage } from '../pages/phonenumber/phonenumber';
@@ -132,6 +133,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ListPage,
 	LoginPage,
 	RegisterPage,
+  NewRegistrationPage,
 	ConfirmemailPage,
 	EmailisverifiedPage,
 	PhonenumberPage,
@@ -242,6 +244,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ListPage,
 	LoginPage,
 	RegisterPage,
+  NewRegistrationPage,
 	ConfirmemailPage,
 	EmailisverifiedPage,
 	PhonenumberPage,

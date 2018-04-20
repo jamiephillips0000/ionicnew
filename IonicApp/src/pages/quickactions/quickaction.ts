@@ -6,6 +6,7 @@ import { QuickactionRolecallPage } from '../quickaction-rolecall/quickaction-rol
 import { Absentteachers1Page } from '../tempteacherapply/absentteachers1/absentteachers1';
 import { AddincidentPage } from '../dashboard-teacher/addincident/addincident';
 import { QuickactionBookPage } from '../quickaction-book/quickaction-book';
+import { NewRegistrationPage } from '../new-registration/new-registration';
 import { RestService } from '../../services/rest/restservice'
 
 @IonicPage()
@@ -21,7 +22,8 @@ export class QuickactionPage {
     this.pages = [
       [{ title: 'Absent', component: AbsencePage }, { title: 'Absent Teacher', component: Absentteachers1Page }],
       [{ title: 'Role Call', component: QuickactionRolecallPage }, { title: 'Log Incident', component: AddincidentPage }],
-      [{ title: 'Panic', component: PanicPage }, { title: 'Book Equipment/Room', component: QuickactionBookPage }]
+      [{ title: 'Panic', component: PanicPage }, { title: 'Book Equipment/Room', component: QuickactionBookPage }],
+      [{ title: 'Register', component: NewRegistrationPage }]
     ];
   }
 
