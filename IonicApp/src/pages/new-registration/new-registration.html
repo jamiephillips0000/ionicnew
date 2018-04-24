@@ -22,26 +22,34 @@
 
 <ion-content padding>
   <ion-row>
-    <ion-col col-12>
-      <div class="width45 width100_576 m_0a mt_40p">
-        <ion-list class="pos_rel">
-          <div>
+
+      <ion-col col-12>
+        <div class="width45 width100_576 m_0a mt_40p">
+          <ion-list class="pos_rel">
             <div>
-              <ion-item class="mb_15p">
-                <ion-label floating>
-                  <p class="fontopensansbold color_b0">APPLICANT(S):</p>
-                </ion-label>
-                <ion-input type="text" class="font18 color_42 fontopensansreg" [(ngModel)]="newItem" pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})"></ion-input>
-              </ion-item>
-              <span class="step size-32 plus_icon_pos font40 color_67" (click)="addApplicant()"> <i class="icon ion-plus-circled"></i> </span>
-              <div *ngFor="let item of applicants" class="pos_rel bg_grey mb_5p">
-                <input id="item-{{$index}}" class="input-{{$index}} lh_49 border_none bg_grey pl_15p width91" value="{{item.email}}" disabled/>
-                <span class="step size-32 font40 minus_icon_pos color_grey" (click)="delApplicant($index)"> <i class="icon ion-minus-circled"></i> </span> </div>
+              <div>
+                <form [formGroup]="form">
+                  <ion-item class="mb_15p">
+                    <ion-label floating>
+                      <p class="fontopensansbold color_b0">EMAIL:</p>
+                    </ion-label>
+                    <ion-input type="email" [class.invalid]="!form.controls.newItem.valid && (form.controls.newItem.dirty || submitAttempt)" formControlName="newItem" class="font18 color_42 fontopensansreg" [(ngModel)]="newItem" ></ion-input>
+                  </ion-item>
+                  <ion-item *ngIf="!form.controls.newItem.valid  && (form.controls.newItem.dirty || submitAttempt)">
+                    Please enter a valid email.
+                  </ion-item>
+                  <span class="step size-32 plus_icon_pos font40 color_67" (click)="addApplicant()"> <i class="icon ion-plus-circled"></i> </span>
+                  <div *ngFor="let item of applicants" class="pos_rel bg_grey mb_5p">
+                    <input id="item-{{$index}}" class="input-{{$index}} lh_49 border_none bg_grey pl_15p width91" value="{{item.email}}" disabled/>
+                    <span class="step size-32 font40 minus_icon_pos color_grey" (click)="delApplicant($index)"> <i class="icon ion-minus-circled"></i> </span>
+                  </div>
+                </form>
+              </div>
             </div>
-          </div>
-        </ion-list>
-      </div>
-    </ion-col>
+          </ion-list>
+        </div>
+      </ion-col>
+
   </ion-row>
   <ion-row>
     <ion-col col-12>

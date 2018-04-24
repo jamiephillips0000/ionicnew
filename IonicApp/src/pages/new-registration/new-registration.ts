@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ToastController } from 'ionic-angular';
 import { Applicant } from "./applicant";
 /**
  * Generated class for the NewRegistrationPage page.
@@ -17,17 +19,28 @@ import { Applicant } from "./applicant";
 export class NewRegistrationPage {
 
  applicants: Array<Applicant>;
- newItem : string = ""
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.applicants = [];
-  }
+ form: FormGroup;
+ submitAttempt: boolean = false;
 
+ newItem : string = ""
+  constructor(public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder, public toastCtrl: ToastController) {
+    this.applicants = [];
+    this.form = formBuilder.group({
+        newItem: ['', Validators.compose([Validators.email, Validators.required])],
+    });
+  }
   ionViewDidLoad() {
     console.log('ionViewDidLoad NewRegistrationPage');
   }
   addApplicant(){
-    this.applicants.push(new Applicant(this.newItem));
-    this.newItem = "";
+    this.submitAttempt = true;
+    console.log("valid" + this.form.valid);
+    if(this.form.valid){
+      this.applicants.push(new Applicant(this.newItem));
+      this.newItem = "";
+      this.form.reset();
+      this.submitAttempt = false;
+    }
   }
   delApplicant(idx){
 		this.applicants.splice(idx,1);
