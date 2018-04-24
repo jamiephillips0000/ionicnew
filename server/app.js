@@ -58,11 +58,11 @@ console.log("** here >>>");
 var AuthController = require('./routes/AuthController');
 app.use('/api/v1/auth', AuthController);
 
-var VerifyToken = require("./routes/VerifyToken");
-app.all('*', function(req, res, next) {
-  console.log("** req.query >>>" + JSON.stringify(req.query));
-  VerifyToken(req,res,next)
-});
+// var VerifyToken = require("./routes/VerifyToken");
+// app.all('*', function(req, res, next) {
+//   console.log("** req.query >>>" + JSON.stringify(req.query));
+//   VerifyToken(req,res,next)
+// });
 
 var UserController = require('./routes/UserController');
 app.use('/users', UserController);

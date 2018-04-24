@@ -105,7 +105,8 @@ export class MyApp {
     if (restService.hasValidToken()) {
       this.rootPage = HomePage;
     } else {
-      this.rootPage = LoginPage;
+      // this.rootPage = LoginPage;
+      this.rootPage = HomePage;
     }
 
 

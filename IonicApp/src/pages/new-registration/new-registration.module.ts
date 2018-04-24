@@ -10,4 +10,9 @@ import { NewRegistrationPage } from './new-registration';
     IonicPageModule.forChild(NewRegistrationPage),
   ],
 })
-export class NewRegistrationPageModule {}
+export class NewRegistrationPageModule {
+
+
+
+
+}
