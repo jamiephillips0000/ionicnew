@@ -114,6 +114,7 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: HomePage },
 //	  { title: 'LogIn', component: LoginPage },
+//    { title: 'InvitationToRegisterPage', component: InvitationtoregisterPage },
 //	  { title: 'Application Register', component: ApplicationsregisterPage },
 	  { title: 'Quick Actions', component: QuickactionPage },
 //	  { title: 'Quick Actions For principal', component: QuickactionPrincipalPage },

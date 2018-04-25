@@ -21,12 +21,17 @@ export class NewRegistrationPage {
  applicants: Array<Applicant>;
  form: FormGroup;
  submitAttempt: boolean = false;
+ parentSubmitAttempt :boolean = false;
+ title : string = "";
+ description : string = "";
 
  newItem : string = ""
   constructor(public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder, public toastCtrl: ToastController) {
     this.applicants = [];
     this.form = formBuilder.group({
-        newItem: ['', Validators.compose([Validators.email, Validators.required])],
+        //newItem: ['', Validators.compose([Validators.email, Validators.required])],
+        title: ['', Validators.compose([Validators.required])],
+        description : ['', Validators.compose([Validators.required])]
     });
   }
   ionViewDidLoad() {
@@ -49,4 +54,10 @@ export class NewRegistrationPage {
     this.navCtrl.pop();
   }
 
+  gotoAddApplicant(){
+    //this.navCtrl.push(AddschoolPage);
+  }
+  gotoAddParentGuuardian(){
+    //this.navCtrl.push(AddschoolPage);
+  }
 }

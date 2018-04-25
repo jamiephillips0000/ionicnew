@@ -14,15 +14,86 @@
       <div class="float_left"><span class="step size-32 font40"> <i class="icon ion-ios-arrow-left"></i> </span></div>
       <div class="float_left pl_10 lh_56 fontopensansreg font18"><span>Back</span></div>
     </div>
-    <ion-title class="text_center p_l_5">New Registration</ion-title>
+    <ion-title class="text_center p_l_5">Registration</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <form [formGroup]="form">
   <ion-row>
+      <ion-col col-12>
+        <div class="width45 width100_576 m_0a mt_40p">
+          <ion-list class="pos_rel">
+              <div>
+                  <ion-item class="mb_15p">
+                    <ion-label floating>
+                      <p class="fontopensansbold color_b0">TITLE:</p>
+                    </ion-label>
+                    <ion-input type="text" [class.invalid]="!form.controls.title.valid && (form.controls.title.dirty || parentSubmitAttempt)" class="font18 color_42 fontopensansreg" formControlName="title"  [(ngModel)]="title" ></ion-input>
+                  </ion-item>
+                  <ion-item *ngIf="!form.controls.title.valid  && (form.controls.title.dirty || parentSubmitAttempt)">
+                    Please enter a valid title.
+                  </ion-item>
 
+                  <ion-item class="mb_15p">
+                    <ion-label floating>
+                      <p class="fontopensansbold color_b0">DESCRIPTION:</p>
+                    </ion-label>
+                    <ion-input type="text" [class.invalid]="!form.controls.description.valid && (form.controls.description.dirty || parentSubmitAttempt)" class="font18 color_42 fontopensansreg" formControlName="description"  [(ngModel)]="description" ></ion-input>
+                  </ion-item>
+                  <ion-item *ngIf="!form.controls.description.valid  && (form.controls.description.dirty || parentSubmitAttempt)">
+                    Please enter a valid description.
+                  </ion-item>
+                </div>
+            </ion-list>
+            <ion-grid class="">
+              <ion-row class="bg_ec">
+                <ion-col col-12 class="pl_15p">
+                  <div class="pos_rel"><p class="color_42 font15 fontopensansbold ptb_9_5p">Applicants</div>
+                    <span class="step size-32 plus_arrow_set" (click)="gotoaddschool()"> <i class="icon ion-android-add"></i> </span>
+                </ion-col>
+              </ion-row>
+              <ion-row class="bb_ec">
+                <ion-col col-12 class="pl_15p">
+                  <div class="pos_rel"><p class="color_42 font13 fontopensansreg ptb_11p">St Pauls British Primary</div>
+                    <span class="step size-32 trash_icon"> <i class="icon ion-ios-trash-outline"></i> </span>
+                </ion-col>
+              </ion-row>
+              <ion-row class="bb_ec">
+                <ion-col col-12 class="pl_15p">
+                  <div class="pos_rel"><p class="color_42 font13 fontopensansreg ptb_11p">St Paul's</div>
+                    <span class="step size-32 trash_icon"> <i class="icon ion-ios-trash-outline"></i> </span>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+            <ion-grid class="">
+              <ion-row class="bg_ec">
+                <ion-col col-12 class="pl_15p">
+                  <div class="pos_rel"><p class="color_42 font15 fontopensansbold ptb_9_5p">Parents/Guardians</div>
+                    <span class="step size-32 plus_arrow_set" (click)="gotoaddschool()"> <i class="icon ion-android-add"></i> </span>
+                </ion-col>
+              </ion-row>
+              <ion-row class="bb_ec">
+                <ion-col col-12 class="pl_15p">
+                  <div class="pos_rel"><p class="color_42 font13 fontopensansreg ptb_11p">St Pauls British Primary</div>
+                    <span class="step size-32 trash_icon"> <i class="icon ion-ios-trash-outline"></i> </span>
+                </ion-col>
+              </ion-row>
+              <ion-row class="bb_ec">
+                <ion-col col-12 class="pl_15p">
+                  <div class="pos_rel"><p class="color_42 font13 fontopensansreg ptb_11p">St Paul's</div>
+                    <span class="step size-32 trash_icon"> <i class="icon ion-ios-trash-outline"></i> </span>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </div>
+        </ion-col>
+    </ion-row>
+
+</form>
+  <!-- <ion-row>
       <ion-col col-12>
         <div class="width45 width100_576 m_0a mt_40p">
           <ion-list class="pos_rel">
@@ -49,8 +120,7 @@
           </ion-list>
         </div>
       </ion-col>
-
-  </ion-row>
+  </ion-row> -->
   <ion-row>
     <ion-col col-12>
       <div class="width45 width100_576 m_0a">
