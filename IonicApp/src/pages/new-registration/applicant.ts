@@ -1,8 +1,10 @@
 export class Applicant{
 
-    email: string;
+    title: string;
+    description : string;
 
-    constructor(email){
-        this.email = email;
+    constructor(title, description){
+        this.title = title;
+        this.description = description;
     }
 }

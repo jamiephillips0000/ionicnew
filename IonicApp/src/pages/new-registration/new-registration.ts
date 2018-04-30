@@ -3,6 +3,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ToastController } from 'ionic-angular';
 import { Applicant } from "./applicant";
+import { Application } from "./application";
+import { NewApplicantPage } from './new-applicant/new-applicant';
 /**
  * Generated class for the NewRegistrationPage page.
  *
@@ -18,6 +20,7 @@ import { Applicant } from "./applicant";
 })
 export class NewRegistrationPage {
 
+ application : Application ;
  applicants: Array<Applicant>;
  form: FormGroup;
  submitAttempt: boolean = false;
@@ -38,10 +41,13 @@ export class NewRegistrationPage {
     console.log('ionViewDidLoad NewRegistrationPage');
   }
   addApplicant(){
+    this.navCtrl.push(NewApplicantPage);
+  }
+  submit(){
     this.submitAttempt = true;
     console.log("valid" + this.form.valid);
     if(this.form.valid){
-      this.applicants.push(new Applicant(this.newItem));
+      //this.applicants.push(new Applicant(this.newItem));
       this.newItem = "";
       this.form.reset();
       this.submitAttempt = false;

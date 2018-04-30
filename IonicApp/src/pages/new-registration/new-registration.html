@@ -52,21 +52,21 @@
               <ion-row class="bg_ec">
                 <ion-col col-12 class="pl_15p">
                   <div class="pos_rel"><p class="color_42 font15 fontopensansbold ptb_9_5p">Applicants</div>
-                    <span class="step size-32 plus_arrow_set" (click)="gotoaddschool()"> <i class="icon ion-android-add"></i> </span>
+                    <span class="step size-32 plus_arrow_set" (click)="addApplicant()"> <i class="icon ion-android-add"></i> </span>
                 </ion-col>
               </ion-row>
-              <ion-row class="bb_ec">
+              <ion-row class="bb_ec" *ngFor="let a of applicants">
                 <ion-col col-12 class="pl_15p">
                   <div class="pos_rel"><p class="color_42 font13 fontopensansreg ptb_11p">St Pauls British Primary</div>
                     <span class="step size-32 trash_icon"> <i class="icon ion-ios-trash-outline"></i> </span>
                 </ion-col>
               </ion-row>
-              <ion-row class="bb_ec">
+              <!-- <ion-row class="bb_ec">
                 <ion-col col-12 class="pl_15p">
                   <div class="pos_rel"><p class="color_42 font13 fontopensansreg ptb_11p">St Paul's</div>
                     <span class="step size-32 trash_icon"> <i class="icon ion-ios-trash-outline"></i> </span>
                 </ion-col>
-              </ion-row>
+              </ion-row> -->
             </ion-grid>
             <ion-grid class="">
               <ion-row class="bg_ec">

@@ -17,6 +17,7 @@ import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 import { NewRegistrationPage } from '../pages/new-registration/new-registration';
+import { NewApplicantPage } from '../pages/new-registration/new-applicant/new-applicant';
 import { ConfirmemailPage } from '../pages/confirmemail/confirmemail';
 import { EmailisverifiedPage } from '../pages/emailisverified/emailisverified';
 import { PhonenumberPage } from '../pages/phonenumber/phonenumber';
@@ -126,6 +127,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 
+
 @NgModule({
   declarations: [
     MyApp,
@@ -134,6 +136,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 	LoginPage,
 	RegisterPage,
   NewRegistrationPage,
+  NewApplicantPage,
 	ConfirmemailPage,
 	EmailisverifiedPage,
 	PhonenumberPage,
@@ -245,6 +248,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 	LoginPage,
 	RegisterPage,
   NewRegistrationPage,
+  NewApplicantPage,
 	ConfirmemailPage,
 	EmailisverifiedPage,
 	PhonenumberPage,
